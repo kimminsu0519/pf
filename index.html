@@ -1232,95 +1232,93 @@
             </div>
           </div>
 
-          <div class="ov-right" style="gap: 14px;">
-            <div class="card" style="padding: 14px 22px; height: 248px; justify-content: center;">
+          <div class="ov-right" style="gap: 12px;">
+            <div class="card" style="padding: 12px 20px; height: 242px; justify-content: center;">
               <span class="card-badge" style="margin-bottom: 6px;">통합 시스템 아키텍처 (Gazebo · ROS 2 Jazzy · FMS Web)</span>
               <div class="diagram-wrapper">
-                <svg viewBox="0 0 1050 205" style="width:100%; height:174px;">
+                <svg viewBox="0 0 1050 188" style="width:100%; height:176px;">
                   <defs>
                     <marker id="arr-lsm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                       <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
                     </marker>
                   </defs>
                   <!-- Gazebo -->
-                  <rect x="10" y="20" width="210" height="165" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"></rect>
-                  <text x="115" y="45" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">Gazebo Harmonic 8.11</text>
-                  <rect x="26" y="60" width="178" height="44" rx="6" fill="#ffffff" stroke="#94a3b8"></rect>
-                  <text x="115" y="79" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e293b">DiffDrive (/odom, 30Hz)</text>
-                  <text x="115" y="96" text-anchor="middle" font-size="11" fill="#475569">vx 추출 (슬립 오차 vyaw 배제)</text>
-                  <rect x="26" y="114" width="178" height="52" rx="6" fill="#ffffff" stroke="#94a3b8"></rect>
-                  <text x="115" y="135" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e293b">6-Axis MEMS IMU (83~91Hz)</text>
-                  <text x="115" y="154" text-anchor="middle" font-size="11" fill="#475569">Noise/Bias 인가 (vyaw, ax)</text>
+                  <rect x="8" y="10" width="224" height="168" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"></rect>
+                  <text x="120" y="36" text-anchor="middle" font-size="15.5" font-weight="800" fill="#0f172a">Gazebo Harmonic</text>
+                  <rect x="22" y="50" width="196" height="52" rx="7" fill="#ffffff" stroke="#94a3b8"></rect>
+                  <text x="120" y="72" text-anchor="middle" font-size="13.8" font-weight="800" fill="#1e293b">DiffDrive (/odom)</text>
+                  <text x="120" y="91" text-anchor="middle" font-size="12.2" fill="#475569">30Hz 직진 선속도</text>
+                  <rect x="22" y="112" width="196" height="52" rx="7" fill="#ffffff" stroke="#94a3b8"></rect>
+                  <text x="120" y="134" text-anchor="middle" font-size="13.8" font-weight="800" fill="#1e293b">6-Axis MEMS IMU</text>
+                  <text x="120" y="153" text-anchor="middle" font-size="12.2" fill="#475569">90Hz 자이로 · 가속도</text>
 
-                  <line x1="220" y1="102" x2="262" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="232" y1="94" x2="262" y2="94" stroke="#4338ca" stroke-width="2.2" marker-end="url(#arr-lsm)"></line>
 
-                  <!-- Localization & Nav2 -->
-                  <rect x="265" y="20" width="275" height="165" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.8"></rect>
-                  <text x="402" y="45" text-anchor="middle" font-size="14" font-weight="800" fill="#312e81">ROS 2 Localization &amp; Nav2</text>
-                  <rect x="281" y="58" width="243" height="52" rx="6" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"></rect>
-                  <text x="402" y="79" text-anchor="middle" font-size="13" font-weight="800" fill="#4338ca">robot_localization EKF (30.01Hz)</text>
-                  <text x="402" y="98" text-anchor="middle" font-size="11.5" fill="#334155">/odometry/filtered + odom→base_footprint</text>
-                  <rect x="281" y="118" width="243" height="50" rx="6" fill="#ffffff" stroke="#64748b"></rect>
-                  <text x="402" y="139" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">AMCL + slam_toolbox + Nav2</text>
-                  <text x="402" y="157" text-anchor="middle" font-size="11" fill="#475569">원점 [-2.4,-0.3] · 180° 초기 헤딩 정합</text>
+                  <!-- ROS 2 & Nav2 -->
+                  <rect x="266" y="10" width="246" height="168" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.8"></rect>
+                  <text x="389" y="36" text-anchor="middle" font-size="15.5" font-weight="800" fill="#312e81">ROS 2 &amp; Nav2</text>
+                  <rect x="280" y="50" width="218" height="52" rx="7" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"></rect>
+                  <text x="389" y="72" text-anchor="middle" font-size="14" font-weight="800" fill="#4338ca">EKF 퓨전 (30Hz)</text>
+                  <text x="389" y="91" text-anchor="middle" font-size="12.2" fill="#334155">/odometry/filtered</text>
+                  <rect x="280" y="112" width="218" height="52" rx="7" fill="#ffffff" stroke="#64748b"></rect>
+                  <text x="389" y="134" text-anchor="middle" font-size="13.8" font-weight="800" fill="#0f172a">AMCL · SLAM · Nav2</text>
+                  <text x="389" y="153" text-anchor="middle" font-size="12.2" fill="#475569">원점 정합 · 자율 주행</text>
 
-                  <line x1="540" y1="102" x2="582" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="512" y1="94" x2="542" y2="94" stroke="#4338ca" stroke-width="2.2" marker-end="url(#arr-lsm)"></line>
 
-                  <!-- C++17 Core & Dispatch -->
-                  <rect x="585" y="20" width="245" height="165" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
-                  <text x="707" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#312e81">C++17 Core &amp; Dispatch</text>
-                  <rect x="599" y="51" width="217" height="36" rx="5" fill="#eef2ff" stroke="#a5b4fc"></rect>
-                  <text x="707" y="67" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0f172a">amr_state_machine_cpp (C++17)</text>
-                  <text x="707" y="81" text-anchor="middle" font-size="10.2" fill="#475569">5단계 FSM · 10Hz Status · MTE(4)</text>
-                  <rect x="599" y="93" width="217" height="36" rx="5" fill="#eef2ff" stroke="#4f46e5"></rect>
-                  <text x="707" y="109" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4338ca">precision_docking_node (C++17)</text>
-                  <text x="707" y="123" text-anchor="middle" font-size="10.2" fill="#475569">50Hz PID 도킹(1.9~3.4cm) · /scan 안전</text>
-                  <rect x="599" y="135" width="217" height="39" rx="5" fill="#f8fafc" stroke="#94a3b8"></rect>
-                  <text x="707" y="152" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Vector A* (C++17) &amp; SeqNav (10Hz)</text>
-                  <text x="707" y="167" text-anchor="middle" font-size="10.2" fill="#475569">206노드 최단 경로 · cancel_active_route</text>
+                  <!-- C++17 Core -->
+                  <rect x="546" y="10" width="248" height="168" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
+                  <text x="670" y="36" text-anchor="middle" font-size="15.5" font-weight="800" fill="#312e81">C++17 Real-Time Core</text>
+                  <rect x="560" y="48" width="220" height="36" rx="6" fill="#eef2ff" stroke="#a5b4fc"></rect>
+                  <text x="670" y="71" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">5단계 FSM 제어 (10Hz)</text>
+                  <rect x="560" y="91" width="220" height="36" rx="6" fill="#eef2ff" stroke="#4f46e5"></rect>
+                  <text x="670" y="114" text-anchor="middle" font-size="13.2" font-weight="800" fill="#4338ca">50Hz PID 도킹 (3.4cm)</text>
+                  <rect x="560" y="134" width="220" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"></rect>
+                  <text x="670" y="157" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">206노드 A* 최단 경로</text>
 
-                  <line x1="830" y1="102" x2="872" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="794" y1="94" x2="824" y2="94" stroke="#4338ca" stroke-width="2.2" marker-end="url(#arr-lsm)"></line>
 
-                  <!-- FMS Web -->
-                  <rect x="875" y="20" width="165" height="165" rx="10" fill="#0f172a"></rect>
-                  <text x="957" y="50" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">WebSocket FMS</text>
-                  <text x="957" y="74" text-anchor="middle" font-size="12" fill="#a5b4fc">Port 9090 Bridge</text>
-                  <rect x="890" y="90" width="135" height="76" rx="6" fill="#1e293b" stroke="#334155"></rect>
-                  <text x="957" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">실시간 2D 관제</text>
-                  <text x="957" y="132" text-anchor="middle" font-size="11" fill="#cbd5e1">5-Step FSM UI</text>
-                  <text x="957" y="150" text-anchor="middle" font-size="11" fill="#cbd5e1">A* 경로 &amp; 미션 하달</text>
+                  <!-- WebSocket FMS (Indigo Theme instead of harsh #0f172a) -->
+                  <rect x="828" y="10" width="214" height="168" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"></rect>
+                  <rect x="838" y="20" width="194" height="32" rx="7" fill="#4338ca"></rect>
+                  <text x="935" y="41" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">WebSocket FMS</text>
+                  <text x="935" y="74" text-anchor="middle" font-size="12.8" font-weight="700" fill="#4338ca">Port 9090 Bridge</text>
+                  <rect x="842" y="88" width="186" height="76" rx="7" fill="#ffffff" stroke="#a5b4fc"></rect>
+                  <text x="935" y="114" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">실시간 2D 관제</text>
+                  <text x="935" y="135" text-anchor="middle" font-size="12.2" fill="#475569">5-Step FSM 상태 UI</text>
+                  <text x="935" y="153" text-anchor="middle" font-size="12.2" fill="#475569">A* 경로 · 미션 하달</text>
                 </svg>
               </div>
             </div>
 
-            <div class="card" style="flex: 1; padding: 16px 22px; justify-content: space-between; gap: 12px;">
+            <div class="card" style="flex: 1; padding: 13px 18px; justify-content: space-between; gap: 8px;">
               <div style="display: flex; flex-direction: column; flex: 1;">
-                <span class="card-badge" style="margin-bottom: 10px;">Gazebo · RViz2 · Web FMS 실구동 화면</span>
-                <div style="display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 12px; align-items: stretch; flex: 1;">
-                  <div class="proof-item" style="padding: 10px;">
-                    <div class="proof-img-box light" style="flex: 1; height: 100%; min-height: 368px;">
+                <span class="card-badge" style="margin-bottom: 8px;">Gazebo · RViz2 · Web FMS 실구동 화면</span>
+                <div style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 10px; align-items: stretch; flex: 1;">
+                  <div class="proof-item" style="padding: 6px 8px;">
+                    <div class="proof-img-box light" style="flex: 1; height: 100%; min-height: 416px;">
                       <img src="./assets/lsm_01_gazebo.png" class="cover" alt="Gazebo 3D 물류 창고">
                     </div>
-                    <div class="proof-caption" data-tid="p-31" contenteditable="false">▲ 1:1 스케일 Gazebo 3D 창고 월드</div>
+                    <div class="proof-caption" style="margin-top: 4px; font-size: 13px;" data-tid="p-31" contenteditable="false">▲ 1:1 스케일 Gazebo 3D 창고 월드</div>
                   </div>
-                  <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <div class="proof-item" style="padding: 8px 10px;">
-                      <div class="proof-img-box light" style="height: 176px;">
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div class="proof-item" style="padding: 6px 8px;">
+                      <div class="proof-img-box light" style="height: 202px;">
                         <img src="./assets/lsm_02_rviz.png" alt="RViz2 AMCL Nav2 정합">
                       </div>
-                      <div class="proof-caption" data-tid="p-32" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
+                      <div class="proof-caption" style="margin-top: 4px; font-size: 13px;" data-tid="p-32" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
                     </div>
-                    <div class="proof-item" style="padding: 8px 10px;">
-                      <div class="proof-img-box light" style="height: 176px;">
+                    <div class="proof-item" style="padding: 6px 8px;">
+                      <div class="proof-img-box light" style="height: 202px;">
                         <img src="./assets/lsm_03_fms.png" alt="FMS 웹 관제 대시보드">
                       </div>
-                      <div class="proof-caption" data-tid="p-33" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
+                      <div class="proof-caption" style="margin-top: 4px; font-size: 13px;" data-tid="p-33" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #4338ca; border-radius: 10px; padding: 12px 18px; font-size: 13.8px; color: #0f172a; font-weight: 600;">
+              <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #4338ca; border-radius: 10px; padding: 8px 16px; font-size: 13.5px; color: #0f172a; font-weight: 600;">
                 <span><strong style="color: #4338ca;">Verification Gate PASS</strong> · C++17 (-O3) 8 Packages (0 Errors)</span>
                 <span><code>/odometry/filtered</code> 30.01Hz · <code>Zero</code> Hardcoded Paths (<code>ament_index</code>)</span>
               </div>
@@ -1673,12 +1671,13 @@
 
                 <line x1="642" y1="67" x2="674" y2="67" stroke="#4338ca" stroke-width="2.2" marker-end="url(#arr-cpp)"></line>
 
-                <rect x="678" y="8" width="214" height="118" rx="10" fill="#0f172a"></rect>
-                <text x="785" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="#ffffff">Python 3.12 Web Bridge</text>
-                <rect x="692" y="44" width="186" height="68" rx="7" fill="#1e293b" stroke="#334155"></rect>
-                <text x="785" y="65" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a5b4fc">telemetry_bridge · Web UI</text>
-                <text x="785" y="83" text-anchor="middle" font-size="10.8" fill="#cbd5e1">Port 9090 WebSocket 관제</text>
-                <text x="785" y="100" text-anchor="middle" font-size="10.8" fill="#cbd5e1">실시간 FSM · 경로 모니터링</text>
+                <rect x="678" y="8" width="214" height="118" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.8"></rect>
+                <rect x="688" y="15" width="194" height="24" rx="6" fill="#4338ca"></rect>
+                <text x="785" y="31" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Python 3.12 Web Bridge</text>
+                <rect x="692" y="45" width="186" height="71" rx="7" fill="#ffffff" stroke="#a5b4fc"></rect>
+                <text x="785" y="66" text-anchor="middle" font-size="12" font-weight="800" fill="#4338ca">telemetry_bridge · UI</text>
+                <text x="785" y="85" text-anchor="middle" font-size="11.2" fill="#334155">Port 9090 WebSocket</text>
+                <text x="785" y="103" text-anchor="middle" font-size="11.2" fill="#475569">FSM · 경로 실시간 관제</text>
               </svg>
 
               <table class="metric-table" style="font-size: 12.6px; margin-top: 0;">
@@ -1851,102 +1850,97 @@
                     </marker>
                   </defs>
 
-                  <!-- 1. Robot Edge H/W -->
-                  <rect x="8" y="16" width="225" height="372" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="1.8"></rect>
-                  <text x="120" y="44" text-anchor="middle" font-size="15.5" font-weight="800" fill="#0f172a">Robot H/W &amp; Handler</text>
-                  <rect x="24" y="62" width="193" height="58" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
-                  <text x="120" y="85" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">Vision &amp; Audio Stream</text>
-                  <text x="120" y="105" text-anchor="middle" font-size="12" fill="#475569">Front Cam(7022) · Mic(UDP)</text>
+                  <!-- 1. Robot H/W & UI -->
+                  <rect x="8" y="14" width="225" height="376" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="1.8"></rect>
+                  <text x="120" y="43" text-anchor="middle" font-size="16.5" font-weight="800" fill="#0f172a">Robot H/W &amp; UI</text>
 
-                  <rect x="24" y="132" width="193" height="62" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
-                  <text x="120" y="155" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">Safety &amp; Load Sensors</text>
-                  <text x="120" y="175" text-anchor="middle" font-size="12" fill="#475569">DetectionStatus (전·후·좌우)</text>
-                  <text x="120" y="189" text-anchor="middle" font-size="11.5" fill="#64748b">/weight_data (Load Cell)</text>
+                  <rect x="24" y="60" width="193" height="62" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
+                  <text x="120" y="86" text-anchor="middle" font-size="14.2" font-weight="800" fill="#1e293b">Cam · Mic Stream</text>
+                  <text x="120" y="107" text-anchor="middle" font-size="12.5" fill="#475569">UDP 7022 영상 · 음성</text>
 
-                  <rect x="24" y="206" width="193" height="64" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
-                  <text x="120" y="230" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">Motion &amp; HRI Output</text>
-                  <text x="120" y="250" text-anchor="middle" font-size="12" fill="#475569">/cmd_vel (Twist 속도 인가)</text>
-                  <text x="120" y="264" text-anchor="middle" font-size="11.5" fill="#64748b">/face_expression · Speaker</text>
+                  <rect x="24" y="134" width="193" height="64" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
+                  <text x="120" y="160" text-anchor="middle" font-size="14.2" font-weight="800" fill="#1e293b">Safety · Load Cell</text>
+                  <text x="120" y="181" text-anchor="middle" font-size="12.5" fill="#475569">전후좌우 장애물 · 무게</text>
 
-                  <rect x="24" y="282" width="193" height="90" rx="8" fill="#0f172a"></rect>
-                  <text x="120" y="308" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Kiosk &amp; Admin UI</text>
-                  <text x="120" y="329" text-anchor="middle" font-size="12" fill="#bbf7d0">QR 인증 · Escort · BookSearch</text>
-                  <text x="120" y="349" text-anchor="middle" font-size="11.5" fill="#cbd5e1">실시간 Robot Status 관제</text>
+                  <rect x="24" y="210" width="193" height="64" rx="8" fill="#ffffff" stroke="#94a3b8"></rect>
+                  <text x="120" y="236" text-anchor="middle" font-size="14.2" font-weight="800" fill="#1e293b">Motion · HRI Output</text>
+                  <text x="120" y="257" text-anchor="middle" font-size="12.5" fill="#475569">/cmd_vel · 표정 · 음성</text>
 
-                  <!-- Arrows to AI Server -->
-                  <line x1="233" y1="90" x2="275" y2="90" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
-                  <line x1="233" y1="162" x2="275" y2="162" stroke="#475569" stroke-width="2" marker-end="url(#arr-slate)"></line>
-                  <line x1="275" y1="238" x2="233" y2="238" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
+                  <rect x="24" y="286" width="193" height="88" rx="9" fill="#eef2f6" stroke="#475569" stroke-width="1.6"></rect>
+                  <rect x="34" y="294" width="173" height="28" rx="6" fill="#475569"></rect>
+                  <text x="120" y="313" text-anchor="middle" font-size="13.8" font-weight="800" fill="#ffffff">Kiosk &amp; Admin UI</text>
+                  <text x="120" y="343" text-anchor="middle" font-size="12.8" font-weight="700" fill="#1e293b">QR 인증 · 도서 검색</text>
+                  <text x="120" y="362" text-anchor="middle" font-size="12" fill="#475569">실시간 상태 관제</text>
 
-                  <!-- 2. AI Service Server (My Role Highlight) -->
-                  <rect x="278" y="16" width="470" height="372" rx="12" fill="#f2f8ea" stroke="#82be48" stroke-width="2.4"></rect>
-                  <rect x="294" y="26" width="438" height="28" rx="6" fill="#5c8d2e"></rect>
-                  <text x="513" y="45" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">AI Service Package (ROS 2 Humble · 본인 전담 Core Node)</text>
+                  <!-- Arrows -->
+                  <line x1="233" y1="91" x2="275" y2="91" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
+                  <line x1="233" y1="166" x2="275" y2="166" stroke="#475569" stroke-width="2" marker-end="url(#arr-slate)"></line>
+                  <line x1="275" y1="242" x2="233" y2="242" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
+
+                  <!-- 2. AI Service Package (Core Role) -->
+                  <rect x="278" y="14" width="470" height="376" rx="12" fill="#f2f8ea" stroke="#82be48" stroke-width="2.4"></rect>
+                  <rect x="294" y="24" width="438" height="30" rx="7" fill="#5c8d2e"></rect>
+                  <text x="513" y="44" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">AI Service Package (ROS 2 Humble · 본인 전담)</text>
 
                   <!-- Vision Block -->
-                  <rect x="294" y="66" width="438" height="106" rx="10" fill="#ffffff" stroke="#82be48" stroke-width="1.6"></rect>
-                  <text x="310" y="88" font-size="14" font-weight="800" fill="#5c8d2e">① Vision Gesture Pipeline</text>
-                  <text x="716" y="88" text-anchor="end" font-size="12" font-weight="700" fill="#475569">UDP 4MB · Lock</text>
-                  <rect x="308" y="98" width="132" height="60" rx="6" fill="#f8faf5" stroke="#aed684"></rect>
-                  <text x="374" y="118" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">GestureDetector</text>
-                  <text x="374" y="136" text-anchor="middle" font-size="11.2" fill="#475569">MediaPipe 21-pt</text>
-                  <text x="374" y="150" text-anchor="middle" font-size="11.2" fill="#5c8d2e">5-Frame 합의 필터</text>
-                  <line x1="440" y1="128" x2="462" y2="128" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
-                  <rect x="464" y="98" width="112" height="60" rx="6" fill="#f8faf5" stroke="#aed684"></rect>
-                  <text x="520" y="118" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">ROS2Bridge</text>
-                  <text x="520" y="136" text-anchor="middle" font-size="11.2" fill="#475569">Port 7023 수신</text>
-                  <text x="520" y="150" text-anchor="middle" font-size="11.2" fill="#5c8d2e">/gesture_result</text>
-                  <line x1="576" y1="128" x2="598" y2="128" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
-                  <rect x="600" y="98" width="120" height="60" rx="6" fill="#eff6ff" stroke="#82be48"></rect>
-                  <text x="660" y="118" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">ControlNode</text>
-                  <text x="660" y="136" text-anchor="middle" font-size="11.2" fill="#475569">장애물 탈출 우선</text>
-                  <text x="660" y="150" text-anchor="middle" font-size="11.2" fill="#5c8d2e">20단계 선형 감속</text>
+                  <rect x="294" y="66" width="438" height="110" rx="10" fill="#ffffff" stroke="#82be48" stroke-width="1.6"></rect>
+                  <text x="310" y="89" font-size="14.5" font-weight="800" fill="#2e7d32">① Vision Gesture</text>
+                  <text x="716" y="89" text-anchor="end" font-size="12.5" font-weight="700" fill="#475569">UDP 4MB · Lock</text>
+                  <rect x="308" y="100" width="130" height="62" rx="7" fill="#f8faf5" stroke="#aed684"></rect>
+                  <text x="373" y="125" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">GestureDetector</text>
+                  <text x="373" y="146" text-anchor="middle" font-size="12" fill="#5c8d2e">MediaPipe · 5-Frame</text>
+                  <line x1="438" y1="131" x2="460" y2="131" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
+                  <rect x="462" y="100" width="120" height="62" rx="7" fill="#f8faf5" stroke="#aed684"></rect>
+                  <text x="522" y="125" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">ROS2Bridge</text>
+                  <text x="522" y="146" text-anchor="middle" font-size="12" fill="#475569">Port 7023 브리지</text>
+                  <line x1="582" y1="131" x2="602" y2="131" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
+                  <rect x="604" y="100" width="116" height="62" rx="7" fill="#f2f8ea" stroke="#82be48"></rect>
+                  <text x="662" y="125" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">ControlNode</text>
+                  <text x="662" y="146" text-anchor="middle" font-size="12" fill="#2e7d32">안전 인터락 · 감속</text>
 
-                  <!-- Voice LLM Block -->
-                  <rect x="294" y="184" width="438" height="122" rx="10" fill="#ffffff" stroke="#82be48" stroke-width="1.6"></rect>
-                  <text x="310" y="206" font-size="14" font-weight="800" fill="#5c8d2e">② Voice &amp; OpenAI LLM Pipeline (talker_manager2)</text>
-                  <rect x="308" y="216" width="124" height="76" rx="6" fill="#f8faf5" stroke="#aed684"></rect>
-                  <text x="370" y="238" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">Porcupine Wake</text>
-                  <text x="370" y="256" text-anchor="middle" font-size="11.2" fill="#475569">resampy 512 pad</text>
-                  <text x="370" y="272" text-anchor="middle" font-size="11.2" fill="#5c8d2e">'리보야' → stop 연동</text>
-                  <line x1="432" y1="254" x2="452" y2="254" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
-                  <rect x="454" y="216" width="132" height="76" rx="6" fill="#f8faf5" stroke="#aed684"></rect>
-                  <text x="520" y="238" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">RMS Cut &amp; STT</text>
-                  <text x="520" y="256" text-anchor="middle" font-size="11.2" fill="#475569">RMS&gt;300 · 1.5s 종료</text>
-                  <text x="520" y="272" text-anchor="middle" font-size="11.2" fill="#5c8d2e">Google STT (ko-KR)</text>
-                  <line x1="586" y1="254" x2="606" y2="254" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
-                  <rect x="608" y="216" width="112" height="76" rx="6" fill="#eff6ff" stroke="#82be48"></rect>
-                  <text x="664" y="238" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">GPT-3.5 Intent</text>
-                  <text x="664" y="256" text-anchor="middle" font-size="11.2" fill="#475569">9종 JSON 분류</text>
-                  <text x="664" y="272" text-anchor="middle" font-size="11.2" fill="#5c8d2e">Service 모드 전환</text>
+                  <!-- Voice Block -->
+                  <rect x="294" y="188" width="438" height="114" rx="10" fill="#ffffff" stroke="#82be48" stroke-width="1.6"></rect>
+                  <text x="310" y="211" font-size="14.5" font-weight="800" fill="#2e7d32">② Voice · LLM (talker_manager2)</text>
+                  <rect x="308" y="222" width="130" height="66" rx="7" fill="#f8faf5" stroke="#aed684"></rect>
+                  <text x="373" y="249" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">WakeWord</text>
+                  <text x="373" y="270" text-anchor="middle" font-size="12" fill="#5c8d2e">'리보야' → 즉시 정지</text>
+                  <line x1="438" y1="255" x2="460" y2="255" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
+                  <rect x="462" y="222" width="126" height="66" rx="7" fill="#f8faf5" stroke="#aed684"></rect>
+                  <text x="525" y="249" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">RMS 컷 &amp; STT</text>
+                  <text x="525" y="270" text-anchor="middle" font-size="12" fill="#475569">1.5s 침묵 종료</text>
+                  <line x1="588" y1="255" x2="606" y2="255" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo)"></line>
+                  <rect x="608" y="222" width="112" height="66" rx="7" fill="#f2f8ea" stroke="#82be48"></rect>
+                  <text x="664" y="249" text-anchor="middle" font-size="13.2" font-weight="800" fill="#0f172a">GPT-3.5</text>
+                  <text x="664" y="270" text-anchor="middle" font-size="12" fill="#2e7d32">9종 의도 전환</text>
 
-                  <!-- ROS2 Interfaces Strip -->
-                  <rect x="294" y="318" width="438" height="54" rx="8" fill="#ffffff" stroke="#5c8d2e" stroke-width="1.5"></rect>
-                  <text x="513" y="340" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">③ 통합 ROS 2 DDS 인터페이스 : libo_interfaces (13 .msg · 21 .srv)</text>
-                  <text x="513" y="360" text-anchor="middle" font-size="11.2" fill="#475569">ActivateGesture ↔ ActivateTracker · EndTask · BookSearch · VoiceCommand</text>
+                  <!-- DDS Strip -->
+                  <rect x="294" y="314" width="438" height="60" rx="8" fill="#ffffff" stroke="#5c8d2e" stroke-width="1.6"></rect>
+                  <text x="513" y="338" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">③ DDS 인터페이스 : libo_interfaces (13 .msg · 21 .srv)</text>
+                  <text x="513" y="360" text-anchor="middle" font-size="12.2" fill="#475569">ActivateGesture ↔ ActivateTracker · EndTask · BookSearch</text>
 
-                  <!-- Arrows to Main Server & Cloud -->
-                  <line x1="748" y1="145" x2="788" y2="145" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
-                  <line x1="748" y1="325" x2="788" y2="325" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
+                  <!-- Arrows to Right -->
+                  <line x1="748" y1="138" x2="788" y2="138" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
+                  <line x1="748" y1="322" x2="788" y2="322" stroke="#5c8d2e" stroke-width="2.2" marker-end="url(#arr-libo)"></line>
 
-                  <!-- 3. Main Server & Cloud DB -->
-                  <rect x="792" y="16" width="250" height="218" rx="12" fill="#ffffff" stroke="#64748b" stroke-width="1.8"></rect>
-                  <text x="917" y="44" text-anchor="middle" font-size="15.5" font-weight="800" fill="#0f172a">Main Navigation Server</text>
-                  <rect x="808" y="60" width="218" height="54" rx="8" fill="#f8fafc" stroke="#cbd5e1"></rect>
-                  <text x="917" y="83" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">TaskManager &amp; FSM</text>
-                  <text x="917" y="102" text-anchor="middle" font-size="11.8" fill="#475569">Assist ↔ Escort ↔ Idle 조율</text>
-                  <rect x="808" y="124" width="218" height="94" rx="8" fill="#f8fafc" stroke="#cbd5e1"></rect>
-                  <text x="917" y="147" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">Nav2 + Re-ID Tracker</text>
-                  <text x="917" y="168" text-anchor="middle" font-size="11.8" fill="#475569">AMCL/SLAM · Waypoint 주행</text>
-                  <text x="917" y="187" text-anchor="middle" font-size="11.8" fill="#475569">직원 추종 ↔ 제스처 상호 배제</text>
-                  <text x="917" y="206" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5c8d2e">CancelNavigation / Navigate</text>
+                  <!-- 3. Main Server & Cloud -->
+                  <rect x="792" y="14" width="250" height="222" rx="12" fill="#ffffff" stroke="#64748b" stroke-width="1.8"></rect>
+                  <text x="917" y="43" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Main Navigation Server</text>
+                  <rect x="808" y="58" width="218" height="66" rx="8" fill="#f8fafc" stroke="#cbd5e1"></rect>
+                  <text x="917" y="86" text-anchor="middle" font-size="14.2" font-weight="800" fill="#1e293b">TaskManager FSM</text>
+                  <text x="917" y="108" text-anchor="middle" font-size="12.5" fill="#475569">Assist ↔ Escort ↔ Idle</text>
+                  <rect x="808" y="136" width="218" height="84" rx="8" fill="#f8fafc" stroke="#cbd5e1"></rect>
+                  <text x="917" y="164" text-anchor="middle" font-size="14.2" font-weight="800" fill="#1e293b">Nav2 · Re-ID Tracker</text>
+                  <text x="917" y="185" text-anchor="middle" font-size="12.5" fill="#475569">SLAM 주행 · 직원 추종</text>
+                  <text x="917" y="205" text-anchor="middle" font-size="12.2" font-weight="700" fill="#5c8d2e">모드 간 상호 배제 제어</text>
 
-                  <rect x="792" y="248" width="250" height="140" rx="12" fill="#0f172a"></rect>
-                  <text x="917" y="278" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">GCP Cloud &amp; Speech API</text>
-                  <rect x="808" y="294" width="218" height="36" rx="6" fill="#1e293b" stroke="#334155"></rect>
-                  <text x="917" y="317" text-anchor="middle" font-size="12.5" font-weight="700" fill="#bbf7d0">MySQL 8.0 (도서·로그 DB)</text>
-                  <rect x="808" y="338" width="218" height="36" rx="6" fill="#1e293b" stroke="#334155"></rect>
-                  <text x="917" y="361" text-anchor="middle" font-size="12.5" font-weight="700" fill="#e2e8f0">Google Cloud TTS / OpenAI API</text>
+                  <!-- GCP Cloud & Speech API (LIBO Theme instead of #0f172a) -->
+                  <rect x="792" y="248" width="250" height="142" rx="12" fill="#f2f8ea" stroke="#5c8d2e" stroke-width="1.8"></rect>
+                  <rect x="806" y="258" width="222" height="30" rx="7" fill="#5c8d2e"></rect>
+                  <text x="917" y="278" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">GCP Cloud &amp; Speech API</text>
+                  <rect x="808" y="298" width="218" height="38" rx="7" fill="#ffffff" stroke="#aed684"></rect>
+                  <text x="917" y="322" text-anchor="middle" font-size="13" font-weight="800" fill="#2e7d32">MySQL 8.0 (도서·로그)</text>
+                  <rect x="808" y="342" width="218" height="38" rx="7" fill="#ffffff" stroke="#aed684"></rect>
+                  <text x="917" y="366" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Google TTS · OpenAI API</text>
                 </svg>
               </div>
             </div>
@@ -2008,14 +2002,15 @@
 
               <line x1="647" y1="90" x2="673" y2="90" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo2)"></line>
 
-              <rect x="676" y="16" width="244" height="148" rx="10" fill="#0f172a"></rect>
-              <text x="798" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">GestureControlNode (Safety)</text>
-              <rect x="690" y="54" width="216" height="44" rx="6" fill="#1e293b" stroke="#334155"></rect>
-              <text x="798" y="73" text-anchor="middle" font-size="12" font-weight="700" fill="#bbf7d0">/detection_status 최우선 인터락</text>
-              <text x="798" y="90" text-anchor="middle" font-size="11" fill="#cbd5e1">전방→BACK만 · 후방→GO만 허용</text>
-              <rect x="690" y="106" width="216" height="46" rx="6" fill="#1e293b" stroke="#334155"></rect>
-              <text x="798" y="126" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">gradual_stop(steps=20, 0.3s)</text>
-              <text x="798" y="143" text-anchor="middle" font-size="11" fill="#94a3b8">선형 감속 /cmd_vel · 역회전 정지</text>
+              <rect x="676" y="16" width="244" height="148" rx="10" fill="#e8f3dc" stroke="#5c8d2e" stroke-width="1.8"></rect>
+              <rect x="688" y="24" width="220" height="24" rx="6" fill="#5c8d2e"></rect>
+              <text x="798" y="40" text-anchor="middle" font-size="12.5" font-weight="800" fill="#ffffff">GestureControlNode (Safety)</text>
+              <rect x="690" y="55" width="216" height="44" rx="6" fill="#ffffff" stroke="#82be48"></rect>
+              <text x="798" y="74" text-anchor="middle" font-size="12" font-weight="800" fill="#2e7d32">/detection_status 최우선 인터락</text>
+              <text x="798" y="91" text-anchor="middle" font-size="11" fill="#475569">전방→BACK만 · 후방→GO만 허용</text>
+              <rect x="690" y="106" width="216" height="46" rx="6" fill="#ffffff" stroke="#82be48"></rect>
+              <text x="798" y="126" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">gradual_stop(steps=20, 0.3s)</text>
+              <text x="798" y="143" text-anchor="middle" font-size="11" fill="#475569">선형 감속 /cmd_vel · 역회전 정지</text>
             </svg>
 
             <div>
@@ -2152,14 +2147,15 @@
 
               <line x1="668" y1="90" x2="694" y2="90" stroke="#5c8d2e" stroke-width="2" marker-end="url(#arr-libo3)"></line>
 
-              <rect x="697" y="16" width="224" height="148" rx="10" fill="#0f172a"></rect>
-              <text x="809" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">ROS 2 Service &amp; TTS</text>
-              <rect x="710" y="54" width="198" height="44" rx="6" fill="#1e293b" stroke="#334155"></rect>
-              <text x="809" y="73" text-anchor="middle" font-size="12" font-weight="700" fill="#bbf7d0">상호 배제 서비스 호출</text>
-              <text x="809" y="90" text-anchor="middle" font-size="11" fill="#cbd5e1">Gesture ↔ Tracker · EndTask</text>
-              <rect x="710" y="106" width="198" height="46" rx="6" fill="#1e293b" stroke="#334155"></rect>
-              <text x="809" y="126" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">비동기 TTS &amp; 표정 복귀</text>
-              <text x="809" y="143" text-anchor="middle" font-size="11" fill="#94a3b8">Google TTS · 5.0s 데몬 normal</text>
+              <rect x="697" y="16" width="224" height="148" rx="10" fill="#e8f3dc" stroke="#5c8d2e" stroke-width="1.8"></rect>
+              <rect x="708" y="24" width="202" height="24" rx="6" fill="#5c8d2e"></rect>
+              <text x="809" y="40" text-anchor="middle" font-size="12.5" font-weight="800" fill="#ffffff">ROS 2 Service &amp; TTS</text>
+              <rect x="710" y="55" width="198" height="44" rx="6" fill="#ffffff" stroke="#82be48"></rect>
+              <text x="809" y="74" text-anchor="middle" font-size="12" font-weight="800" fill="#2e7d32">상호 배제 서비스 호출</text>
+              <text x="809" y="91" text-anchor="middle" font-size="11" fill="#475569">Gesture ↔ Tracker · EndTask</text>
+              <rect x="710" y="106" width="198" height="46" rx="6" fill="#ffffff" stroke="#82be48"></rect>
+              <text x="809" y="126" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">비동기 TTS &amp; 표정 복귀</text>
+              <text x="809" y="143" text-anchor="middle" font-size="11" fill="#475569">Google TTS · 5.0s 데몬 normal</text>
             </svg>
 
             <div>
@@ -2335,35 +2331,35 @@
               </div>
             </div>
 
-            <div class="card" style="flex: 1; padding: 16px 22px; justify-content: space-between;">
-              <span class="card-badge" style="margin-bottom: 10px;">담당 핵심 산업용 센서 (SICK) &amp; 실차 VD2 HMI 정밀 튜닝</span>
-              <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px; flex: 1;">
-                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
-                  <img src="./assets/amr_03_tim320.png" alt="TiM320" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
+            <div class="card" style="flex: 1; padding: 14px 20px; justify-content: space-between;">
+              <span class="card-badge" style="margin-bottom: 8px;">담당 핵심 산업용 센서 (SICK) &amp; 실차 VD2 HMI 정밀 튜닝</span>
+              <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 12px; flex: 1;">
+                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 16px;">
+                  <img src="./assets/amr_03_tim320.png" alt="TiM320" style="width: 156px; height: 156px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
                     <div style="font-size:12.5px; font-weight:700; color:#334155;">2D LiDAR Sensor</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK TiM320</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• 270° 고속 스캔 · 공장 2D SLAM 지도 작성<br>• LiDAR-LOC 맵 정합 및 반사판 기준점 트래킹</div>
                   </div>
                 </div>
-                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
-                  <img src="./assets/amr_04_nanoscan3.png" alt="nanoScan3" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
+                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 16px;">
+                  <img src="./assets/amr_04_nanoscan3.png" alt="nanoScan3" style="width: 156px; height: 156px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
                     <div style="font-size:12.5px; font-weight:700; color:#334155;">Safety Laser Scanner</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK nanoScan3</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• Safety Designer 직진/턴/소화전 필드 분할<br>• Input Delay 20ms 적용으로 n1/n3 fault 해소</div>
                   </div>
                 </div>
-                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
-                  <img src="./assets/amr_05_ahm36.png" alt="AHM36" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
+                <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 16px;">
+                  <img src="./assets/amr_05_ahm36.png" alt="AHM36" style="width: 156px; height: 156px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
                     <div style="font-size:12.5px; font-weight:700; color:#334155;">Absolute Encoder</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK AHM36</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• 조향·구동축 절대 각도 실시간 피드백<br>• 전원 재인가 원점 유지 및 오도메트리 정밀화</div>
                   </div>
                 </div>
-                <div style="background: #f1f5f9; border: 1.2px solid #cbd5e1; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 16px;">
-                  <img src="./assets/amr_hmi_tuning.jpg" alt="VD2 HMI 정밀 보정" style="width: 98px; height: 132px; object-fit: cover; border-radius: 8px; border: 1.2px solid #94a3b8; flex-shrink: 0;">
+                <div style="background: #f1f5f9; border: 1.2px solid #cbd5e1; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 16px;">
+                  <img src="./assets/amr_hmi_tuning.jpg" alt="VD2 HMI 정밀 보정" style="width: 126px; height: 162px; object-fit: cover; border-radius: 8px; border: 1.2px solid #94a3b8; flex-shrink: 0;">
                   <div>
                     <div style="font-size:12.5px; font-weight:800; color:#1e293b;">실차 VD2 온보드 HMI 현장 튜닝</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">GLS · QR 0.05° / 1mm 보정</div>
