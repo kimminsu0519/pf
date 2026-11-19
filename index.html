@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>김민수 포트폴리오 - 로봇 S/W · 자율주행(ROS 2) 엔지니어</title>
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet" />
@@ -79,9 +80,9 @@
       --surface-muted: #f8fafc;
       --border-neutral: #cbd5e1;
       --t0-bg: #f1f5f9; --t0-accent: #1e40af; --t0-border: #cbd5e1;
-      --t1-bg: #ebf1fc; --t1-accent: #1d4ed8; --t1-dark: #1e3a8a; --t1-border: #c5d6f3; --t1-hl: #dbeafe;
+      --t1-bg: #eef2ff; --t1-accent: #4338ca; --t1-dark: #312e81; --t1-border: #c7d2fe; --t1-hl: #e0e7ff;
       --t2-bg: #e3f0d6; --t2-accent: #6aa832; --t2-dark: #2e7d32; --t2-border: #c8dbb8; --t2-hl: #e3f2d3;
-      --t3-bg: #ebf2fa; --t3-accent: #2563eb; --t3-dark: #1e40af; --t3-border: #c7dbf2; --t3-hl: #dbeafe;
+      --t3-bg: #eef1f5; --t3-accent: #334155; --t3-dark: #1e293b; --t3-border: #cbd5e1; --t3-hl: #e2e8f0;
       --t4-bg: #fdf2ea; --t4-accent: #d9531e; --t4-dark: #9a3412; --t4-border: #f2cbb5; --t4-hl: #ffedd5;
       --t5-bg: #eef7f6; --t5-accent: #0f766e; --t5-dark: #115e59; --t5-border: #bee3de; --t5-hl: #ccfbf1;
     }
@@ -663,7 +664,9 @@
     .deck .meta-row { display: flex; align-items: flex-start; gap: 14px; }
     .deck .meta-pill { color: var(--white); font-size: 14.5px; font-weight: 700; padding: 4px 14px; border-radius: 999px; min-width: 112px; text-align: center; flex-shrink: 0; }
     .deck .meta-val { font-size: 17px; color: var(--ink-900); font-weight: 500; line-height: 1.42; }
-    .deck .meta-val a { font-weight: 700; text-decoration: underline; }
+    .deck .meta-val a { font-weight: 600; text-decoration: none; color: #1d5fa7; }
+    .theme-lsm .meta-val a { color: var(--t1-accent); }
+    .theme-libo .meta-val a { color: var(--t2-dark); }
     .theme-lsm .meta-box, .theme-lsm .summary-box { border-color: var(--t1-border); } .theme-lsm .meta-pill { background: var(--t1-accent); }
     .theme-libo .meta-box, .theme-libo .summary-box { border-color: var(--t2-border); } .theme-libo .meta-pill { background: #82be48; }
     .theme-amr .meta-box, .theme-amr .summary-box { border-color: var(--t3-border); } .theme-amr .meta-pill { background: var(--t3-accent); }
@@ -704,6 +707,7 @@
     .metric-table th { background: #f1f5f9; font-weight: 700; color: var(--ink-900); font-size: 12.8px; }
     .metric-table td:first-child, .metric-table th:first-child { text-align: left; font-weight: 700; }
     .metric-table td.good { font-weight: 800; color: #1d4ed8; background: #eff6ff; }
+    .theme-lsm .metric-table td.good { color: var(--t1-accent); background: #eef2ff; }
 
     /* Inline edit highlights */
     body.editing [contenteditable="true"]:hover {
@@ -892,83 +896,65 @@
 </head>
 <body class="ppt-view">
   <div class="export-bar">
-    <strong>김민수 포트폴리오 · 로봇 S/W · 자율주행(ROS 2) 엔지니어</strong>
+    <strong>김민수 PORTFOLIO · 로봇 S/W · 자율주행(ROS 2) 엔지니어</strong>
     <div style="display:flex; gap:8px;">
+      <button class="st-btn" onclick="location.href='./resume.html'">이력서 (3p)</button>
       <button class="st-btn primary" onclick="setView('ppt')">PPT 발표 보기</button>
       <button class="st-btn" onclick="printDeck()">PDF 저장 (16:9)</button>
     </div>
   </div>
   <div class="doc-canvas">
     <section class="portfolio-section-wrap" style="display:block;">
-      <main class="deck" id="deck"><div class="slide-slot" id="pf-s1" style="width: 1475px; height: 829.688px;">
-      <section class="slide slide-cover" style="transform: scale(0.768229); transform-origin: left top;">
-        <div class="cover-grid-bg"></div>
-        <div class="cover-inner">
-          <div>
-            <span class="cover-kicker">ROBOTICS S/W &amp; AUTONOMOUS NAVIGATION PORTFOLIO</span>
-            <h1 class="cover-title" data-tid="p-1" contenteditable="false">
-              상상을 현실로 만드는<br>
-              <span>로보틱스 S/W 개발자, 김민수</span>입니다
+      <main class="deck" id="deck"><div class="slide-slot" id="pf-s1" style="width: 1017px; height: 572.062px;">
+      <section class="slide" style="background: rgb(255, 255, 255); color: rgb(15, 23, 42); padding: 84px 96px 60px; position: relative; overflow: hidden; transform: scale(0.529687); transform-origin: left top;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(29, 95, 167, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 95, 167, 0.045) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none;"></div>
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 10px; background: #1d4ed8;"></div>
+        <div style="position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div class="editable-text" style="font-size: 15px; font-weight: 700; letter-spacing: 2.2px; color: #1d4ed8;" data-tid="p-1" contenteditable="false">
+            2026 &nbsp;·&nbsp; ROBOTICS S/W ENGINEERING
+          </div>
+
+          <div style="margin: auto 0;">
+            <div style="width: 72px; height: 5px; background: #1d4ed8; border-radius: 999px; margin-bottom: 32px;"></div>
+            <h1 style="font-size: 84px; font-weight: 800; color: #0f172a; letter-spacing: -2.4px; line-height: 1.12;" data-tid="p-2" contenteditable="false">
+              김민수 PORTFOLIO
             </h1>
-            <p class="cover-sub" data-tid="p-2" contenteditable="false">
-              양산 라인 산업용 AMR 필드 엔지니어링 감각과 ROS 2 기반 자율주행·센서 퓨전(EKF)·FMS 통합 관제 구현 역량을 갖춘 엔지니어
-            </p>
-          </div>
-
-          <div class="cover-cards">
-            <div class="cover-card">
-              <span class="cover-card-num">PROJECT 01 · SIMULATION &amp; FMS</span>
-              <div class="cover-card-title" data-tid="p-3" contenteditable="false">LSM Bot</div>
-              <div class="cover-card-desc" data-tid="p-4" contenteditable="false">ROS 2 Jazzy · C++17 50Hz PID 도킹(1.9~3.4cm) · 6축 EKF(+91.6%) · 206노드 A* FSM</div>
-            </div>
-            <div class="cover-card">
-              <span class="cover-card-num">PROJECT 02 · HRI &amp; AI ROBOT</span>
-              <div class="cover-card-title" data-tid="p-5" contenteditable="false">LIBO</div>
-              <div class="cover-card-desc" data-tid="p-6" contenteditable="false">ROS 2 Humble · MediaPipe 5-Frame 슬라이딩 필터 · 음성/OpenAI LLM 비동기 제어</div>
-            </div>
-            <div class="cover-card">
-              <span class="cover-card-num">WORK EXPERIENCE · 10 MONTHS</span>
-              <div class="cover-card-title" data-tid="p-7" contenteditable="false">AMR 제어팀 (인턴)</div>
-              <div class="cover-card-desc" data-tid="p-8" contenteditable="false">SK배터리 39대 · 현대모비스 40대 · LiDAR-LOC 비대칭 반사판 · nanoScan3 · PLC/PIO</div>
-            </div>
-            <div class="cover-card">
-              <span class="cover-card-num">PROJECT 03 · THESIS &amp; HANIUM</span>
-              <div class="cover-card-title" data-tid="p-9" contenteditable="false">AutoSavior</div>
-              <div class="cover-card-desc" data-tid="p-10" contenteditable="false">YOLOv8n(mAP@50 0.926) · Hailo-8 엣지 NPU 배포 · 한이음 드림업 동상 · 학사논문</div>
+            <div class="cover-sub" style="margin-top: 24px; font-size: 32px; font-weight: 600; color: #1d4ed8; letter-spacing: -0.5px;" data-tid="p-3" contenteditable="false">
+              로봇 S/W · 자율주행(ROS 2) 엔지니어
             </div>
           </div>
 
-          <div class="cover-footer">
-            <span>김민수 (1999.05.19) · 인천대학교 정보통신공학과 공학사 우등 졸업</span>
-            <span>ajferhcz153@gmail.com · 010-9900-9256 · github.com/kimminsu0519</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 22px; border-top: 1.5px solid #e2e8f0; font-size: 16.5px; color: #475569; font-weight: 500;">
+            <span class="editable-text" data-tid="p-4" contenteditable="false"><strong style="color: #0f172a; font-weight: 700;">김민수 (Kim Minsu)</strong> · 1999.05.19</span>
+            <span><a href="mailto:ajferhcz153@gmail.com" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">ajferhcz153@gmail.com</a> · 010-9900-9256 · <a href="https://github.com/kimminsu0519" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">github.com/kimminsu0519</a> · <a href="https://kimminsu0519.github.io/pf" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">kimminsu0519.github.io/pf</a></span>
           </div>
         </div>
         <div class="page-num" style="color: #94a3b8;">1</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s2" style="width: 1475px; height: 829.688px;">
-      <section class="slide" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s2" style="width: 1017px; height: 572.062px;">
+      <section class="slide" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo" style="color: #1e40af;">PROFILE &amp; STACK</span>
             <span class="divider" style="background-color: #1e40af;"></span>
-            <span class="header-sub" data-tid="p-11" contenteditable="false">엔지니어 프로필 · 학력/경력/수상 · 핵심 기술 스택</span>
+            <span class="header-sub" data-tid="p-5" contenteditable="false">엔지니어 프로필 · 학력/경력/수상 · 핵심 기술 스택</span>
           </div>
         </div>
 
         <div class="profile-layout">
           <!-- 좌측: 프로필 & 자격/학력/수상 (수직 중앙 정렬) -->
-          <div class="card" style="padding: 32px 32px; justify-content: space-between; gap: 16px;">
+          <div class="card" style="padding: 34px 32px; justify-content: flex-start; gap: 22px;">
             <div class="profile-head" style="padding-bottom: 20px; margin-bottom: 0;">
               <img class="profile-pic" style="width: 126px; height: 162px;" src="./assets/profile_photo.jpg" alt="김민수 증명사진">
               <div>
                 <div class="profile-name">김민수</div>
-                <div class="profile-role" style="font-size: 17.5px;" data-tid="p-12" contenteditable="false">로봇 S/W · 자율주행(ROS 2) 엔지니어</div>
+                <div class="profile-role" style="font-size: 17.5px;" data-tid="p-6" contenteditable="false">로봇 S/W · 자율주행(ROS 2) 엔지니어</div>
                 <div class="profile-kv" style="font-size: 15.5px; line-height: 1.72;">
                   1999.05.19 · 010-9900-9256<br>
-                  <a href="mailto:ajferhcz153@gmail.com">ajferhcz153@gmail.com</a><br>
-                  <a href="https://github.com/kimminsu0519" target="_blank" rel="noopener">github.com/kimminsu0519</a><br>
-                  <a href="https://kimminsu0519.github.io/pf" target="_blank" rel="noopener">kimminsu0519.github.io/pf</a>
+                  <a href="mailto:ajferhcz153@gmail.com" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">ajferhcz153@gmail.com</a><br>
+                  <a href="https://github.com/kimminsu0519" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">github.com/kimminsu0519</a><br>
+                  <a href="https://kimminsu0519.github.io/pf" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">kimminsu0519.github.io/pf</a>
                 </div>
               </div>
             </div>
@@ -976,33 +962,33 @@
             <div>
               <div class="info-block-title" style="margin: 0 0 8px; letter-spacing: 0.3px;">EDUCATION &amp; TRAINING</div>
               <ul class="info-mini-list" style="gap: 9px;">
-                <li data-tid="p-13" contenteditable="false"><strong>인천대학교 정보통신공학과</strong> (2018.03 ~ 2025.02)<br><span style="font-size: 14.2px; color: #475569;">공학사 우등 졸업 · 전체 평점 3.82/4.5 (전공 3.83/4.5)</span></li>
-                <li data-tid="p-14" contenteditable="false"><strong>에드인에듀 아카데미</strong> (2025.02 ~ 2025.08 · 960시간)<br><span style="font-size: 14.2px; color: #475569;">ROS 2 · AI 자율주행 로봇 개발자 양성과정 수료</span></li>
+                <li data-tid="p-7" contenteditable="false"><strong>인천대학교 정보통신공학과</strong> (2018.03 ~ 2025.02)<br><span style="font-size: 14.2px; color: #475569;">공학사 졸업 · 전체 평점 3.82/4.5 (전공 3.83/4.5)</span></li>
+                <li data-tid="p-8" contenteditable="false"><strong>에드인에듀 아카데미</strong> (2025.02 ~ 2025.08 · 960시간)<br><span style="font-size: 14.2px; color: #475569;">ROS 2 · AI 자율주행 로봇 개발자 양성과정 수료</span></li>
               </ul>
             </div>
 
             <div>
               <div class="info-block-title" style="margin: 0 0 8px; letter-spacing: 0.3px;">CAREER</div>
               <ul class="info-mini-list" style="gap: 6px;">
-                <li data-tid="p-15" contenteditable="false"><strong>(주)넥스트디앤에이 AMR 제어팀 인턴</strong> (2021.12 ~ 2022.09 · 10개월)<br><span style="font-size: 14.2px; color: #475569;">미국 SK배터리(39대)·현대모비스(40대)·한화큐셀 양산 라인 셋업</span></li>
+                <li data-tid="p-9" contenteditable="false"><strong>(주)넥스트디앤에이 AMR 제어팀 인턴</strong> (2021.12 ~ 2022.09 · 10개월)<br><span style="font-size: 14.2px; color: #475569;">미국 SK배터리(39대)·현대모비스(40대)·한화큐셀 양산 라인 셋업</span></li>
               </ul>
             </div>
 
             <div>
               <div class="info-block-title" style="margin: 0 0 8px; letter-spacing: 0.3px;">CERTIFICATIONS &amp; AWARDS</div>
               <ul class="info-mini-list" style="gap: 8px;">
-                <li data-tid="p-16" contenteditable="false"><strong>정보처리기사</strong> (2026.09.11) · <strong>OPIc IM1</strong> · <strong>운전면허 2종 보통</strong></li>
-                <li data-tid="p-17" contenteditable="false"><strong>2025 WCRC AI 주행로봇(대학일반) — 은상 (2위)</strong> <span style="font-size: 14px; color: #475569;">(2025.08 · 팀장 PM/시스템 아키텍처)</span></li>
-                <li data-tid="p-18" contenteditable="false"><strong>스마트해상물류 × ICT멘토링 공모전 — 동상</strong> <span style="font-size: 14px; color: #475569;">(2024.12 · AutoSavior)</span></li>
+                <li data-tid="p-10" contenteditable="false"><strong>정보처리기사</strong> (2026.09.11) · <strong>OPIc IM1</strong> · <strong>운전면허 2종 보통</strong></li>
+                <li data-tid="p-11" contenteditable="false"><strong>2025 WCRC AI 주행로봇(대학일반) — 은상 (2위)</strong> <span style="font-size: 14px; color: #475569;">(2025.08 · 팀장 PM/시스템 아키텍처)</span></li>
+                <li data-tid="p-12" contenteditable="false"><strong>스마트해상물류 × ICT멘토링 공모전 — 동상</strong> <span style="font-size: 14px; color: #475569;">(2024.12 · AutoSavior)</span></li>
               </ul>
             </div>
           </div>
 
           <!-- 우측: 핵심 기술 스택 2×2 (실무 적용 근거 연동) -->
-          <div class="card" style="padding: 30px 34px; justify-content: flex-start; gap: 20px;">
+          <div class="card" style="padding: 34px 34px; justify-content: flex-start; gap: 24px;">
             <span class="card-badge" style="background: #1e40af; margin-bottom: 0;">Core Technical Stack &amp; Field/Sim Verification</span>
-            <div class="skills-grid" style="flex: 1; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 20px;">
-              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+            <div class="skills-grid" style="gap: 20px;">
+              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px;">
                 <div>
                   <div class="skill-group-title" style="font-size: 17.5px; margin-bottom: 12px;">Robotics &amp; Navigation</div>
                   <div class="pill-wrap" style="gap: 8px;">
@@ -1014,15 +1000,15 @@
                   </div>
                 </div>
                 <ul class="bullet-list" style="gap: 7px; margin: 4px 0;">
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-19" contenteditable="false">Gazebo 휠 슬립 환경 6축 자이로 EKF(<code>yaw=false</code>) 및 AMCL 원점 정합</li>
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-20" contenteditable="false">206노드 토폴로지 A* 순차 디스패처 · 50Hz PID 정밀 도킹 구현</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-13" contenteditable="false">Gazebo 휠 슬립 환경 6축 자이로 EKF(<code>yaw=false</code>) 및 AMCL 원점 정합</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-14" contenteditable="false">206노드 토폴로지 A* 순차 디스패처 · 50Hz PID 정밀 도킹 구현</li>
                 </ul>
                 <div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-size: 14px; color: #334155;">
                   <strong style="color: #1e40af;">검증:</strong> LSM Bot C++17(39~108x) · 50Hz PID(1.9~3.4cm) · EKF(+91.6%)
                 </div>
               </div>
 
-              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px;">
                 <div>
                   <div class="skill-group-title" style="font-size: 17.5px; margin-bottom: 12px;">Languages &amp; Industrial Control</div>
                   <div class="pill-wrap" style="gap: 8px;">
@@ -1034,15 +1020,15 @@
                   </div>
                 </div>
                 <ul class="bullet-list" style="gap: 7px; margin: 4px 0;">
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-21" contenteditable="false">50m 반복 구간 스캔 오매칭 규명 및 비대칭 반사판 배치·도킹 1mm 티칭</li>
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-22" contenteditable="false"><code>Safety Designer</code> 구역 분할 및 Input Delay 20ms로 세이프티 오정지 해소</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-15" contenteditable="false">50m 반복 구간 스캔 오매칭 규명 및 비대칭 반사판 배치·도킹 1mm 티칭</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-16" contenteditable="false"><code>Safety Designer</code> 구역 분할 및 Input Delay 20ms로 세이프티 오정지 해소</li>
                 </ul>
                 <div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-size: 14px; color: #334155;">
                   <strong style="color: #1e40af;">검증:</strong> SK·현대모비스 양산 79대 셋업 · 이탈 재발 0건 · 20ms 지연 보정
                 </div>
               </div>
 
-              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px;">
                 <div>
                   <div class="skill-group-title" style="font-size: 17.5px; margin-bottom: 12px;">AI Vision &amp; Edge Deployment</div>
                   <div class="pill-wrap" style="gap: 8px;">
@@ -1054,15 +1040,15 @@
                   </div>
                 </div>
                 <ul class="bullet-list" style="gap: 7px; margin: 4px 0;">
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-23" contenteditable="false">화염 1,600장 증강 YOLOv8n 학습 및 <code>Hailo-8 NPU</code> 온보드 양자화 배포</li>
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-24" contenteditable="false">MediaPipe 5-Frame 합의·0.3s 선형 감속 및 WakeWord·LLM 9종 의도 제어</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-17" contenteditable="false">화염 1,600장 증강 YOLOv8n 학습 및 <code>Hailo-8 NPU</code> 온보드 양자화 배포</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-18" contenteditable="false">MediaPipe 5-Frame 합의·0.3s 선형 감속 및 WakeWord·LLM 9종 의도 제어</li>
                 </ul>
                 <div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-size: 14px; color: #334155;">
                   <strong style="color: #1e40af;">검증:</strong> AutoSavior mAP@50 0.926 · LIBO 5-Frame · 15s→1.5s 지연 단축
                 </div>
               </div>
 
-              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+              <div class="skill-group" style="padding: 24px 26px; display: flex; flex-direction: column; justify-content: flex-start; gap: 15px;">
                 <div>
                   <div class="skill-group-title" style="font-size: 17.5px; margin-bottom: 12px;">Infra, Comm &amp; Database</div>
                   <div class="pill-wrap" style="gap: 8px;">
@@ -1073,8 +1059,8 @@
                   </div>
                 </div>
                 <ul class="bullet-list" style="gap: 7px; margin: 4px 0;">
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-25" contenteditable="false">분산 ROS 2 커스텀 규격(<code>lsm/libo_interfaces</code>) 및 <code>ament_index</code> 이식성 구축</li>
-                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-26" contenteditable="false">UDP 4MB 수신·추론 스레드 분리(30fps) 및 Port 9090 WebSocket FMS 연동</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-19" contenteditable="false">분산 ROS 2 커스텀 규격(<code>lsm/libo_interfaces</code>) 및 <code>ament_index</code> 이식성 구축</li>
+                  <li style="font-size: 14.5px; line-height: 1.45;" data-tid="p-20" contenteditable="false">UDP 4MB 수신·추론 스레드 분리(30fps) 및 Port 9090 WebSocket FMS 연동</li>
                 </ul>
                 <div style="padding-top: 10px; border-top: 1px dashed #cbd5e1; font-size: 14px; color: #334155;">
                   <strong style="color: #1e40af;">검증:</strong> Custom ROS 2 인터페이스(lsm/libo) · Web FMS &amp; Cloud DB 구축
@@ -1086,35 +1072,35 @@
         <div class="page-num">2</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s3" style="width: 1475px; height: 829.688px;">
-      <section class="slide" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s3" style="width: 1017px; height: 572.062px;">
+      <section class="slide" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo" style="color: #1e40af;">PORTFOLIO CONTENTS</span>
             <span class="divider" style="background-color: #1e40af;"></span>
-            <span class="header-sub" data-tid="p-27" contenteditable="false">자율주행 · 필드 엔지니어링 · AI 로보틱스 핵심 경험 로드맵</span>
+            <span class="header-sub" data-tid="p-21" contenteditable="false">자율주행 · 필드 엔지니어링 · AI 로보틱스 핵심 경험 로드맵</span>
           </div>
         </div>
 
-        <div style="flex: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 14px;">
-          <a class="card" href="#pf-s4" onclick="jumpTo('pf-s4'); return false;" style="padding: 32px 36px; border-left: 6px solid #1d4ed8; justify-content: space-between; text-decoration: none;">
+        <div style="flex: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 24px; margin-top: 22px;">
+          <a class="card" href="#pf-s4" onclick="jumpTo('pf-s4'); return false;" style="padding: 32px 36px; border-color: #c7d2fe; border-left: 6px solid #4338ca; justify-content: flex-start; gap: 22px; text-decoration: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span class="card-badge" style="background: #1d4ed8; margin-bottom: 0; font-size: 15px;">PROJECT 01 · SIMULATION &amp; FMS</span>
-              <span style="font-size: 20px; font-weight: 800; color: #1d4ed8;">04 ~ 07p</span>
+              <span class="card-badge" style="background: #4338ca; margin-bottom: 0; font-size: 15px;">PROJECT 01 · SIMULATION &amp; FMS</span>
+              <span style="font-size: 20px; font-weight: 800; color: #4338ca;">04 ~ 07p</span>
             </div>
             <div>
               <div style="font-size: 30px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">LSM Bot <span style="font-size: 18px; font-weight: 600; color: #475569;">(2026.07 ~ 2026.09 · 1인)</span></div>
-              <div style="font-size: 18.5px; font-weight: 600; color: #1e3a8a; margin-top: 8px;">스마트 물류 센터 자율주행 AMR 및 FMS 통합 관제 시스템</div>
+              <div style="font-size: 18.5px; font-weight: 600; color: #312e81; margin-top: 8px;">스마트 물류 센터 자율주행 AMR 및 FMS 통합 관제 시스템</div>
               <div style="font-size: 16.5px; color: #475569; margin-top: 10px; line-height: 1.5;">양산 현장 슬립·좌표 문제를 Gazebo 1:1 월드로 재현하고, 무노이즈 GT 스냅을 차단한 6축 EKF(+91.6%)와 50Hz PID 도킹(1.9~3.4cm)·206노드 A*로 28.14m 슬립·정상 E2E 완주</div>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">6축 자이로 EKF (XY +91.6%)</span>
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">206노드 A* 순차 디스패치</span>
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">C++17 50Hz PID 도킹(1.9~3.4cm)</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #eef2ff; border-color: #c7d2fe; color: #312e81;">6축 자이로 EKF (XY +91.6%)</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #eef2ff; border-color: #c7d2fe; color: #312e81;">206노드 A* 순차 디스패치</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #eef2ff; border-color: #c7d2fe; color: #312e81;">C++17 50Hz PID 도킹(1.9~3.4cm)</span>
             </div>
           </a>
 
-          <a class="card" href="#pf-s7" onclick="jumpTo('pf-s7'); return false;" style="padding: 32px 36px; border-left: 6px solid #6aa832; border-color: var(--t2-border); border-left-color: #6aa832; justify-content: space-between; text-decoration: none;">
+          <a class="card" href="#pf-s7" onclick="jumpTo('pf-s7'); return false;" style="padding: 32px 36px; border-left: 6px solid #6aa832; border-color: var(--t2-border); border-left-color: #6aa832; justify-content: flex-start; gap: 22px; text-decoration: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <span class="card-badge" style="background: #6aa832; margin-bottom: 0; font-size: 15px;">PROJECT 02 · HRI &amp; AI ROBOT</span>
               <span style="font-size: 20px; font-weight: 800; color: #5c8d2e;">08 ~ 10p</span>
@@ -1131,24 +1117,24 @@
             </div>
           </a>
 
-          <a class="card" href="#pf-s10" onclick="jumpTo('pf-s10'); return false;" style="padding: 32px 36px; border-left: 6px solid #2563eb; justify-content: space-between; text-decoration: none;">
+          <a class="card" href="#pf-s10" onclick="jumpTo('pf-s10'); return false;" style="padding: 32px 36px; border-color: #cbd5e1; border-left: 6px solid #334155; justify-content: flex-start; gap: 22px; text-decoration: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span class="card-badge" style="background: #2563eb; margin-bottom: 0; font-size: 15px;">WORK EXPERIENCE · FIELD ENGINEERING</span>
-              <span style="font-size: 20px; font-weight: 800; color: #2563eb;">11 ~ 12p</span>
+              <span class="card-badge" style="background: #334155; margin-bottom: 0; font-size: 15px;">WORK EXPERIENCE · FIELD ENGINEERING</span>
+              <span style="font-size: 20px; font-weight: 800; color: #334155;">11 ~ 12p</span>
             </div>
             <div>
               <div style="font-size: 30px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">AMR 제어팀 (인턴) <span style="font-size: 18px; font-weight: 600; color: #475569;">(2021.12 ~ 2022.09 · 10개월)</span></div>
-              <div style="font-size: 18.5px; font-weight: 600; color: #1e40af; margin-top: 8px;">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수</div>
+              <div style="font-size: 18.5px; font-weight: 600; color: #334155; margin-top: 8px;">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수</div>
               <div style="font-size: 16.5px; color: #475569; margin-top: 10px; line-height: 1.5;">미국 SK배터리(39대)·현대모비스 대구(40대)·한화큐셀 양산 라인 셋업 및 LiDAR-LOC 비대칭 반사판 배치·nanoScan3 세이프티·PIO 디버깅 수행</div>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">양산 플릿 79대 셋업</span>
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">50m 구간 이탈 재발 0건</span>
-              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px;">0.05°/1mm 도킹 · 20ms 지연 보정</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #f1f5f9; border-color: #cbd5e1; color: #1e293b;">양산 플릿 79대 셋업</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #f1f5f9; border-color: #cbd5e1; color: #1e293b;">50m 구간 이탈 재발 0건</span>
+              <span class="tech-chip" style="font-size: 14px; padding: 6px 12px; background: #f1f5f9; border-color: #cbd5e1; color: #1e293b;">0.05°/1mm 도킹 · 20ms 지연 보정</span>
             </div>
           </a>
 
-          <a class="card" href="#pf-s12" onclick="jumpTo('pf-s12'); return false;" style="padding: 32px 36px; border-left: 6px solid #d9531e; border-color: var(--t4-border); border-left-color: #d9531e; justify-content: space-between; text-decoration: none;">
+          <a class="card" href="#pf-s12" onclick="jumpTo('pf-s12'); return false;" style="padding: 32px 36px; border-left: 6px solid #d9531e; border-color: var(--t4-border); border-left-color: #d9531e; justify-content: flex-start; gap: 22px; text-decoration: none;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <span class="card-badge" style="background: #d9531e; margin-bottom: 0; font-size: 15px;">PROJECT 03 · THESIS &amp; HANIUM</span>
               <span style="font-size: 20px; font-weight: 800; color: #d9531e;">13 ~ 14p</span>
@@ -1173,13 +1159,13 @@
         <div class="page-num">3</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s4" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-lsm" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s4" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-lsm" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">PROJECT 01 · LSM Bot</span>
             <span class="divider"></span>
-            <span class="header-sub" data-tid="p-28" contenteditable="false">스마트 물류 센터 자율주행 AMR 및 FMS 통합 관제 시스템 (1/4 · 개요 및 아키텍처)</span>
+            <span class="header-sub" data-tid="p-22" contenteditable="false">스마트 물류 센터 자율주행 AMR 및 FMS 통합 관제 시스템 (1/4 · 개요 및 아키텍처)</span>
           </div>
         </div>
 
@@ -1188,46 +1174,46 @@
             <div class="meta-box">
               <div class="meta-row">
                 <span class="meta-pill">개발 기간</span>
-                <span class="meta-val" data-tid="p-29" contenteditable="false">2026.07 ~ 2026.09 (이후 EKF Ablation · 5단계 FSM E2E 고도화)</span>
+                <span class="meta-val" data-tid="p-23" contenteditable="false">2026.07 ~ 2026.09 (이후 EKF Ablation · 5단계 FSM E2E 고도화)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">참여 인력</span>
-                <span class="meta-val" data-tid="p-30" contenteditable="false">1인 단독 프로젝트 (C++17 제어·FSM·A* · EKF · Gazebo · FMS 풀스택)</span>
+                <span class="meta-val" data-tid="p-24" contenteditable="false">1인 단독 프로젝트 (C++17 제어·FSM·A* · EKF · Gazebo · FMS 풀스택)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">기술 스택</span>
-                <span class="meta-val" data-tid="p-31" contenteditable="false">ROS 2 Jazzy, C++17 (rclcpp · Eigen3), Python 3.12, Gazebo Harmonic 8.11, Nav2 (AMCL, EKF), WebSocket</span>
+                <span class="meta-val" data-tid="p-25" contenteditable="false">ROS 2 Jazzy, C++17 (rclcpp · Eigen3), Python 3.12, Gazebo Harmonic 8.11, Nav2 (AMCL, EKF), WebSocket</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">저장소</span>
-                <span class="meta-val" data-tid="p-32" contenteditable="false"><a href="https://github.com/kimminsu0519/LSM_Bot" target="_blank" rel="noopener">github.com/kimminsu0519/LSM_Bot</a></span>
+                <span class="meta-val" data-tid="p-26" contenteditable="false"><a href="https://github.com/kimminsu0519/LSM_Bot" target="_blank" rel="noopener">github.com/kimminsu0519/LSM_Bot</a></span>
               </div>
             </div>
 
-            <div class="summary-box" style="justify-content: space-between; gap: 20px; padding: 28px 30px;">
+            <div class="summary-box" style="justify-content: flex-start; gap: 28px; padding: 30px 30px;">
               <div>
                 <span class="card-badge" style="margin-bottom: 14px;">프로젝트 개요 및 핵심 구현</span>
-                <ul class="bullet-list" style="gap: 14px;">
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-33" contenteditable="false"><b>현장 기반 시뮬레이터 구축</b>: 양산 창고 동선을 1:1 Gazebo 3D 월드로 제작하고 마찰 분리(<code>slip_mode</code>) 슬립 벤치마크 구현</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-34" contenteditable="false"><b>6축 자이로 EKF &amp; AMCL 원점 정합</b>: GT 스냅 차단(<code>yaw=false</code>) 4-Way 검증으로 <b>XY +91.6% · Yaw +86.4%</b> 개선 및 AMCL 원점 정렬(<code>0.09cm</code>)</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-35" contenteditable="false"><b>206노드 A* 순차 디스패처</b>: 10Hz <code>SequentialNavigator</code>와 <code>cancel_active_route</code>로 통로 이탈·경합 원천 방지</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-36" contenteditable="false"><b>5단계 FSM · 슬립 E2E 풀 사이클</b>: 50Hz PID 도킹·Port 9090 관제 연동으로 <b>28.14m 완주(슬립 210.47초 · 정상 216.17초)</b></li>
+                <ul class="bullet-list" style="gap: 17px;">
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-27" contenteditable="false"><b>현장 기반 시뮬레이터 구축</b>: 양산 창고 동선을 1:1 Gazebo 3D 월드로 제작하고 마찰 분리(<code>slip_mode</code>) 슬립 벤치마크 구현</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-28" contenteditable="false"><b>6축 자이로 EKF &amp; AMCL 원점 정합</b>: GT 스냅 차단(<code>yaw=false</code>) 4-Way 검증으로 <b>XY +91.6% · Yaw +86.4%</b> 개선 및 AMCL 원점 정렬(<code>0.09cm</code>)</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-29" contenteditable="false"><b>206노드 A* 순차 디스패처</b>: 10Hz <code>SequentialNavigator</code>와 <code>cancel_active_route</code>로 통로 이탈·경합 원천 방지</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-30" contenteditable="false"><b>5단계 FSM · 슬립 E2E 풀 사이클</b>: 50Hz PID 도킹·Port 9090 관제 연동으로 <b>28.14m 완주(슬립 210.47초 · 정상 216.17초)</b></li>
                 </ul>
               </div>
 
               <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding-top: 16px; border-top: 1.5px solid #e2e8f0;">
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #1e40af;">EKF 4-Way 오차 개선</div>
+                <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 11px 12px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #3730a3;">EKF 4-Way 오차 개선</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">XY +91.6%</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">0.3825→0.0322m · Yaw +86.4%</div>
                 </div>
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #1d4ed8;">토폴로지 · 관제</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #4338ca;">토폴로지 · 관제</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">206노드 A*</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">5단계 FSM (10.000 Hz)</div>
                 </div>
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #1e40af;">슬립/정상 E2E 실증</div>
+                <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 11px 12px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #3730a3;">슬립/정상 E2E 실증</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">210.47초</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">28.14m · 슬립 도킹 1.90cm</div>
                 </div>
@@ -1242,7 +1228,7 @@
                 <svg viewBox="0 0 1050 205" style="width:100%; height:200px;">
                   <defs>
                     <marker id="arr-lsm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                      <path d="M0 1 L10 5 L0 9 z" fill="#1d4ed8"></path>
+                      <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
                     </marker>
                   </defs>
                   <!-- Gazebo -->
@@ -1255,39 +1241,39 @@
                   <text x="115" y="135" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e293b">6-Axis MEMS IMU (83~91Hz)</text>
                   <text x="115" y="154" text-anchor="middle" font-size="11" fill="#475569">Noise/Bias 인가 (vyaw, ax)</text>
 
-                  <line x1="220" y1="102" x2="262" y2="102" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="220" y1="102" x2="262" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
 
                   <!-- Localization & Nav2 -->
-                  <rect x="265" y="20" width="275" height="165" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                  <text x="402" y="45" text-anchor="middle" font-size="14" font-weight="800" fill="#1e3a8a">ROS 2 Localization &amp; Nav2</text>
-                  <rect x="281" y="58" width="243" height="52" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"></rect>
-                  <text x="402" y="79" text-anchor="middle" font-size="13" font-weight="800" fill="#1d4ed8">robot_localization EKF (30.01Hz)</text>
+                  <rect x="265" y="20" width="275" height="165" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.8"></rect>
+                  <text x="402" y="45" text-anchor="middle" font-size="14" font-weight="800" fill="#312e81">ROS 2 Localization &amp; Nav2</text>
+                  <rect x="281" y="58" width="243" height="52" rx="6" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"></rect>
+                  <text x="402" y="79" text-anchor="middle" font-size="13" font-weight="800" fill="#4338ca">robot_localization EKF (30.01Hz)</text>
                   <text x="402" y="98" text-anchor="middle" font-size="11.5" fill="#334155">/odometry/filtered + odom→base_footprint</text>
                   <rect x="281" y="118" width="243" height="50" rx="6" fill="#ffffff" stroke="#64748b"></rect>
                   <text x="402" y="139" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">AMCL + slam_toolbox + Nav2</text>
                   <text x="402" y="157" text-anchor="middle" font-size="11" fill="#475569">원점 [-2.4,-0.3] · 180° 초기 헤딩 정합</text>
 
-                  <line x1="540" y1="102" x2="582" y2="102" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="540" y1="102" x2="582" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
 
                   <!-- C++17 Core & Dispatch -->
-                  <rect x="585" y="20" width="245" height="165" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                  <text x="707" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">C++17 Core &amp; Dispatch</text>
-                  <rect x="599" y="51" width="217" height="36" rx="5" fill="#eff6ff" stroke="#93c5fd"></rect>
+                  <rect x="585" y="20" width="245" height="165" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
+                  <text x="707" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#312e81">C++17 Core &amp; Dispatch</text>
+                  <rect x="599" y="51" width="217" height="36" rx="5" fill="#eef2ff" stroke="#a5b4fc"></rect>
                   <text x="707" y="67" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0f172a">amr_state_machine_cpp (C++17)</text>
                   <text x="707" y="81" text-anchor="middle" font-size="10.2" fill="#475569">5단계 FSM · 10Hz Status · MTE(4)</text>
-                  <rect x="599" y="93" width="217" height="36" rx="5" fill="#eff6ff" stroke="#2563eb"></rect>
-                  <text x="707" y="109" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1d4ed8">precision_docking_node (C++17)</text>
+                  <rect x="599" y="93" width="217" height="36" rx="5" fill="#eef2ff" stroke="#4f46e5"></rect>
+                  <text x="707" y="109" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4338ca">precision_docking_node (C++17)</text>
                   <text x="707" y="123" text-anchor="middle" font-size="10.2" fill="#475569">50Hz PID 도킹(1.9~3.4cm) · /scan 안전</text>
                   <rect x="599" y="135" width="217" height="39" rx="5" fill="#f8fafc" stroke="#94a3b8"></rect>
                   <text x="707" y="152" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Vector A* (C++17) &amp; SeqNav (10Hz)</text>
                   <text x="707" y="167" text-anchor="middle" font-size="10.2" fill="#475569">206노드 최단 경로 · cancel_active_route</text>
 
-                  <line x1="830" y1="102" x2="872" y2="102" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-lsm)"></line>
+                  <line x1="830" y1="102" x2="872" y2="102" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-lsm)"></line>
 
                   <!-- FMS Web -->
                   <rect x="875" y="20" width="165" height="165" rx="10" fill="#0f172a"></rect>
                   <text x="957" y="50" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">WebSocket FMS</text>
-                  <text x="957" y="74" text-anchor="middle" font-size="12" fill="#93c5fd">Port 9090 Bridge</text>
+                  <text x="957" y="74" text-anchor="middle" font-size="12" fill="#a5b4fc">Port 9090 Bridge</text>
                   <rect x="890" y="90" width="135" height="76" rx="6" fill="#1e293b" stroke="#334155"></rect>
                   <text x="957" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">실시간 2D 관제</text>
                   <text x="957" y="132" text-anchor="middle" font-size="11" fill="#cbd5e1">5-Step FSM UI</text>
@@ -1304,25 +1290,25 @@
                     <div class="proof-img-box light" style="height: 255px;">
                       <img src="./assets/lsm_01_gazebo.png" class="cover" alt="Gazebo 3D 물류 창고">
                     </div>
-                    <div class="proof-caption" data-tid="p-37" contenteditable="false">▲ 1:1 스케일 Gazebo 3D 창고 월드</div>
+                    <div class="proof-caption" data-tid="p-31" contenteditable="false">▲ 1:1 스케일 Gazebo 3D 창고 월드</div>
                   </div>
                   <div class="proof-item" style="padding: 10px;">
                     <div class="proof-img-box light" style="height: 255px;">
                       <img src="./assets/lsm_02_rviz.png" alt="RViz2 AMCL Nav2 정합">
                     </div>
-                    <div class="proof-caption" data-tid="p-38" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
+                    <div class="proof-caption" data-tid="p-32" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
                   </div>
                   <div class="proof-item" style="padding: 10px;">
                     <div class="proof-img-box light" style="height: 255px;">
                       <img src="./assets/lsm_03_fms.png" alt="FMS 웹 관제 대시보드">
                     </div>
-                    <div class="proof-caption" data-tid="p-39" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
+                    <div class="proof-caption" data-tid="p-33" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
                   </div>
                 </div>
               </div>
 
-              <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #1d4ed8; border-radius: 10px; padding: 12px 18px; font-size: 13.8px; color: #0f172a; font-weight: 600;">
-                <span><strong style="color: #1d4ed8;">Verification Gate PASS</strong> · C++17 (-O3) 8 Packages (0 Errors)</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #4338ca; border-radius: 10px; padding: 12px 18px; font-size: 13.8px; color: #0f172a; font-weight: 600;">
+                <span><strong style="color: #4338ca;">Verification Gate PASS</strong> · C++17 (-O3) 8 Packages (0 Errors)</span>
                 <span><code>/odometry/filtered</code> 30.01Hz · <code>Zero</code> Hardcoded Paths (<code>ament_index</code>)</span>
               </div>
             </div>
@@ -1331,15 +1317,15 @@
         <div class="page-num">4</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s5" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-lsm" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s5" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-lsm" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">LSM Bot</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving #1 : AMCL 원점 정합 &amp; 6축 자이로 EKF 4-Way (2/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-40" contenteditable="false">무노이즈 GT 스냅을 배제한 6축 MEMS 자이로 EKF 4-Way 검증으로 슬립 오차 XY +91.6%(0.0322m) · Yaw +86.4% 개선</h1>
+          <h1 class="main-title" data-tid="p-34" contenteditable="false">무노이즈 GT 스냅을 배제한 6축 MEMS 자이로 EKF 4-Way 검증으로 슬립 오차 XY +91.6%(0.0322m) · Yaw +86.4% 개선</h1>
         </div>
 
         <div class="middle-section">
@@ -1350,30 +1336,30 @@
                 <svg viewBox="0 0 340 330" style="width: 100%; height: 335px;">
                   <defs>
                     <marker id="tf-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                      <path d="M0 1 L10 5 L0 9 z" fill="#1d4ed8"></path>
+                      <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
                     </marker>
                   </defs>
-                  <text x="170" y="18" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">ROS 2 TF Tree (3 Publishers · 충돌 0건)</text>
+                  <text x="170" y="18" text-anchor="middle" font-size="13.5" font-weight="800" fill="#312e81">ROS 2 TF Tree (3 Publishers · 충돌 0건)</text>
 
                   <!-- map -->
                   <rect x="95" y="30" width="150" height="38" rx="8" fill="#ffffff" stroke="#1e293b" stroke-width="1.6"></rect>
                   <text x="170" y="54" text-anchor="middle" font-size="14.5" font-weight="800" fill="#0f172a">map</text>
 
-                  <line x1="170" y1="68" x2="170" y2="104" stroke="#1d4ed8" stroke-width="2.2" marker-end="url(#tf-arr)"></line>
-                  <rect x="180" y="75" width="132" height="22" rx="4" fill="#eff6ff" stroke="#bfdbfe"></rect>
-                  <text x="246" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">amcl (10.37 Hz)</text>
+                  <line x1="170" y1="68" x2="170" y2="104" stroke="#4338ca" stroke-width="2.2" marker-end="url(#tf-arr)"></line>
+                  <rect x="180" y="75" width="132" height="22" rx="4" fill="#eef2ff" stroke="#c7d2fe"></rect>
+                  <text x="246" y="90" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3730a3">amcl (10.37 Hz)</text>
 
                   <!-- odom -->
-                  <rect x="95" y="106" width="150" height="38" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                  <text x="170" y="130" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1d4ed8">odom</text>
+                  <rect x="95" y="106" width="150" height="38" rx="8" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
+                  <text x="170" y="130" text-anchor="middle" font-size="14.5" font-weight="800" fill="#4338ca">odom</text>
 
-                  <line x1="170" y1="144" x2="170" y2="188" stroke="#1d4ed8" stroke-width="2.4" marker-end="url(#tf-arr)"></line>
-                  <rect x="180" y="153" width="154" height="26" rx="4" fill="#1d4ed8"></rect>
+                  <line x1="170" y1="144" x2="170" y2="188" stroke="#4338ca" stroke-width="2.4" marker-end="url(#tf-arr)"></line>
+                  <rect x="180" y="153" width="154" height="26" rx="4" fill="#4338ca"></rect>
                   <text x="257" y="170" text-anchor="middle" font-size="11.5" font-weight="800" fill="#ffffff">ekf_filter (30.25 Hz)</text>
 
                   <!-- base_footprint -->
-                  <rect x="68" y="190" width="204" height="40" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"></rect>
-                  <text x="170" y="215" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1e3a8a">base_footprint</text>
+                  <rect x="68" y="190" width="204" height="40" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"></rect>
+                  <text x="170" y="215" text-anchor="middle" font-size="14.5" font-weight="800" fill="#312e81">base_footprint</text>
 
                   <line x1="170" y1="230" x2="170" y2="255" stroke="#475569" stroke-width="1.8"></line>
                   <line x1="70" y1="255" x2="270" y2="255" stroke="#475569" stroke-width="1.8"></line>
@@ -1391,65 +1377,65 @@
                   <rect x="12" y="303" width="316" height="24" rx="6" fill="#fef2f2" stroke="#fca5a5"></rect>
                   <text x="170" y="319" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">✕ ros_gz_bridge /diff_drive TF 차단 · 단독 발행 검증</text>
                 </svg>
-                <div class="proof-caption" style="margin: 0; font-size: 12.5px;" data-tid="p-41" contenteditable="false">▲ robot_state_publisher (static) + EKF(30.25Hz) + AMCL(10.37Hz)</div>
+                <div class="proof-caption" style="margin: 0; font-size: 12.5px;" data-tid="p-35" contenteditable="false">▲ robot_state_publisher (static) + EKF(30.25Hz) + AMCL(10.37Hz)</div>
               </div>
               <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 9px 13px; font-size: 13px; line-height: 1.46;">
-                  <strong style="color: #1d4ed8;">4-Way 센서 융합 행렬 (<code>ax=T</code> vs <code>ax=F</code> · <code>yaw=false</code>)</strong><br>
+                  <strong style="color: #4338ca;">4-Way 센서 융합 행렬 (<code>ax=T</code> vs <code>ax=F</code> · <code>yaw=false</code>)</strong><br>
                   • <code>odom0</code>: <b>vx = true</b> (슬립 <b>vy, vyaw = false</b>) / <code>imu0</code>: <b>vyaw = true, ax = true/false</b><br>
                   • <b>핵심 검증</b>: <code>v2</code> 전진 궤적으로 역주행 상쇄 배제 · <code>ax</code> 차이 <b>0.6mm</b> 확인(회전 슬립 주원인)
                 </div>
                 <table class="metric-table" style="font-size: 12.2px;">
                   <thead>
                     <tr>
-                      <th data-tid="p-42" contenteditable="false">평가 지표 (v2 vs GT)</th>
-                      <th data-tid="p-43" contenteditable="false">Case A<br>Raw /odom</th>
-                      <th data-tid="p-44" contenteditable="false">B1 (Main)<br>ax=T, yaw=F</th>
-                      <th data-tid="p-45" contenteditable="false">B2 (Ref)<br>ax=F, yaw=F</th>
-                      <th data-tid="p-46" contenteditable="false">C (Ref)<br>AHRS yaw=T</th>
-                      <th data-tid="p-47" contenteditable="false">개선율<br>(A→B1)</th>
+                      <th data-tid="p-36" contenteditable="false">평가 지표 (v2 vs GT)</th>
+                      <th data-tid="p-37" contenteditable="false">Case A<br>Raw /odom</th>
+                      <th data-tid="p-38" contenteditable="false">B1 (Main)<br>ax=T, yaw=F</th>
+                      <th data-tid="p-39" contenteditable="false">B2 (Ref)<br>ax=F, yaw=F</th>
+                      <th data-tid="p-40" contenteditable="false">C (Ref)<br>AHRS yaw=T</th>
+                      <th data-tid="p-41" contenteditable="false">개선율<br>(A→B1)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td data-tid="p-48" contenteditable="false">XY 궤적 RMSE</td>
-                      <td data-tid="p-49" contenteditable="false">0.3825 m</td>
-                      <td class="good" data-tid="p-50" contenteditable="false">0.0322 m</td>
-                      <td data-tid="p-51" contenteditable="false">0.0316 m</td>
-                      <td data-tid="p-52" contenteditable="false">0.0292 m</td>
-                      <td class="good" data-tid="p-53" contenteditable="false">+91.6%</td>
+                      <td data-tid="p-42" contenteditable="false">XY 궤적 RMSE</td>
+                      <td data-tid="p-43" contenteditable="false">0.3825 m</td>
+                      <td class="good" data-tid="p-44" contenteditable="false">0.0322 m</td>
+                      <td data-tid="p-45" contenteditable="false">0.0316 m</td>
+                      <td data-tid="p-46" contenteditable="false">0.0292 m</td>
+                      <td class="good" data-tid="p-47" contenteditable="false">+91.6%</td>
                     </tr>
                     <tr>
-                      <td data-tid="p-54" contenteditable="false">XY 최대 오차</td>
-                      <td data-tid="p-55" contenteditable="false">0.7358 m</td>
-                      <td class="good" data-tid="p-56" contenteditable="false">0.0541 m</td>
-                      <td data-tid="p-57" contenteditable="false">0.0539 m</td>
-                      <td data-tid="p-58" contenteditable="false">0.0539 m</td>
-                      <td class="good" data-tid="p-59" contenteditable="false">+92.6%</td>
+                      <td data-tid="p-48" contenteditable="false">XY 최대 오차</td>
+                      <td data-tid="p-49" contenteditable="false">0.7358 m</td>
+                      <td class="good" data-tid="p-50" contenteditable="false">0.0541 m</td>
+                      <td data-tid="p-51" contenteditable="false">0.0539 m</td>
+                      <td data-tid="p-52" contenteditable="false">0.0539 m</td>
+                      <td class="good" data-tid="p-53" contenteditable="false">+92.6%</td>
                     </tr>
                     <tr>
-                      <td data-tid="p-60" contenteditable="false">XY 최종 오차</td>
-                      <td data-tid="p-61" contenteditable="false">0.7311 m</td>
-                      <td class="good" data-tid="p-62" contenteditable="false">0.0230 m</td>
-                      <td data-tid="p-63" contenteditable="false">0.0226 m</td>
-                      <td data-tid="p-64" contenteditable="false">0.0096 m</td>
-                      <td class="good" data-tid="p-65" contenteditable="false">+96.9%</td>
+                      <td data-tid="p-54" contenteditable="false">XY 최종 오차</td>
+                      <td data-tid="p-55" contenteditable="false">0.7311 m</td>
+                      <td class="good" data-tid="p-56" contenteditable="false">0.0230 m</td>
+                      <td data-tid="p-57" contenteditable="false">0.0226 m</td>
+                      <td data-tid="p-58" contenteditable="false">0.0096 m</td>
+                      <td class="good" data-tid="p-59" contenteditable="false">+96.9%</td>
                     </tr>
                     <tr>
-                      <td data-tid="p-66" contenteditable="false">Yaw 방위각 RMSE</td>
-                      <td data-tid="p-67" contenteditable="false">12.614°</td>
-                      <td class="good" data-tid="p-68" contenteditable="false">1.710°</td>
-                      <td data-tid="p-69" contenteditable="false">1.749°</td>
-                      <td data-tid="p-70" contenteditable="false">1.375°</td>
-                      <td class="good" data-tid="p-71" contenteditable="false">+86.4%</td>
+                      <td data-tid="p-60" contenteditable="false">Yaw 방위각 RMSE</td>
+                      <td data-tid="p-61" contenteditable="false">12.614°</td>
+                      <td class="good" data-tid="p-62" contenteditable="false">1.710°</td>
+                      <td data-tid="p-63" contenteditable="false">1.749°</td>
+                      <td data-tid="p-64" contenteditable="false">1.375°</td>
+                      <td class="good" data-tid="p-65" contenteditable="false">+86.4%</td>
                     </tr>
                     <tr>
-                      <td data-tid="p-72" contenteditable="false">Yaw 최대 / 최종</td>
-                      <td data-tid="p-73" contenteditable="false">25.18° / 15.45°</td>
-                      <td class="good" data-tid="p-74" contenteditable="false">4.72° / 0.80°</td>
-                      <td data-tid="p-75" contenteditable="false">4.62° / 0.80°</td>
-                      <td data-tid="p-76" contenteditable="false">4.26° / 0.00°</td>
-                      <td class="good" data-tid="p-77" contenteditable="false">+94.8%(종료)</td>
+                      <td data-tid="p-66" contenteditable="false">Yaw 최대 / 최종</td>
+                      <td data-tid="p-67" contenteditable="false">25.18° / 15.45°</td>
+                      <td class="good" data-tid="p-68" contenteditable="false">4.72° / 0.80°</td>
+                      <td data-tid="p-69" contenteditable="false">4.62° / 0.80°</td>
+                      <td data-tid="p-70" contenteditable="false">4.26° / 0.00°</td>
+                      <td class="good" data-tid="p-71" contenteditable="false">+94.8%(종료)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1469,42 +1455,42 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-78" contenteditable="false"><b>AMCL 이중 오프셋 불일치</b>: <code>map_origin=[-2.4,-0.3]</code>에서 초기 포즈를 <code>(2.4,0.3)</code>으로 이중 발행하는 설정·대칭 맵 역수렴 존재</li>
-              <li data-tid="p-79" contenteditable="false"><b>슬립 시 단조 발산</b>: 전진 궤적(v2) S-커브+J-Turn 중 휠 슬립으로 Raw <code>/odom</code>이 XY <b>0.7358m</b> · Yaw <b>25.182°</b>까지 이탈</li>
-              <li data-tid="p-80" contenteditable="false"><b>시뮬레이터 GT 스냅 함정</b>: Gazebo <code>gz-sim-imu-system</code>의 orientation 쿼터니언이 무노이즈 GT와 직결되어 <code>yaw=true</code> 시 인위적 0.000° 수렴 발생</li>
+              <li data-tid="p-72" contenteditable="false"><b>AMCL 이중 오프셋 불일치</b>: <code>map_origin=[-2.4,-0.3]</code>에서 초기 포즈를 <code>(2.4,0.3)</code>으로 이중 발행하는 설정·대칭 맵 역수렴 존재</li>
+              <li data-tid="p-73" contenteditable="false"><b>슬립 시 단조 발산</b>: 전진 궤적(v2) S-커브+J-Turn 중 휠 슬립으로 Raw <code>/odom</code>이 XY <b>0.7358m</b> · Yaw <b>25.182°</b>까지 이탈</li>
+              <li data-tid="p-74" contenteditable="false"><b>시뮬레이터 GT 스냅 함정</b>: Gazebo <code>gz-sim-imu-system</code>의 orientation 쿼터니언이 무노이즈 GT와 직결되어 <code>yaw=true</code> 시 인위적 0.000° 수렴 발생</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-81" contenteditable="false"><b>AMCL 원점·도메인 정합</b>: 초기 포즈를 <code>map=(0,0,180°)</code>로 정렬해 <code>AMCL_vs_GT 0.09cm</code> 확보 및 도메인 통일</li>
-              <li data-tid="p-82" contenteditable="false"><b>6축 자이로 EKF 설계</b>: <code>yaw=false</code>로 GT 스냅 차단, 노이즈·바이어스 자이로(<code>vyaw, ax</code>) + 휠 선속도(<code>vx</code>) 융합</li>
-              <li data-tid="p-83" contenteditable="false"><b>4-Way Ablation &amp; Q 튜닝</b>: <code>ax=T(B1)</code> vs <code>ax=F(B2)</code> 동시 계측 및 <code>Q(ax,ax)=0.001</code> 억제 튜닝</li>
+              <li data-tid="p-75" contenteditable="false"><b>AMCL 원점·도메인 정합</b>: 초기 포즈를 <code>map=(0,0,180°)</code>로 정렬해 <code>AMCL_vs_GT 0.09cm</code> 확보 및 도메인 통일</li>
+              <li data-tid="p-76" contenteditable="false"><b>6축 자이로 EKF 설계</b>: <code>yaw=false</code>로 GT 스냅 차단, 노이즈·바이어스 자이로(<code>vyaw, ax</code>) + 휠 선속도(<code>vx</code>) 융합</li>
+              <li data-tid="p-77" contenteditable="false"><b>4-Way Ablation &amp; Q 튜닝</b>: <code>ax=T(B1)</code> vs <code>ax=F(B2)</code> 동시 계측 및 <code>Q(ax,ax)=0.001</code> 억제 튜닝</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-84" contenteditable="false">4-Way 전진 궤적 실험에서 Raw 대비 <b>XY RMSE +91.6%(0.3825→0.0322m) · Yaw +86.4%(1.710°)</b> 개선 (<code>ax</code> 차이 0.6mm)</li>
-              <li data-tid="p-85" contenteditable="false">종료 오차 <b>96.9%</b>(0.731→0.023m) 감소, 210s 장기 주행 자이로 드리프트(10.85°)도 <b>AMCL 스캔 매칭으로 0.10° 수렴</b> 검증</li>
-              <li data-tid="p-86" contenteditable="false"><code>ekf_filter_node</code> 단독 TF 발행(<b>30.25Hz</b>) 및 <code>/odometry/filtered</code>(30.01Hz) Nav2·FMS 통합 연동 완료</li>
+              <li data-tid="p-78" contenteditable="false">4-Way 전진 궤적 실험에서 Raw 대비 <b>XY RMSE +91.6%(0.3825→0.0322m) · Yaw +86.4%(1.710°)</b> 개선 (<code>ax</code> 차이 0.6mm)</li>
+              <li data-tid="p-79" contenteditable="false">종료 오차 <b>96.9%</b>(0.731→0.023m) 감소, 210s 장기 주행 자이로 드리프트(10.85°)도 <b>AMCL 스캔 매칭으로 0.10° 수렴</b> 검증</li>
+              <li data-tid="p-80" contenteditable="false"><code>ekf_filter_node</code> 단독 TF 발행(<b>30.25Hz</b>) 및 <code>/odometry/filtered</code>(30.01Hz) Nav2·FMS 통합 연동 완료</li>
             </ul>
           </div>
         </div>
         <div class="page-num">5</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s6" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-lsm" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s6" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-lsm" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">LSM Bot</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving #2 : 206노드 A* 순차 디스패처 &amp; 5단계 FSM E2E (3/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-87" contenteditable="false">206노드 A* 순차 디스패처와 C++17 5단계 FSM으로 28.14m 정상(216.17s)·슬립(210.47s) E2E 완주</h1>
+          <h1 class="main-title" data-tid="p-81" contenteditable="false">206노드 A* 순차 디스패처와 C++17 5단계 FSM으로 28.14m 정상(216.17s)·슬립(210.47s) E2E 완주</h1>
         </div>
 
         <div class="middle-section">
@@ -1514,72 +1500,72 @@
               <svg viewBox="0 0 920 190" style="width:100%; height:185px;">
                 <defs>
                   <marker id="arr-fsm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                    <path d="M0 1 L10 5 L0 9 z" fill="#1d4ed8"></path>
+                    <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
                   </marker>
                 </defs>
                 <!-- 0 -->
-                <rect x="10" y="20" width="160" height="64" rx="10" fill="#1e3a8a"></rect>
+                <rect x="10" y="20" width="160" height="64" rx="10" fill="#312e81"></rect>
                 <text x="90" y="45" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">0: CHARGING</text>
-                <text x="90" y="66" text-anchor="middle" font-size="11.5" fill="#bfdbfe">충전소 대기 (wp-charge-1)</text>
-                <line x1="170" y1="52" x2="215" y2="52" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></line>
+                <text x="90" y="66" text-anchor="middle" font-size="11.5" fill="#c7d2fe">충전소 대기 (wp-charge-1)</text>
+                <line x1="170" y1="52" x2="215" y2="52" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></line>
                 <!-- 1 -->
-                <rect x="218" y="20" width="175" height="64" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                <text x="305" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">1: MOVING_UNLOADED</text>
+                <rect x="218" y="20" width="175" height="64" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
+                <text x="305" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#312e81">1: MOVING_UNLOADED</text>
                 <text x="305" y="66" text-anchor="middle" font-size="11" fill="#334155">Leg1 공차 픽업 (6.94m)</text>
-                <line x1="393" y1="52" x2="438" y2="52" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></line>
+                <line x1="393" y1="52" x2="438" y2="52" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></line>
                 <!-- 2 -->
-                <rect x="441" y="20" width="185" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"></rect>
-                <text x="533" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">2: WORKING_LOADING</text>
+                <rect x="441" y="20" width="185" height="64" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"></rect>
+                <text x="533" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#312e81">2: WORKING_LOADING</text>
                 <text x="533" y="66" text-anchor="middle" font-size="11" fill="#334155">적재 대기 (CARGO_LOADED)</text>
-                <line x1="626" y1="52" x2="671" y2="52" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></line>
+                <line x1="626" y1="52" x2="671" y2="52" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></line>
                 <!-- 3 -->
-                <rect x="674" y="20" width="232" height="64" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                <text x="790" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">3: MOVING_LOADED</text>
+                <rect x="674" y="20" width="232" height="64" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.8"></rect>
+                <text x="790" y="45" text-anchor="middle" font-size="12.5" font-weight="800" fill="#312e81">3: MOVING_LOADED</text>
                 <text x="790" y="66" text-anchor="middle" font-size="11" fill="#334155">Leg2 실차 하역지 이동 (11.65m)</text>
 
                 <!-- down arrow 3->4 -->
-                <path d="M790 84 L790 114" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></path>
+                <path d="M790 84 L790 114" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></path>
 
                 <!-- 4 -->
-                <rect x="640" y="118" width="266" height="58" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"></rect>
-                <text x="773" y="142" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">4: WORKING_UNLOADING</text>
+                <rect x="640" y="118" width="266" height="58" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"></rect>
+                <text x="773" y="142" text-anchor="middle" font-size="12.5" font-weight="800" fill="#312e81">4: WORKING_UNLOADING</text>
                 <text x="773" y="161" text-anchor="middle" font-size="11" fill="#334155">하역 완료 (CARGO_UNLOADED)</text>
 
                 <!-- 4 -> 1 return -> 0 -->
-                <line x1="640" y1="147" x2="425" y2="147" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></line>
+                <line x1="640" y1="147" x2="425" y2="147" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></line>
                 <rect x="218" y="118" width="204" height="58" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.6"></rect>
                 <text x="320" y="142" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">1: MOVING_UNLOADED (복귀)</text>
                 <text x="320" y="161" text-anchor="middle" font-size="11" fill="#475569">Leg3 충전소 복귀 (9.55m)</text>
-                <path d="M218 147 L90 147 L90 87" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-fsm)"></path>
+                <path d="M218 147 L90 147 L90 87" fill="none" stroke="#4338ca" stroke-width="2" marker-end="url(#arr-fsm)"></path>
               </svg>
 
               <table class="metric-table" style="font-size: 13px;">
                 <thead>
                   <tr>
-                    <th data-tid="p-88" contenteditable="false">구간 / 단계</th>
-                    <th data-tid="p-89" contenteditable="false">출발 → 도착</th>
-                    <th data-tid="p-90" contenteditable="false">A* 웨이포인트 / 거리</th>
-                    <th data-tid="p-91" contenteditable="false">C++17 + 50Hz PID 실측 검증 (정상 / slip_mode:=true)</th>
+                    <th data-tid="p-82" contenteditable="false">구간 / 단계</th>
+                    <th data-tid="p-83" contenteditable="false">출발 → 도착</th>
+                    <th data-tid="p-84" contenteditable="false">A* 웨이포인트 / 거리</th>
+                    <th data-tid="p-85" contenteditable="false">C++17 + 50Hz PID 실측 검증 (정상 / slip_mode:=true)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-tid="p-92" contenteditable="false">Leg 1 (공차)</td>
-                    <td data-tid="p-93" contenteditable="false">wp-charge-1 → wp-ws-a-4</td>
-                    <td data-tid="p-94" contenteditable="false">9 wps / 6.94 m</td>
-                    <td data-tid="p-95" contenteditable="false">Nav2 <code>29.2~29.3cm</code> → PID 도킹 <b>3.27cm(정상) / 3.01cm(슬립)</b> · FSM <code>0→1→2</code></td>
+                    <td data-tid="p-86" contenteditable="false">Leg 1 (공차)</td>
+                    <td data-tid="p-87" contenteditable="false">wp-charge-1 → wp-ws-a-4</td>
+                    <td data-tid="p-88" contenteditable="false">9 wps / 6.94 m</td>
+                    <td data-tid="p-89" contenteditable="false">Nav2 <code>29.2~29.3cm</code> → PID 도킹 <b>3.27cm(정상) / 3.01cm(슬립)</b> · FSM <code>0→1→2</code></td>
                   </tr>
                   <tr>
-                    <td data-tid="p-96" contenteditable="false">Leg 2 (실차)</td>
-                    <td data-tid="p-97" contenteditable="false">wp-ws-a-4 → wp-ws-a-5</td>
-                    <td data-tid="p-98" contenteditable="false">12 wps / 11.65 m</td>
-                    <td data-tid="p-99" contenteditable="false"><code>CARGO_LOADED(2)</code> 트리거 · PID 도킹 <b>1.63cm(정상) / 1.71cm(슬립)</b> · <code>3→4</code></td>
+                    <td data-tid="p-90" contenteditable="false">Leg 2 (실차)</td>
+                    <td data-tid="p-91" contenteditable="false">wp-ws-a-4 → wp-ws-a-5</td>
+                    <td data-tid="p-92" contenteditable="false">12 wps / 11.65 m</td>
+                    <td data-tid="p-93" contenteditable="false"><code>CARGO_LOADED(2)</code> 트리거 · PID 도킹 <b>1.63cm(정상) / 1.71cm(슬립)</b> · <code>3→4</code></td>
                   </tr>
                   <tr>
-                    <td data-tid="p-100" contenteditable="false">Leg 3 (복귀)</td>
-                    <td data-tid="p-101" contenteditable="false">wp-ws-a-5 → wp-charge-1</td>
-                    <td data-tid="p-102" contenteditable="false">10 wps / 9.55 m</td>
-                    <td class="good" data-tid="p-103" contenteditable="false">정상 216.17s / <b>슬립 210.47s(Raw 대비 -6.29s)</b> · AMCL Yaw 0.10° · [0,1,2,3,4,1,0]</td>
+                    <td data-tid="p-94" contenteditable="false">Leg 3 (복귀)</td>
+                    <td data-tid="p-95" contenteditable="false">wp-ws-a-5 → wp-charge-1</td>
+                    <td data-tid="p-96" contenteditable="false">10 wps / 9.55 m</td>
+                    <td class="good" data-tid="p-97" contenteditable="false">정상 216.17s / <b>슬립 210.47s(Raw 대비 -6.29s)</b> · AMCL Yaw 0.10° · [0,1,2,3,4,1,0]</td>
                   </tr>
                 </tbody>
               </table>
@@ -1593,7 +1579,7 @@
                 <div class="proof-img-box light" style="height: 335px;">
                   <img src="./assets/lsm_03_fms.png" alt="FMS 5단계 FSM 대시보드">
                 </div>
-                <div class="proof-caption" data-tid="p-104" contenteditable="false">▲ TASK_A4_A5_E2E_001 실행 중 FMS 화면<br>(좌측 녹색 A* 최단 경로 + 하단 FSM 1: MOVING_UNLOADED 상태바)</div>
+                <div class="proof-caption" data-tid="p-98" contenteditable="false">▲ TASK_A4_A5_E2E_001 실행 중 FMS 화면<br>(좌측 녹색 A* 최단 경로 + 하단 FSM 1: MOVING_UNLOADED 상태바)</div>
               </div>
             </div>
           </div>
@@ -1603,42 +1589,42 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-105" contenteditable="false"><b>단일 직통 주행 시 통로 이탈</b>: Nav2에 최종 목적지만 직접 전송하면 좁은 랙·작업대 사이를 가로지르며 코너 충돌 위험 발생</li>
-              <li data-tid="p-106" contenteditable="false"><b>단순 주행 완료 vs 공정 상태 분리 부족</b>: 적재·하역 작업 대기와 공차·실차 주행을 구분하는 표준 물류 상태 머신 부재</li>
-              <li data-tid="p-107" contenteditable="false"><b>경로 취소 및 이식성 한계</b>: 하드코딩된 절대 경로와 미션 취소 시 잔여 웨이포인트가 남는 경합 위험 존재</li>
+              <li data-tid="p-99" contenteditable="false"><b>단일 직통 주행 시 통로 이탈</b>: Nav2에 최종 목적지만 직접 전송하면 좁은 랙·작업대 사이를 가로지르며 코너 충돌 위험 발생</li>
+              <li data-tid="p-100" contenteditable="false"><b>단순 주행 완료 vs 공정 상태 분리 부족</b>: 적재·하역 작업 대기와 공차·실차 주행을 구분하는 표준 물류 상태 머신 부재</li>
+              <li data-tid="p-101" contenteditable="false"><b>경로 취소 및 이식성 한계</b>: 하드코딩된 절대 경로와 미션 취소 시 잔여 웨이포인트가 남는 경합 위험 존재</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-108" contenteditable="false"><b>206노드 A* + SequentialNavigator</b>: 156 활성 노드·208 방향 엣지 그래프 위 A* 경로를 계산해 10Hz로 순차 Nav2 Goal 디스패치</li>
-              <li data-tid="p-109" contenteditable="false"><b>독립 FSM 노드 &amp; 계약</b>: <code>amr_state_machine_node</code>로 5단계 상태를 10Hz 발행하고, <code>DispatchTask</code> 액션·<code>TriggerMockEvent</code> 서비스 분리</li>
-              <li data-tid="p-110" contenteditable="false"><b>취소 안전성 &amp; WebSocket 연동</b>: <code>cancel_active_route()</code>로 취소 시 큐 즉시 비움 구현 및 Port 9090 FMS UI 스텝퍼 연동</li>
+              <li data-tid="p-102" contenteditable="false"><b>206노드 A* + SequentialNavigator</b>: 156 활성 노드·208 방향 엣지 그래프 위 A* 경로를 계산해 10Hz로 순차 Nav2 Goal 디스패치</li>
+              <li data-tid="p-103" contenteditable="false"><b>독립 FSM 노드 &amp; 계약</b>: <code>amr_state_machine_node</code>로 5단계 상태를 10Hz 발행하고, <code>DispatchTask</code> 액션·<code>TriggerMockEvent</code> 서비스 분리</li>
+              <li data-tid="p-104" contenteditable="false"><b>취소 안전성 &amp; WebSocket 연동</b>: <code>cancel_active_route()</code>로 취소 시 큐 즉시 비움 구현 및 Port 9090 FMS UI 스텝퍼 연동</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-111" contenteditable="false"><b>E2E 풀 사이클 100% 정합</b>: 3-Leg(31 wps, 28.14m) 미션에서 관측 시퀀스 <code>[0,1,2,3,4,1,0]</code> 일치 및 <code>STATUS_SUCCEEDED</code> 달성</li>
-              <li data-tid="p-112" contenteditable="false">비대칭 슬립(<code>mu=0.35/0.28</code>) E2E에서도 Raw+AMCL(216.76s) 대비 <b>210.47s(-6.29s) 완주</b> 및 도킹 <b>1.90cm(-93.5%)</b> 달성</li>
-              <li data-tid="p-113" contenteditable="false"><code>colcon build</code> 8개 패키지 에러 0건, <code>ament_index_python</code> 기반 경로 이식성 검증 완료</li>
+              <li data-tid="p-105" contenteditable="false"><b>E2E 풀 사이클 100% 정합</b>: 3-Leg(31 wps, 28.14m) 미션에서 관측 시퀀스 <code>[0,1,2,3,4,1,0]</code> 일치 및 <code>STATUS_SUCCEEDED</code> 달성</li>
+              <li data-tid="p-106" contenteditable="false">비대칭 슬립(<code>mu=0.35/0.28</code>) E2E에서도 Raw+AMCL(216.76s) 대비 <b>210.47s(-6.29s) 완주</b> 및 도킹 <b>1.90cm(-93.5%)</b> 달성</li>
+              <li data-tid="p-107" contenteditable="false"><code>colcon build</code> 8개 패키지 에러 0건, <code>ament_index_python</code> 기반 경로 이식성 검증 완료</li>
             </ul>
           </div>
         </div>
         <div class="page-num">6</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s6b" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-lsm" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s6b" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-lsm" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">LSM Bot</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving #3 : Modern C++17 (rclcpp · Eigen3) 코어 전환 &amp; 50Hz PID 정밀 도킹 (4/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-114" contenteditable="false">C++17(rclcpp · Eigen3) 실시간 코어 전환으로 연산 39~108배 가속 및 50Hz PID 정밀 도킹(29.27cm → 3.42cm) 달성</h1>
+          <h1 class="main-title" data-tid="p-108" contenteditable="false">C++17(rclcpp · Eigen3) 실시간 코어 전환으로 연산 39~108배 가속 및 50Hz PID 정밀 도킹(29.27cm → 3.42cm) 달성</h1>
         </div>
 
         <div class="middle-section">
@@ -1648,36 +1634,36 @@
               <svg viewBox="0 0 900 135" style="width:100%; height:132px;">
                 <defs>
                   <marker id="arr-cpp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M0 1 L10 5 L0 9 z" fill="#1d4ed8"></path>
+                    <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
                   </marker>
                 </defs>
-                <rect x="6" y="8" width="636" height="118" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.8"></rect>
-                <text x="324" y="28" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">Onboard Real-Time Core — Modern C++17 (-O3 · rclcpp 28.1 · Eigen 3.4.0)</text>
+                <rect x="6" y="8" width="636" height="118" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.8"></rect>
+                <text x="324" y="28" text-anchor="middle" font-size="12.5" font-weight="800" fill="#312e81">Onboard Real-Time Core — Modern C++17 (-O3 · rclcpp 28.1 · Eigen 3.4.0)</text>
 
-                <rect x="18" y="38" width="194" height="76" rx="7" fill="#ffffff" stroke="#2563eb"></rect>
+                <rect x="18" y="38" width="194" height="76" rx="7" fill="#ffffff" stroke="#4f46e5"></rect>
                 <text x="115" y="56" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">amr_state_machine_cpp</text>
                 <text x="115" y="74" text-anchor="middle" font-size="10.8" fill="#334155">4-Thread MultiThreadedExec</text>
-                <text x="115" y="90" text-anchor="middle" font-size="10.8" fill="#1d4ed8">5-Stage FSM · 10Hz Status</text>
+                <text x="115" y="90" text-anchor="middle" font-size="10.8" fill="#4338ca">5-Stage FSM · 10Hz Status</text>
                 <text x="115" y="105" text-anchor="middle" font-size="10.2" fill="#475569">216.17s E2E 풀 사이클</text>
 
-                <rect x="224" y="38" width="202" height="76" rx="7" fill="#ffffff" stroke="#2563eb"></rect>
+                <rect x="224" y="38" width="202" height="76" rx="7" fill="#ffffff" stroke="#4f46e5"></rect>
                 <text x="325" y="56" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">precision_docking_node</text>
                 <text x="325" y="74" text-anchor="middle" font-size="10.8" fill="#334155">50Hz(20ms) 2-Phase PID</text>
-                <text x="325" y="90" text-anchor="middle" font-size="10.8" fill="#1d4ed8">360° /scan 안전 (0.87µs)</text>
+                <text x="325" y="90" text-anchor="middle" font-size="10.8" fill="#4338ca">360° /scan 안전 (0.87µs)</text>
                 <text x="325" y="105" text-anchor="middle" font-size="10.2" fill="#475569">29.27cm → 3.42cm (-88.3%)</text>
 
-                <rect x="438" y="38" width="192" height="76" rx="7" fill="#ffffff" stroke="#2563eb"></rect>
+                <rect x="438" y="38" width="192" height="76" rx="7" fill="#ffffff" stroke="#4f46e5"></rect>
                 <text x="534" y="56" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">topological_route_planner</text>
                 <text x="534" y="74" text-anchor="middle" font-size="10.8" fill="#334155">정수 인덱스 Vector A* (1.47µs)</text>
-                <text x="534" y="90" text-anchor="middle" font-size="10.8" fill="#1d4ed8">Eigen3 6×6 2D EKF (0.29µs)</text>
+                <text x="534" y="90" text-anchor="middle" font-size="10.8" fill="#4338ca">Eigen3 6×6 2D EKF (0.29µs)</text>
                 <text x="534" y="105" text-anchor="middle" font-size="10.2" fill="#475569">스택 할당 · 힙 할당 0건</text>
 
-                <line x1="642" y1="67" x2="674" y2="67" stroke="#1d4ed8" stroke-width="2.2" marker-end="url(#arr-cpp)"></line>
+                <line x1="642" y1="67" x2="674" y2="67" stroke="#4338ca" stroke-width="2.2" marker-end="url(#arr-cpp)"></line>
 
                 <rect x="678" y="8" width="214" height="118" rx="10" fill="#0f172a"></rect>
                 <text x="785" y="32" text-anchor="middle" font-size="12.5" font-weight="800" fill="#ffffff">Python 3.12 Web Bridge</text>
                 <rect x="692" y="44" width="186" height="68" rx="7" fill="#1e293b" stroke="#334155"></rect>
-                <text x="785" y="65" text-anchor="middle" font-size="11.5" font-weight="700" fill="#93c5fd">telemetry_bridge · Web UI</text>
+                <text x="785" y="65" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a5b4fc">telemetry_bridge · Web UI</text>
                 <text x="785" y="83" text-anchor="middle" font-size="10.8" fill="#cbd5e1">Port 9090 WebSocket 관제</text>
                 <text x="785" y="100" text-anchor="middle" font-size="10.8" fill="#cbd5e1">실시간 FSM · 경로 모니터링</text>
               </svg>
@@ -1685,42 +1671,42 @@
               <table class="metric-table" style="font-size: 12.6px; margin-top: 0;">
                 <thead>
                   <tr>
-                    <th data-tid="p-115" contenteditable="false">벤치마크 평가 항목 (동일 워크스테이션)</th>
-                    <th data-tid="p-116" contenteditable="false">Python 3.12 (rclpy/NumPy)</th>
-                    <th data-tid="p-117" contenteditable="false">C++17 -O3 (rclcpp/Eigen3)</th>
-                    <th data-tid="p-118" contenteditable="false">성능 향상 배율 / 개선율</th>
+                    <th data-tid="p-109" contenteditable="false">벤치마크 평가 항목 (동일 워크스테이션)</th>
+                    <th data-tid="p-110" contenteditable="false">Python 3.12 (rclpy/NumPy)</th>
+                    <th data-tid="p-111" contenteditable="false">C++17 -O3 (rclcpp/Eigen3)</th>
+                    <th data-tid="p-112" contenteditable="false">성능 향상 배율 / 개선율</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-tid="p-119" contenteditable="false">206노드 토폴로지 A* 탐색 (1,000회)</td>
-                    <td data-tid="p-120" contenteditable="false">57.57 µs (P99 85.84 µs)</td>
-                    <td class="good" data-tid="p-121" contenteditable="false">1.47 µs (P99 3.05 µs)</td>
-                    <td class="good" data-tid="p-122" contenteditable="false">39.09x 가속 (-97.4%)</td>
+                    <td data-tid="p-113" contenteditable="false">206노드 토폴로지 A* 탐색 (1,000회)</td>
+                    <td data-tid="p-114" contenteditable="false">57.57 µs (P99 85.84 µs)</td>
+                    <td class="good" data-tid="p-115" contenteditable="false">1.47 µs (P99 3.05 µs)</td>
+                    <td class="good" data-tid="p-116" contenteditable="false">39.09x 가속 (-97.4%)</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-123" contenteditable="false">2D EKF Predict+Update Step (10,000회)</td>
-                    <td data-tid="p-124" contenteditable="false">32.08 µs (P99 42.04 µs)</td>
-                    <td class="good" data-tid="p-125" contenteditable="false">0.295 µs (P99 0.371 µs)</td>
-                    <td class="good" data-tid="p-126" contenteditable="false">108.74x 가속 (-99.1%)</td>
+                    <td data-tid="p-117" contenteditable="false">2D EKF Predict+Update Step (10,000회)</td>
+                    <td data-tid="p-118" contenteditable="false">32.08 µs (P99 42.04 µs)</td>
+                    <td class="good" data-tid="p-119" contenteditable="false">0.295 µs (P99 0.371 µs)</td>
+                    <td class="good" data-tid="p-120" contenteditable="false">108.74x 가속 (-99.1%)</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-127" contenteditable="false">360° LiDAR 안전 영역 판별 (10,000회)</td>
-                    <td data-tid="p-128" contenteditable="false">61.65 µs (P99 70.56 µs)</td>
-                    <td class="good" data-tid="p-129" contenteditable="false">0.866 µs (P99 0.902 µs)</td>
-                    <td class="good" data-tid="p-130" contenteditable="false">71.19x 가속 (-98.6%)</td>
+                    <td data-tid="p-121" contenteditable="false">360° LiDAR 안전 영역 판별 (10,000회)</td>
+                    <td data-tid="p-122" contenteditable="false">61.65 µs (P99 70.56 µs)</td>
+                    <td class="good" data-tid="p-123" contenteditable="false">0.866 µs (P99 0.902 µs)</td>
+                    <td class="good" data-tid="p-124" contenteditable="false">71.19x 가속 (-98.6%)</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-131" contenteditable="false">50Hz 타이머 주기 지터 / 노드 RSS 메모리</td>
-                    <td data-tid="p-132" contenteditable="false">63.59 µs / 97.09 MB</td>
-                    <td class="good" data-tid="p-133" contenteditable="false">12.11 µs / 27.63 MB</td>
-                    <td class="good" data-tid="p-134" contenteditable="false">지터 5.25x · 메모리 3.51x ↓</td>
+                    <td data-tid="p-125" contenteditable="false">50Hz 타이머 주기 지터 / 노드 RSS 메모리</td>
+                    <td data-tid="p-126" contenteditable="false">63.59 µs / 97.09 MB</td>
+                    <td class="good" data-tid="p-127" contenteditable="false">12.11 µs / 27.63 MB</td>
+                    <td class="good" data-tid="p-128" contenteditable="false">지터 5.25x · 메모리 3.51x ↓</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-135" contenteditable="false">작업장·충전소 최종 도킹 위치 오차 (E2E)</td>
-                    <td data-tid="p-136" contenteditable="false">29.27 cm (Nav2 공차 한계)</td>
-                    <td class="good" data-tid="p-137" contenteditable="false">정상 3.42cm · <b>슬립 1.90cm</b></td>
-                    <td class="good" data-tid="p-138" contenteditable="false">-88.3% / <b>슬립 -93.5%</b></td>
+                    <td data-tid="p-129" contenteditable="false">작업장·충전소 최종 도킹 위치 오차 (E2E)</td>
+                    <td data-tid="p-130" contenteditable="false">29.27 cm (Nav2 공차 한계)</td>
+                    <td class="good" data-tid="p-131" contenteditable="false">정상 3.42cm · <b>슬립 1.90cm</b></td>
+                    <td class="good" data-tid="p-132" contenteditable="false">-88.3% / <b>슬립 -93.5%</b></td>
                   </tr>
                 </tbody>
               </table>
@@ -1739,40 +1725,40 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-139" contenteditable="false"><b>Python GIL · GC 지연</b>: 50Hz 폐루프·LiDAR 감시 시 Python P99 지터(<code>193µs</code>)·메모리(<code>97.1MB</code>) 부담</li>
-              <li data-tid="p-140" contenteditable="false"><b>해싱 · NumPy 래퍼 오버헤드</b>: 소형 6×6 EKF·206노드 그래프에서 C-API·힙 박싱 비용이 연산 대부분 차지</li>
-              <li data-tid="p-141" contenteditable="false"><b>Nav2 정차 오차(~29cm)</b>: 복도 주행용 허용 공차(<code>0.25~0.30m</code>)만으로는 작업장 정밀 정차 불가</li>
+              <li data-tid="p-133" contenteditable="false"><b>Python GIL · GC 지연</b>: 50Hz 폐루프·LiDAR 감시 시 Python P99 지터(<code>193µs</code>)·메모리(<code>97.1MB</code>) 부담</li>
+              <li data-tid="p-134" contenteditable="false"><b>해싱 · NumPy 래퍼 오버헤드</b>: 소형 6×6 EKF·206노드 그래프에서 C-API·힙 박싱 비용이 연산 대부분 차지</li>
+              <li data-tid="p-135" contenteditable="false"><b>Nav2 정차 오차(~29cm)</b>: 복도 주행용 허용 공차(<code>0.25~0.30m</code>)만으로는 작업장 정밀 정차 불가</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-142" contenteditable="false"><b>Zero-Allocation C++17 코어</b>: 정수 인덱스 연속 벡터 A* 및 <code>Eigen3</code> 6×6 스택 고정 EKF 커널 구현</li>
-              <li data-tid="p-143" contenteditable="false"><b>50Hz 2단계 PID 정밀 도킹</b>: 병진 PID + 제자리 각도 정렬 및 전·후방 360° <code>/scan</code> 0.14m 비상 정지</li>
-              <li data-tid="p-144" contenteditable="false"><b>멀티스레드 FSM 하이브리드</b>: 4스레드 <code>MultiThreadedExecutor</code> C++ FSM과 Python WebSocket 브릿지 분리</li>
+              <li data-tid="p-136" contenteditable="false"><b>Zero-Allocation C++17 코어</b>: 정수 인덱스 연속 벡터 A* 및 <code>Eigen3</code> 6×6 스택 고정 EKF 커널 구현</li>
+              <li data-tid="p-137" contenteditable="false"><b>50Hz 2단계 PID 정밀 도킹</b>: 병진 PID + 제자리 각도 정렬 및 전·후방 360° <code>/scan</code> 0.14m 비상 정지</li>
+              <li data-tid="p-138" contenteditable="false"><b>멀티스레드 FSM 하이브리드</b>: 4스레드 <code>MultiThreadedExecutor</code> C++ FSM과 Python WebSocket 브릿지 분리</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-145" contenteditable="false">동일 환경 벤치마크에서 A* <b>39.1배</b>(1.47µs) · 2D EKF <b>108.7배</b>(0.29µs) · 360° LiDAR 감시 <b>71.2배</b>(0.87µs) 가속 달성</li>
-              <li data-tid="p-146" contenteditable="false">50Hz 지터 <b>5.25배</b>(12.11µs)·메모리 <b>71.5%</b> 절감, 도킹 오차 <b>정상 3.42cm(-88.3%) · 슬립 1.90cm(-93.5%)</b> 개선</li>
-              <li data-tid="p-147" contenteditable="false">C++17 3종 통합 E2E 완주: 정상 <b>216.17s</b>(정착 0.72~1.43cm) · 슬립 <b>210.47s</b>(AMCL Yaw <b>0.10°</b>)</li>
+              <li data-tid="p-139" contenteditable="false">동일 환경 벤치마크에서 A* <b>39.1배</b>(1.47µs) · 2D EKF <b>108.7배</b>(0.29µs) · 360° LiDAR 감시 <b>71.2배</b>(0.87µs) 가속 달성</li>
+              <li data-tid="p-140" contenteditable="false">50Hz 지터 <b>5.25배</b>(12.11µs)·메모리 <b>71.5%</b> 절감, 도킹 오차 <b>정상 3.42cm(-88.3%) · 슬립 1.90cm(-93.5%)</b> 개선</li>
+              <li data-tid="p-141" contenteditable="false">C++17 3종 통합 E2E 완주: 정상 <b>216.17s</b>(정착 0.72~1.43cm) · 슬립 <b>210.47s</b>(AMCL Yaw <b>0.10°</b>)</li>
             </ul>
           </div>
         </div>
         <div class="page-num">7</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s7" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-libo" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s7" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-libo" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">PROJECT 02 · LIBO</span>
             <span class="divider"></span>
-            <span class="header-sub" data-tid="p-148" contenteditable="false">ROS 2와 인공지능을 활용한 자율주행 서점 도우미 로봇 (1/3 · 개요 및 시스템 아키텍처)</span>
+            <span class="header-sub" data-tid="p-142" contenteditable="false">ROS 2와 인공지능을 활용한 자율주행 서점 도우미 로봇 (1/3 · 개요 및 시스템 아키텍처)</span>
           </div>
         </div>
 
@@ -1781,30 +1767,30 @@
             <div class="meta-box">
               <div class="meta-row">
                 <span class="meta-pill">개발 기간</span>
-                <span class="meta-val" data-tid="p-149" contenteditable="false">2025.07.09 ~ 2025.08.14</span>
+                <span class="meta-val" data-tid="p-143" contenteditable="false">2025.07.09 ~ 2025.08.14</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">참여 인력</span>
-                <span class="meta-val" data-tid="p-150" contenteditable="false">5인 팀 (<b>AI HRI · 비전 제스처 · 음성/LLM · 통신 규격/GCP DB 전담 — 본인</b>)</span>
+                <span class="meta-val" data-tid="p-144" contenteditable="false">5인 팀 (<b>AI HRI · 비전 제스처 · 음성/LLM · 통신 규격/GCP DB 전담 — 본인</b>)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">기술 스택</span>
-                <span class="meta-val" data-tid="p-151" contenteditable="false">ROS 2 Humble, Python 3.10, OpenCV, MediaPipe, Porcupine, OpenAI GPT-3.5, Google STT/TTS, MySQL 8.0</span>
+                <span class="meta-val" data-tid="p-145" contenteditable="false">ROS 2 Humble, Python 3.10, OpenCV, MediaPipe, Porcupine, OpenAI GPT-3.5, Google STT/TTS, MySQL 8.0</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">저장소</span>
-                <span class="meta-val" data-tid="p-152" contenteditable="false"><a href="https://github.com/kimminsu0519/ros-repo-1" target="_blank" rel="noopener">github.com/kimminsu0519/ros-repo-1</a></span>
+                <span class="meta-val" data-tid="p-146" contenteditable="false"><a href="https://github.com/kimminsu0519/ros-repo-1" target="_blank" rel="noopener">github.com/kimminsu0519/ros-repo-1</a></span>
               </div>
             </div>
 
-            <div class="summary-box" style="justify-content: space-between; gap: 20px; padding: 28px 30px;">
+            <div class="summary-box" style="justify-content: flex-start; gap: 28px; padding: 30px 30px;">
               <div>
                 <span class="card-badge" style="margin-bottom: 14px;">프로젝트 개요 및 본인 핵심 기여</span>
-                <ul class="bullet-list" style="gap: 14px;">
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-153" contenteditable="false"><b>서점 서비스 자율주행 로봇</b>: 대형 서점 내 고객 도서 검색·안내 및 직원의 도서 운반을 보조하는 HRI 로봇 시스템</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-154" contenteditable="false"><b>비전 제스처 안전 제어</b>: MediaPipe 5-Frame 합의·기하 임계값 및 20단계 선형 감속으로 오작동·급정거 차단</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-155" contenteditable="false"><b>WakeWord · LLM 오케스트레이션</b>: Porcupine(<code>'리보야'</code>) + RMS 1.5s 침묵 감지 + GPT-3.5 9종 의도 분류로 모드 전환</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-156" contenteditable="false"><b>분산 통신 · 클라우드 DB</b>: <code>libo_interfaces</code>(13 <code>.msg</code>/21 <code>.srv</code>) 확립, UDP 4MB/Lock 튜닝 및 GCP MySQL 8.0 연동</li>
+                <ul class="bullet-list" style="gap: 17px;">
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-147" contenteditable="false"><b>서점 서비스 자율주행 로봇</b>: 대형 서점 내 고객 도서 검색·안내 및 직원의 도서 운반을 보조하는 HRI 로봇 시스템</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-148" contenteditable="false"><b>비전 제스처 안전 제어</b>: MediaPipe 5-Frame 합의·기하 임계값 및 20단계 선형 감속으로 오작동·급정거 차단</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-149" contenteditable="false"><b>WakeWord · LLM 오케스트레이션</b>: Porcupine(<code>'리보야'</code>) + RMS 1.5s 침묵 감지 + GPT-3.5 9종 의도 분류로 모드 전환</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-150" contenteditable="false"><b>분산 통신 · 클라우드 DB</b>: <code>libo_interfaces</code>(13 <code>.msg</code>/21 <code>.srv</code>) 확립, UDP 4MB/Lock 튜닝 및 GCP MySQL 8.0 연동</li>
                 </ul>
               </div>
 
@@ -1835,7 +1821,7 @@
               </div>
               <div class="card" style="flex: 0.72; padding: 12px 14px; align-items: center; justify-content: space-between; background: #f8faf5;">
                 <img src="./assets/libo_robot.png" alt="LIBO 실물 로봇" style="max-height: 205px; width: auto; object-fit: contain;">
-                <div class="proof-caption" style="margin-top: 2px; font-size: 13px;" data-tid="p-157" contenteditable="false">▲ 제작 완료된 LIBO 실물 (분산 ROS 2 노드 구성)</div>
+                <div class="proof-caption" style="margin-top: 2px; font-size: 13px;" data-tid="p-151" contenteditable="false">▲ 제작 완료된 LIBO 실물 (분산 ROS 2 노드 구성)</div>
               </div>
             </div>
 
@@ -1956,15 +1942,15 @@
         <div class="page-num">8</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s8" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-libo" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s8" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-libo" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">LIBO</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving #1 : 비전 제스처 실시간 파이프라인 &amp; 장애물 우선 안전 감속</span>
           </div>
-          <h1 class="main-title" data-tid="p-158" contenteditable="false">MediaPipe 5-Frame 합의 · UDP 4MB 버퍼 분리 · 20단계 선형 감속으로 오작동 및 급정거 차단</h1>
+          <h1 class="main-title" data-tid="p-152" contenteditable="false">MediaPipe 5-Frame 합의 · UDP 4MB 버퍼 분리 · 20단계 선형 감속으로 오작동 및 급정거 차단</h1>
         </div>
 
         <div class="middle-section">
@@ -2024,26 +2010,26 @@
               <table class="metric-table" style="margin-top: 0; font-size: 12.8px;">
                 <thead>
                   <tr>
-                    <th style="width: 24%;" data-tid="p-159" contenteditable="false">제스처 / 안전 상태</th>
-                    <th style="width: 44%;" data-tid="p-160" contenteditable="false">기하 판별 조건 · ROS 2 인터락 로직</th>
-                    <th style="width: 32%;" data-tid="p-161" contenteditable="false">제어 출력 · 안전 처리</th>
+                    <th style="width: 24%;" data-tid="p-153" contenteditable="false">제스처 / 안전 상태</th>
+                    <th style="width: 44%;" data-tid="p-154" contenteditable="false">기하 판별 조건 · ROS 2 인터락 로직</th>
+                    <th style="width: 32%;" data-tid="p-155" contenteditable="false">제어 출력 · 안전 처리</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-tid="p-162" contenteditable="false"><b>LEFT / RIGHT</b> (회전)</td>
-                    <td data-tid="p-163" contenteditable="false">주먹(<code>ext==0</code>) + <code>thumb_idx&gt;0.08</code>, <code>angle&gt;30°</code>, <code>palm_x ±0.1</code></td>
-                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-164" contenteditable="false">±0.3 rad/s (방향 반전 시 선감속)</td>
+                    <td data-tid="p-156" contenteditable="false"><b>LEFT / RIGHT</b> (회전)</td>
+                    <td data-tid="p-157" contenteditable="false">주먹(<code>ext==0</code>) + <code>thumb_idx&gt;0.08</code>, <code>angle&gt;30°</code>, <code>palm_x ±0.1</code></td>
+                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-158" contenteditable="false">±0.3 rad/s (방향 반전 시 선감속)</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-165" contenteditable="false"><b>GO / BACK</b> (전·후진)</td>
-                    <td data-tid="p-166" contenteditable="false">손가락 2+ 펴짐(<code>tip.y &lt; pip.y-0.03</code>), <code>wrist.y+0.02</code> 상/하</td>
-                    <td data-tid="p-167" contenteditable="false"><code>+0.2 / -0.1 m/s</code> (평균 Y 병행 검증)</td>
+                    <td data-tid="p-159" contenteditable="false"><b>GO / BACK</b> (전·후진)</td>
+                    <td data-tid="p-160" contenteditable="false">손가락 2+ 펴짐(<code>tip.y &lt; pip.y-0.03</code>), <code>wrist.y+0.02</code> 상/하</td>
+                    <td data-tid="p-161" contenteditable="false"><code>+0.2 / -0.1 m/s</code> (평균 Y 병행 검증)</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-168" contenteditable="false"><b>STOP · 장애물 탈출</b></td>
-                    <td data-tid="p-169" contenteditable="false"><code>thumb_in_center</code> 주먹 · <b>전방 장애물→BACK만 / 후방→GO만</b></td>
-                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-170" contenteditable="false"><code>gradual_stop(steps=20, 0.3s)</code></td>
+                    <td data-tid="p-162" contenteditable="false"><b>STOP · 장애물 탈출</b></td>
+                    <td data-tid="p-163" contenteditable="false"><code>thumb_in_center</code> 주먹 · <b>전방 장애물→BACK만 / 후방→GO만</b></td>
+                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-164" contenteditable="false"><code>gradual_stop(steps=20, 0.3s)</code></td>
                   </tr>
                 </tbody>
               </table>
@@ -2057,13 +2043,13 @@
                 <div class="proof-img-box">
                   <img src="./assets/libo_go.png" alt="GO 제스처 디버깅">
                 </div>
-                <div class="proof-caption" data-tid="p-171" contenteditable="false">▲ GO 제스처 (Stability 100% / Y-Wrist 음수 구간)</div>
+                <div class="proof-caption" data-tid="p-165" contenteditable="false">▲ GO 제스처 (Stability 100% / Y-Wrist 음수 구간)</div>
               </div>
               <div class="proof-item">
                 <div class="proof-img-box">
                   <img src="./assets/libo_back.png" alt="BACK 제스처 디버깅">
                 </div>
-                <div class="proof-caption" data-tid="p-172" contenteditable="false">▲ BACK 임계값 통과 (5-Frame 필터 / min_count=3)</div>
+                <div class="proof-caption" data-tid="p-166" contenteditable="false">▲ BACK 임계값 통과 (5-Frame 필터 / min_count=3)</div>
               </div>
             </div>
           </div>
@@ -2073,42 +2059,42 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-173" contenteditable="false">단일 프레임 기준 21개 관절 좌표 판정 시 조명 변화·손떨림으로 <b>프레임 간 명령 떨림(Chattering)</b> 빈번 발생</li>
-              <li data-tid="p-174" contenteditable="false"><code>STOP</code>/<code>none</code> 전이 또는 회전 반전 시 즉시 <code>cmd_vel=0</code>을 인가해 <b>도서 적재 로봇 급정거 및 차체 흔들림</b> 유발</li>
-              <li data-tid="p-175" contenteditable="false">UDP RAW 영상 수신 버퍼(기본값 1MB)와 단일 스레드 처리 병목으로 <b>고해상도 프레임 드랍 및 지연</b> 발생</li>
+              <li data-tid="p-167" contenteditable="false">단일 프레임 기준 21개 관절 좌표 판정 시 조명 변화·손떨림으로 <b>프레임 간 명령 떨림(Chattering)</b> 빈번 발생</li>
+              <li data-tid="p-168" contenteditable="false"><code>STOP</code>/<code>none</code> 전이 또는 회전 반전 시 즉시 <code>cmd_vel=0</code>을 인가해 <b>도서 적재 로봇 급정거 및 차체 흔들림</b> 유발</li>
+              <li data-tid="p-169" contenteditable="false">UDP RAW 영상 수신 버퍼(기본값 1MB)와 단일 스레드 처리 병목으로 <b>고해상도 프레임 드랍 및 지연</b> 발생</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-176" contenteditable="false"><b>UDP 4MB &amp; Mutex 스레드 분리</b>: <code>SO_RCVBUF(4MB)</code> 확장 및 <code>receive_frames()</code>–<code>frame_lock</code> 분리로 30fps 추론 보장</li>
-              <li data-tid="p-177" contenteditable="false"><b>기하 임계값 + 5-Frame 필터</b>: <code>thumb_angle&gt;30°</code>/<code>palm_center_x±0.1</code> 기하 판정과 <code>history=5 · min_count=3</code> 연속 합의 적용</li>
-              <li data-tid="p-178" contenteditable="false"><b>20단계 감속 &amp; 탈출 우선순위</b>: <code>gradual_stop(steps=20, 0.3s)</code>와 전·후·양측 <code>DetectionStatus</code>별 탈출 방향만 허용하는 인터락 구현</li>
+              <li data-tid="p-170" contenteditable="false"><b>UDP 4MB &amp; Mutex 스레드 분리</b>: <code>SO_RCVBUF(4MB)</code> 확장 및 <code>receive_frames()</code>–<code>frame_lock</code> 분리로 30fps 추론 보장</li>
+              <li data-tid="p-171" contenteditable="false"><b>기하 임계값 + 5-Frame 필터</b>: <code>thumb_angle&gt;30°</code>/<code>palm_center_x±0.1</code> 기하 판정과 <code>history=5 · min_count=3</code> 연속 합의 적용</li>
+              <li data-tid="p-172" contenteditable="false"><b>20단계 감속 &amp; 탈출 우선순위</b>: <code>gradual_stop(steps=20, 0.3s)</code>와 전·후·양측 <code>DetectionStatus</code>별 탈출 방향만 허용하는 인터락 구현</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-179" contenteditable="false">Stability 100% 실시간 디버그 HUD 검증 및 일시적 관절 떨림에 의한 <b>오발행(GO↔STOP) 원천 차단</b></li>
-              <li data-tid="p-180" contenteditable="false">회전 반전(Left↔Right) 및 장애물 정지 시 <b>0.3초 선형 감속으로 도서 적재 주행 안정성 확보</b></li>
-              <li data-tid="p-181" contenteditable="false"><code>ActivateGesture / DeactivateGesture</code> 및 <code>TalkCommand("stop/activate")</code> 연동 완료</li>
+              <li data-tid="p-173" contenteditable="false">Stability 100% 실시간 디버그 HUD 검증 및 일시적 관절 떨림에 의한 <b>오발행(GO↔STOP) 원천 차단</b></li>
+              <li data-tid="p-174" contenteditable="false">회전 반전(Left↔Right) 및 장애물 정지 시 <b>0.3초 선형 감속으로 도서 적재 주행 안정성 확보</b></li>
+              <li data-tid="p-175" contenteditable="false"><code>ActivateGesture / DeactivateGesture</code> 및 <code>TalkCommand("stop/activate")</code> 연동 완료</li>
             </ul>
           </div>
         </div>
         <div class="page-num">9</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s9" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-libo" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s9" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-libo" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">LIBO</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving #2 : 실시간 음성·LLM 의도 분류 및 ROS 2 모드 오케스트레이션</span>
           </div>
-          <h1 class="main-title" data-tid="p-182" contenteditable="false">Porcupine 한국어 WakeWord · RMS 1.5초 침묵 감지 · GPT-3.5 9종 의도 분류 기반 비동기 모드 전환</h1>
+          <h1 class="main-title" data-tid="p-176" contenteditable="false">Porcupine 한국어 WakeWord · RMS 1.5초 침묵 감지 · GPT-3.5 9종 의도 분류 기반 비동기 모드 전환</h1>
         </div>
 
         <div class="middle-section">
@@ -2168,31 +2154,31 @@
               <table class="metric-table" style="margin-top: 0; font-size: 12.6px;">
                 <thead>
                   <tr>
-                    <th style="width: 24%;" data-tid="p-183" contenteditable="false">LLM Intent (JSON)</th>
-                    <th style="width: 34%;" data-tid="p-184" contenteditable="false">대표 사용자 발화 예시</th>
-                    <th style="width: 42%;" data-tid="p-185" contenteditable="false">ROS 2 서비스 · 토픽 실행 시퀀스</th>
+                    <th style="width: 24%;" data-tid="p-177" contenteditable="false">LLM Intent (JSON)</th>
+                    <th style="width: 34%;" data-tid="p-178" contenteditable="false">대표 사용자 발화 예시</th>
+                    <th style="width: 42%;" data-tid="p-179" contenteditable="false">ROS 2 서비스 · 토픽 실행 시퀀스</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-tid="p-186" contenteditable="false"><code>start_gesture</code> / <code>start_follow</code></td>
-                    <td data-tid="p-187" contenteditable="false">"제스쳐모드 시작" · "팔로우 시작"</td>
-                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-188" contenteditable="false"><code>ActivateGesture ↔ ActivateTracker</code> + <code>talk_cmd("activate")</code></td>
+                    <td data-tid="p-180" contenteditable="false"><code>start_gesture</code> / <code>start_follow</code></td>
+                    <td data-tid="p-181" contenteditable="false">"제스쳐모드 시작" · "팔로우 시작"</td>
+                    <td style="color:#5c8d2e; background:#f2f8ea; font-weight:800;" data-tid="p-182" contenteditable="false"><code>ActivateGesture ↔ ActivateTracker</code> + <code>talk_cmd("activate")</code></td>
                   </tr>
                   <tr>
-                    <td data-tid="p-189" contenteditable="false"><code>pause</code> / <code>resume_assist</code></td>
-                    <td data-tid="p-190" contenteditable="false">"잠깐 멈춰" · "다시 따라와"</td>
-                    <td data-tid="p-191" contenteditable="false"><code>/talk_command ("stop" / "activate")</code> 주행 정지·재개</td>
+                    <td data-tid="p-183" contenteditable="false"><code>pause</code> / <code>resume_assist</code></td>
+                    <td data-tid="p-184" contenteditable="false">"잠깐 멈춰" · "다시 따라와"</td>
+                    <td data-tid="p-185" contenteditable="false"><code>/talk_command ("stop" / "activate")</code> 주행 정지·재개</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-192" contenteditable="false"><code>get_weight</code> / <code>stop_assist</code></td>
-                    <td data-tid="p-193" contenteditable="false">"책 무게는?" · "복귀하자"</td>
-                    <td data-tid="p-194" contenteditable="false"><code>/weight_data</code> 동적 무게 TTS 응답 · <code>EndTask.srv</code> 호출</td>
+                    <td data-tid="p-186" contenteditable="false"><code>get_weight</code> / <code>stop_assist</code></td>
+                    <td data-tid="p-187" contenteditable="false">"책 무게는?" · "복귀하자"</td>
+                    <td data-tid="p-188" contenteditable="false"><code>/weight_data</code> 동적 무게 TTS 응답 · <code>EndTask.srv</code> 호출</td>
                   </tr>
                   <tr>
-                    <td data-tid="p-195" contenteditable="false"><code>get_mode</code> / <code>weather</code> / <code>ignore</code></td>
-                    <td data-tid="p-196" contenteditable="false">"지금 모드?" · "날씨?" · 오호출</td>
-                    <td data-tid="p-197" contenteditable="false">모드 상태 · <code>dynamic_tts</code> 응답 + 5s 후 <code>normal</code> 복귀</td>
+                    <td data-tid="p-189" contenteditable="false"><code>get_mode</code> / <code>weather</code> / <code>ignore</code></td>
+                    <td data-tid="p-190" contenteditable="false">"지금 모드?" · "날씨?" · 오호출</td>
+                    <td data-tid="p-191" contenteditable="false">모드 상태 · <code>dynamic_tts</code> 응답 + 5s 후 <code>normal</code> 복귀</td>
                   </tr>
                 </tbody>
               </table>
@@ -2206,13 +2192,13 @@
                 <div class="proof-img-box light" style="background: #1e293b;">
                   <img src="./assets/libo_voice_cmd.png" alt="음성 명령 발화">
                 </div>
-                <div class="proof-caption" data-tid="p-198" contenteditable="false">▲ 1) WakeWord('리보야') 감지 후 자연어 발화<br>("제스쳐모드 시작" → Listening)</div>
+                <div class="proof-caption" data-tid="p-192" contenteditable="false">▲ 1) WakeWord('리보야') 감지 후 자연어 발화<br>("제스쳐모드 시작" → Listening)</div>
               </div>
               <div class="proof-item">
                 <div class="proof-img-box light" style="background: #1e293b;">
                   <img src="./assets/libo_voice_res.png" alt="LLM 의도 분류 및 모드 전환">
                 </div>
-                <div class="proof-caption" data-tid="p-199" contenteditable="false">▲ 2) GPT 의도 분류 &amp; ActivateGesture 전환<br>("모션 제스쳐모드를 시작합니다")</div>
+                <div class="proof-caption" data-tid="p-193" contenteditable="false">▲ 2) GPT 의도 분류 &amp; ActivateGesture 전환<br>("모션 제스쳐모드를 시작합니다")</div>
               </div>
             </div>
           </div>
@@ -2222,40 +2208,40 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-200" contenteditable="false">고정 타임아웃(<code>max_time=15.0s</code>) 녹음 시 짧은 명령("잠깐 멈춰")에도 <b>불필요한 최대 대기 지연</b> 발생</li>
-              <li data-tid="p-201" contenteditable="false">호출어('리보야') 발화 직후 로봇이 계속 이동하면 <b>사용자와의 거리 이탈 및 후속 음성 수음 실패</b> 유발</li>
-              <li data-tid="p-202" contenteditable="false">자유 발화 텍스트와 ROS 2 서비스 간 엄격한 구조가 없으면 <b>모드 전환 충돌(Follow↔Gesture 동시 활성)</b> 위험</li>
+              <li data-tid="p-194" contenteditable="false">고정 타임아웃(<code>max_time=15.0s</code>) 녹음 시 짧은 명령("잠깐 멈춰")에도 <b>불필요한 최대 대기 지연</b> 발생</li>
+              <li data-tid="p-195" contenteditable="false">호출어('리보야') 발화 직후 로봇이 계속 이동하면 <b>사용자와의 거리 이탈 및 후속 음성 수음 실패</b> 유발</li>
+              <li data-tid="p-196" contenteditable="false">자유 발화 텍스트와 ROS 2 서비스 간 엄격한 구조가 없으면 <b>모드 전환 충돌(Follow↔Gesture 동시 활성)</b> 위험</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-203" contenteditable="false"><b>WakeWord 즉시 안전 정지</b>: <code>Porcupine('리보야', sens=0.7)</code> 감지 순간 <code>/talk_command("stop")</code>과 <code>listening</code> 표정 즉시 발행</li>
-              <li data-tid="p-204" contenteditable="false"><b>PCM RMS 1.5초 침묵 컷</b>: 청크별 16-bit PCM RMS(임계 <code>300</code>) 측정 후 발화 종료 <code>1.5초</code> 경과 시 즉각 녹음 종료</li>
-              <li data-tid="p-205" contenteditable="false"><b>9종 JSON + 상호 배제 전환</b>: Google STT → <code>gpt-3.5-turbo</code> JSON 파싱 후 Tracker/Gesture 서비스를 상호 배제 호출 &amp; 5s 데몬 표정 복귀</li>
+              <li data-tid="p-197" contenteditable="false"><b>WakeWord 즉시 안전 정지</b>: <code>Porcupine('리보야', sens=0.7)</code> 감지 순간 <code>/talk_command("stop")</code>과 <code>listening</code> 표정 즉시 발행</li>
+              <li data-tid="p-198" contenteditable="false"><b>PCM RMS 1.5초 침묵 컷</b>: 청크별 16-bit PCM RMS(임계 <code>300</code>) 측정 후 발화 종료 <code>1.5초</code> 경과 시 즉각 녹음 종료</li>
+              <li data-tid="p-199" contenteditable="false"><b>9종 JSON + 상호 배제 전환</b>: Google STT → <code>gpt-3.5-turbo</code> JSON 파싱 후 Tracker/Gesture 서비스를 상호 배제 호출 &amp; 5s 데몬 표정 복귀</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-206" contenteditable="false">최대 15초 대기 병목을 제거하고 <b>발화 종료 1.5초 후 즉각 STT→GPT 파이프라인 트리거</b> 달성</li>
-              <li data-tid="p-207" contenteditable="false">ROS 2 Spin 데몬 스레드와 WakeWord/음성 처리 분리로 <b>음성 응답 중에도 주행 제어·무게 구독 블로킹 차단</b></li>
-              <li data-tid="p-208" contenteditable="false">서점 현장 시연에서 <code>WakeWord → 모드 전환(Gesture/Follow) → 무게 질의·복귀</code> HRI 루프 완수</li>
+              <li data-tid="p-200" contenteditable="false">최대 15초 대기 병목을 제거하고 <b>발화 종료 1.5초 후 즉각 STT→GPT 파이프라인 트리거</b> 달성</li>
+              <li data-tid="p-201" contenteditable="false">ROS 2 Spin 데몬 스레드와 WakeWord/음성 처리 분리로 <b>음성 응답 중에도 주행 제어·무게 구독 블로킹 차단</b></li>
+              <li data-tid="p-202" contenteditable="false">서점 현장 시연에서 <code>WakeWord → 모드 전환(Gesture/Follow) → 무게 질의·복귀</code> HRI 루프 완수</li>
             </ul>
           </div>
         </div>
         <div class="page-num">10</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s10" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-amr" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s10" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-amr" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">WORK EXPERIENCE · AMR 제어팀 (인턴)</span>
             <span class="divider"></span>
-            <span class="header-sub" data-tid="p-209" contenteditable="false">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수 (1/2)</span>
+            <span class="header-sub" data-tid="p-203" contenteditable="false">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수 (1/2)</span>
           </div>
         </div>
 
@@ -2264,46 +2250,46 @@
             <div class="meta-box">
               <div class="meta-row">
                 <span class="meta-pill">근무 기간</span>
-                <span class="meta-val" data-tid="p-210" contenteditable="false">2021.12 ~ 2022.09 (10개월)</span>
+                <span class="meta-val" data-tid="p-204" contenteditable="false">2021.12 ~ 2022.09 (10개월)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">파견 현장</span>
-                <span class="meta-val" data-tid="p-211" contenteditable="false"><b>미국 SK배터리(39대)</b> · <b>현대모비스 대구(40대)</b> · 한화큐셀 진천 생산라인</span>
+                <span class="meta-val" data-tid="p-205" contenteditable="false"><b>미국 SK배터리(39대)</b> · <b>현대모비스 대구(40대)</b> · 한화큐셀 진천 생산라인</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">엔지니어링 툴</span>
-                <span class="meta-val" data-tid="p-212" contenteditable="false">SICK LiDAR-LOC, SOPAS ET, Safety Designer, SIM1000 v2.1, GX Works3(PLC), ACS 관제</span>
+                <span class="meta-val" data-tid="p-206" contenteditable="false">SICK LiDAR-LOC, SOPAS ET, Safety Designer, SIM1000 v2.1, GX Works3(PLC), ACS 관제</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">담당 직무</span>
-                <span class="meta-val" data-tid="p-213" contenteditable="false">AMR/AGV 필드엔지니어 (SLAM 매핑 · 정밀 도킹 티칭 · 세이프티 · PIO/하드웨어 디버깅)</span>
+                <span class="meta-val" data-tid="p-207" contenteditable="false">AMR/AGV 필드엔지니어 (SLAM 매핑 · 정밀 도킹 티칭 · 세이프티 · PIO/하드웨어 디버깅)</span>
               </div>
             </div>
 
-            <div class="summary-box" style="justify-content: space-between; gap: 20px; padding: 28px 30px;">
+            <div class="summary-box" style="justify-content: flex-start; gap: 28px; padding: 30px 30px;">
               <div>
                 <span class="card-badge" style="margin-bottom: 14px;">양산 라인 실무 업무 및 핵심 기여</span>
-                <ul class="bullet-list" style="gap: 14px;">
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-214" contenteditable="false"><b>총 79대 양산 플릿 셋업</b>: 미국 SK배터리(39대)·현대모비스(40대) 신규 라인 SLAM 매핑, 티칭 및 FTP 배포</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-215" contenteditable="false"><b>위치 이탈 재발 0건</b>: 50m 대칭 반복 구간 스캔 모호성 원인을 규명하고 <b>비대칭 반사판 배치</b>로 해결</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-216" contenteditable="false"><b>세이프티 분할 &amp; 20ms 억제</b>: <code>Safety Designer</code>·<code>SOPAS ET</code> 구역 분할 및 Input Delay 20ms로 <code>n1/n3 fault</code> 해소</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-217" contenteditable="false"><b>1mm 도킹 · PLC/PIO 디버깅</b>: <code>GLS·QR Offset(0.05°)</code> 보정, PLC 시퀀스·배선(<code>N24/S109</code>) 트러블슈팅</li>
+                <ul class="bullet-list" style="gap: 17px;">
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-208" contenteditable="false"><b>총 79대 양산 플릿 셋업</b>: 미국 SK배터리(39대)·현대모비스(40대) 신규 라인 SLAM 매핑, 티칭 및 FTP 배포</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-209" contenteditable="false"><b>위치 이탈 재발 0건</b>: 50m 대칭 반복 구간 스캔 모호성 원인을 규명하고 <b>비대칭 반사판 배치</b>로 해결</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-210" contenteditable="false"><b>세이프티 분할 &amp; 20ms 억제</b>: <code>Safety Designer</code>·<code>SOPAS ET</code> 구역 분할 및 Input Delay 20ms로 <code>n1/n3 fault</code> 해소</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-211" contenteditable="false"><b>1mm 도킹 · PLC/PIO 디버깅</b>: <code>GLS·QR Offset(0.05°)</code> 보정, PLC 시퀀스·배선(<code>N24/S109</code>) 트러블슈팅</li>
                 </ul>
               </div>
 
               <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding-top: 16px; border-top: 1.5px solid #e2e8f0;">
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #1e40af;">미국 SK배터리</div>
+                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 10px; padding: 11px 12px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #334155;">미국 SK배터리</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">39대 셋업</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">이탈 재발 0건 · FTP 배포</div>
                 </div>
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #2563eb;">현대모비스 대구</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #334155;">현대모비스 대구</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">40대 셋업</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">nanoScan3 분할 · 20ms</div>
                 </div>
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 11px 12px; text-align: center;">
-                  <div style="font-size: 12px; font-weight: 700; color: #1e40af;">한화큐셀 진천</div>
+                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 10px; padding: 11px 12px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #334155;">한화큐셀 진천</div>
                   <div style="font-size: 18px; font-weight: 800; color: #0f172a; margin-top: 2px;">0.05° / 1mm</div>
                   <div style="font-size: 11.8px; color: #475569; margin-top: 2px;">VD2 HMI · PIO · 배선 수리</div>
                 </div>
@@ -2319,19 +2305,19 @@
                   <div class="proof-img-box light" style="height: 236px;">
                     <img src="./assets/amr_fleet_setup.jpg" class="cover" alt="양산 플릿 동시 셋업">
                   </div>
-                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-218" contenteditable="false">▲ 다수 AMR 동시 맵 · 파라미터 셋업</div>
+                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-212" contenteditable="false">▲ 다수 AMR 동시 맵 · 파라미터 셋업</div>
                 </div>
                 <div class="proof-item" style="padding: 8px 10px;">
                   <div class="proof-img-box light" style="height: 236px;">
                     <img src="./assets/amr_01_orange.jpg" class="cover" alt="양산 라인 AMR 주행">
                   </div>
-                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-219" contenteditable="false">▲ 양산 라인 LiDAR AMR 실차 주행 검증</div>
+                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-213" contenteditable="false">▲ 양산 라인 LiDAR AMR 실차 주행 검증</div>
                 </div>
                 <div class="proof-item" style="padding: 8px 10px;">
                   <div class="proof-img-box light" style="height: 236px;">
                     <img src="./assets/amr_acs_ui.jpg" class="cover" alt="ACS 통합 관제 토폴로지 UI">
                   </div>
-                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-220" contenteditable="false">▲ ACS 통합 관제 토폴로지 맵 &amp; 상태 모니터링</div>
+                  <div class="proof-caption" style="font-size: 13px; margin-top: 6px;" data-tid="p-214" contenteditable="false">▲ ACS 통합 관제 토폴로지 맵 &amp; 상태 모니터링</div>
                 </div>
               </div>
             </div>
@@ -2342,7 +2328,7 @@
                 <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
                   <img src="./assets/amr_03_tim320.png" alt="TiM320" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
-                    <div style="font-size:12.5px; font-weight:700; color:#2563eb;">2D LiDAR Sensor</div>
+                    <div style="font-size:12.5px; font-weight:700; color:#334155;">2D LiDAR Sensor</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK TiM320</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• 270° 고속 스캔 · 공장 2D SLAM 지도 작성<br>• LiDAR-LOC 맵 정합 및 반사판 기준점 트래킹</div>
                   </div>
@@ -2350,7 +2336,7 @@
                 <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
                   <img src="./assets/amr_04_nanoscan3.png" alt="nanoScan3" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
-                    <div style="font-size:12.5px; font-weight:700; color:#2563eb;">Safety Laser Scanner</div>
+                    <div style="font-size:12.5px; font-weight:700; color:#334155;">Safety Laser Scanner</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK nanoScan3</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• Safety Designer 직진/턴/소화전 필드 분할<br>• Input Delay 20ms 적용으로 n1/n3 fault 해소</div>
                   </div>
@@ -2358,15 +2344,15 @@
                 <div style="background: var(--surface-muted); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 16px;">
                   <img src="./assets/amr_05_ahm36.png" alt="AHM36" style="width: 112px; height: 112px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
                   <div>
-                    <div style="font-size:12.5px; font-weight:700; color:#2563eb;">Absolute Encoder</div>
+                    <div style="font-size:12.5px; font-weight:700; color:#334155;">Absolute Encoder</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">SICK AHM36</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• 조향·구동축 절대 각도 실시간 피드백<br>• 전원 재인가 원점 유지 및 오도메트리 정밀화</div>
                   </div>
                 </div>
-                <div style="background: #eff6ff; border: 1.2px solid #bfdbfe; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 16px;">
-                  <img src="./assets/amr_hmi_tuning.jpg" alt="VD2 HMI 정밀 보정" style="width: 98px; height: 132px; object-fit: cover; border-radius: 8px; border: 1.2px solid #93c5fd; flex-shrink: 0;">
+                <div style="background: #f1f5f9; border: 1.2px solid #cbd5e1; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 16px;">
+                  <img src="./assets/amr_hmi_tuning.jpg" alt="VD2 HMI 정밀 보정" style="width: 98px; height: 132px; object-fit: cover; border-radius: 8px; border: 1.2px solid #94a3b8; flex-shrink: 0;">
                   <div>
-                    <div style="font-size:12.5px; font-weight:800; color:#1e40af;">실차 VD2 온보드 HMI 현장 튜닝</div>
+                    <div style="font-size:12.5px; font-weight:800; color:#1e293b;">실차 VD2 온보드 HMI 현장 튜닝</div>
                     <div style="font-size:18px; font-weight:800; color:#0f172a; margin-top: 2px;">GLS · QR 0.05° / 1mm 보정</div>
                     <div style="font-size:13.8px; color:#334155; margin-top:6px; line-height:1.48;">• 20~40mm 협소 반입구 안착 편차 1mm 정밀 보정<br>• WF 장애물 센서·PIO 인터락·배선 실시간 진단</div>
                   </div>
@@ -2378,15 +2364,15 @@
         <div class="page-num">11</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s11" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-amr" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s11" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-amr" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">AMR 제어팀 (인턴)</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving : 50m 반복 구간 위치 이탈 규명 &amp; 세이프티·도킹 트러블슈팅 (2/2)</span>
           </div>
-          <h1 class="main-title" data-tid="p-221" contenteditable="false">LiDAR-LOC 스캔 매칭 분석 기반 비대칭 반사판 배치로 50m 반복 구간 위치 이탈 재발 0건 정상화</h1>
+          <h1 class="main-title" data-tid="p-215" contenteditable="false">LiDAR-LOC 스캔 매칭 분석 기반 비대칭 반사판 배치로 50m 반복 구간 위치 이탈 재발 0건 정상화</h1>
         </div>
 
         <div class="middle-section">
@@ -2404,13 +2390,13 @@
                 <div class="proof-img-box light">
                   <img src="./assets/amr_06_lidar_loc.png" alt="LiDAR-LOC 스캔 매칭">
                 </div>
-                <div class="proof-caption" data-tid="p-222" contenteditable="false">▲ LiDAR-LOC 스캔 포인트·맵 정합 분석<br>(반복 구간 특징점 이탈 지점 추적)</div>
+                <div class="proof-caption" data-tid="p-216" contenteditable="false">▲ LiDAR-LOC 스캔 포인트·맵 정합 분석<br>(반복 구간 특징점 이탈 지점 추적)</div>
               </div>
               <div class="proof-item">
                 <div class="proof-img-box light">
                   <img src="./assets/amr_07_sopas_popup.png" alt="SOPAS ET 연동 팝업">
                 </div>
-                <div class="proof-caption" data-tid="p-223" contenteditable="false">▲ SICK SOPAS ET 연동 · 디바이스 진단<br>(드라이버 · nanoScan3 파라미터 통합 관리)</div>
+                <div class="proof-caption" data-tid="p-217" contenteditable="false">▲ SICK SOPAS ET 연동 · 디바이스 진단<br>(드라이버 · nanoScan3 파라미터 통합 관리)</div>
               </div>
             </div>
           </div>
@@ -2420,40 +2406,40 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-224" contenteditable="false"><b>바닥 균열 슬립 가설 배제 → 특징점 모호성 규명</b>: 약 50m 직선 라인의 공사 바닥 균열이 아닌, <b>동일 기둥·설비 패턴 반복</b>에 따른 LiDAR-LOC 위치 이탈 확인</li>
-              <li data-tid="p-225" contenteditable="false"><b>세이프티 오감지 &amp; 간헐 Fault</b>: 곡선·소화전 앞 인접 설비 간섭 및 <code>nanoScan3</code> 간헐적 <code>n1/n3 fault</code>로 비상 정지 발생</li>
-              <li data-tid="p-226" contenteditable="false"><b>협소 스토퍼·PIO 타이밍 이슈</b>: <code>20~40mm</code> 협소 반입구 간격과 설비 PIO/화물감지 인터락 예외로 도킹·반출입 지연 유발</li>
+              <li data-tid="p-218" contenteditable="false"><b>바닥 균열 슬립 가설 배제 → 특징점 모호성 규명</b>: 약 50m 직선 라인의 공사 바닥 균열이 아닌, <b>동일 기둥·설비 패턴 반복</b>에 따른 LiDAR-LOC 위치 이탈 확인</li>
+              <li data-tid="p-219" contenteditable="false"><b>세이프티 오감지 &amp; 간헐 Fault</b>: 곡선·소화전 앞 인접 설비 간섭 및 <code>nanoScan3</code> 간헐적 <code>n1/n3 fault</code>로 비상 정지 발생</li>
+              <li data-tid="p-220" contenteditable="false"><b>협소 스토퍼·PIO 타이밍 이슈</b>: <code>20~40mm</code> 협소 반입구 간격과 설비 PIO/화물감지 인터락 예외로 도킹·반출입 지연 유발</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-227" contenteditable="false"><b>비대칭 반사판 배치(d₁ ≠ d₂ ≠ d₃)</b>: LiDAR-LOC 실시간 스캔·맵 정합률 분석 후 고반사 리플렉터를 비대칭 설치해 구간별 고유 기하 랜드마크 형성</li>
-              <li data-tid="p-228" contenteditable="false"><b>구역별 방호 필드 분할 &amp; 20ms 보정</b>: <code>Safety Designer</code>·<code>SOPAS ET</code>로 주행·턴·소화전 전용 필드를 세분화하고 Input Delay <code>20ms</code> 적용</li>
-              <li data-tid="p-229" contenteditable="false"><b>1mm 티칭 &amp; PLC/PIO 연동</b>: <code>GLS</code>·<code>QR Offset(0.05°)</code> 10회 반복 보정과 <code>GX Works3</code> PIO 시퀀스·배선(<code>N24/S109</code>) 디버깅 수행</li>
+              <li data-tid="p-221" contenteditable="false"><b>비대칭 반사판 배치(d₁ ≠ d₂ ≠ d₃)</b>: LiDAR-LOC 실시간 스캔·맵 정합률 분석 후 고반사 리플렉터를 비대칭 설치해 구간별 고유 기하 랜드마크 형성</li>
+              <li data-tid="p-222" contenteditable="false"><b>구역별 방호 필드 분할 &amp; 20ms 보정</b>: <code>Safety Designer</code>·<code>SOPAS ET</code>로 주행·턴·소화전 전용 필드를 세분화하고 Input Delay <code>20ms</code> 적용</li>
+              <li data-tid="p-223" contenteditable="false"><b>1mm 티칭 &amp; PLC/PIO 연동</b>: <code>GLS</code>·<code>QR Offset(0.05°)</code> 10회 반복 보정과 <code>GX Works3</code> PIO 시퀀스·배선(<code>N24/S109</code>) 디버깅 수행</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-230" contenteditable="false">50m 반복 구간 위치 이탈을 <b>재발 0건으로 해소</b>하고 20~40mm 협소 반입 도킹 정밀도를 회복해 라인 연속 가동 달성</li>
-              <li data-tid="p-231" contenteditable="false">오정지 해소를 통해 <b>미국 SK배터리(39대)·현대모비스 대구(40대)·한화큐셀 양산 라인 가동 셋업 완수</b></li>
-              <li data-tid="p-232" contenteditable="false">실제 산업 현장 센서·PLC/PIO·ACS 통합 관제 기반의 <b>가설 검증형 필드 트러블슈팅 역량</b> 확보</li>
+              <li data-tid="p-224" contenteditable="false">50m 반복 구간 위치 이탈을 <b>재발 0건으로 해소</b>하고 20~40mm 협소 반입 도킹 정밀도를 회복해 라인 연속 가동 달성</li>
+              <li data-tid="p-225" contenteditable="false">오정지 해소를 통해 <b>미국 SK배터리(39대)·현대모비스 대구(40대)·한화큐셀 양산 라인 가동 셋업 완수</b></li>
+              <li data-tid="p-226" contenteditable="false">실제 산업 현장 센서·PLC/PIO·ACS 통합 관제 기반의 <b>가설 검증형 필드 트러블슈팅 역량</b> 확보</li>
             </ul>
           </div>
         </div>
         <div class="page-num">12</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s12" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-as" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s12" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-as" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">PROJECT 03 · AutoSavior</span>
             <span class="divider"></span>
-            <span class="header-sub" data-tid="p-233" contenteditable="false">IoT 화재 감지 연계 자율주행 화재 진압 로봇 — 졸업작품 · 한이음 동상 (1/2 · 개요 및 아키텍처)</span>
+            <span class="header-sub" data-tid="p-227" contenteditable="false">IoT 화재 감지 연계 자율주행 화재 진압 로봇 — 졸업작품 · 한이음 동상 (1/2 · 개요 및 아키텍처)</span>
           </div>
         </div>
 
@@ -2462,30 +2448,30 @@
             <div class="meta-box">
               <div class="meta-row">
                 <span class="meta-pill">개발 기간</span>
-                <span class="meta-val" data-tid="p-234" contenteditable="false">2024.04 ~ 2024.11 (8개월) · 학사학위논문 연계</span>
+                <span class="meta-val" data-tid="p-228" contenteditable="false">2024.04 ~ 2024.11 (8개월) · 학사학위논문 연계</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">수상 실적</span>
-                <span class="meta-val" data-tid="p-235" contenteditable="false"><b>스마트해상물류 × ICT멘토링(한이음 드림업) 동상</b> (한국정보산업연합회, 2024.12)</span>
+                <span class="meta-val" data-tid="p-229" contenteditable="false"><b>스마트해상물류 × ICT멘토링(한이음 드림업) 동상</b> (한국정보산업연합회, 2024.12)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">참여 인원</span>
-                <span class="meta-val" data-tid="p-236" contenteditable="false">3인 팀 (<b>본인: AI 화염 데이터셋·YOLOv8n 학습·Hailo-8 엣지 파이프라인·프로젝트 총괄</b>)</span>
+                <span class="meta-val" data-tid="p-230" contenteditable="false">3인 팀 (<b>본인: AI 화염 데이터셋·YOLOv8n 학습·Hailo-8 엣지 파이프라인·프로젝트 총괄</b>)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-pill">기술 스택</span>
-                <span class="meta-val" data-tid="p-237" contenteditable="false">ROS 2 Humble, Docker(Ubuntu 22.04), YOLOv8n, Hailo-8 NPU, Cartographer SLAM, OpenCR 1.0, LDS-02</span>
+                <span class="meta-val" data-tid="p-231" contenteditable="false">ROS 2 Humble, Docker(Ubuntu 22.04), YOLOv8n, Hailo-8 NPU, Cartographer SLAM, OpenCR 1.0, LDS-02</span>
               </div>
             </div>
 
-            <div class="summary-box" style="justify-content: space-between; gap: 20px; padding: 28px 30px;">
+            <div class="summary-box" style="justify-content: flex-start; gap: 28px; padding: 30px 30px;">
               <div>
                 <span class="card-badge" style="margin-bottom: 14px;">프로젝트 개요 및 본인 핵심 기여</span>
-                <ul class="bullet-list" style="gap: 14px;">
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-238" contenteditable="false"><b>화재 관제 연계 자율 진압</b>: CCTV 화재 감지 좌표 수신 후 <code>Cartographer SLAM</code>·<code>NavigateToPose</code>로 이동·진압하는 시스템</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-239" contenteditable="false"><b>데이터 증강 · YOLOv8n 학습 전담</b>: <code>Roboflow</code> 원본 800장→1,600장 증강 학습으로 <b>mAP@50 0.926 · Recall 0.927</b> 달성</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-240" contenteditable="false"><b>Hailo-8 NPU 엣지 경량화</b>: <code>best.pt(6.3MB) → ONNX → Hailo Model Zoo</code> 양자화·컴파일을 거쳐 RPi5 + M.2 HAT+ 배포</li>
-                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-241" contenteditable="false"><b>ROS 2 통합 · 프로젝트 총괄</b>: 바운딩박스 중앙 정렬 소화 루프 연동, 8개월 산학 멘토링·학사학위논문(29p) 발간 총괄</li>
+                <ul class="bullet-list" style="gap: 17px;">
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-232" contenteditable="false"><b>화재 관제 연계 자율 진압</b>: CCTV 화재 감지 좌표 수신 후 <code>Cartographer SLAM</code>·<code>NavigateToPose</code>로 이동·진압하는 시스템</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-233" contenteditable="false"><b>데이터 증강 · YOLOv8n 학습 전담</b>: <code>Roboflow</code> 원본 800장→1,600장 증강 학습으로 <b>mAP@50 0.926 · Recall 0.927</b> 달성</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-234" contenteditable="false"><b>Hailo-8 NPU 엣지 경량화</b>: <code>best.pt(6.3MB) → ONNX → Hailo Model Zoo</code> 양자화·컴파일을 거쳐 RPi5 + M.2 HAT+ 배포</li>
+                  <li style="font-size: 17.2px; line-height: 1.54;" data-tid="p-235" contenteditable="false"><b>ROS 2 통합 · 프로젝트 총괄</b>: 바운딩박스 중앙 정렬 소화 루프 연동, 8개월 산학 멘토링·학사학위논문(29p) 발간 총괄</li>
                 </ul>
               </div>
 
@@ -2563,13 +2549,13 @@
                   <div class="proof-img-box light" style="height: 415px;">
                     <img src="./assets/as_hw_photo.jpg" alt="AutoSavior 실물 구성도">
                   </div>
-                  <div class="proof-caption" data-tid="p-242" contenteditable="false">▲ 실물(216×320×150mm): 상단 LDS-02 · 전면 카메라·노즐 · 내부 2L 탱크</div>
+                  <div class="proof-caption" data-tid="p-236" contenteditable="false">▲ 실물(216×320×150mm): 상단 LDS-02 · 전면 카메라·노즐 · 내부 2L 탱크</div>
                 </div>
                 <div class="proof-item">
                   <div class="proof-img-box light" style="height: 415px;">
                     <img src="./assets/as_test_arena.jpg" class="cover" alt="실내 A/B 테스트맵">
                   </div>
-                  <div class="proof-caption" data-tid="p-243" contenteditable="false">▲ 실내 테스트베드 (좌하단 대기 로봇 · 상단 CCTV · 화원 표적)</div>
+                  <div class="proof-caption" data-tid="p-237" contenteditable="false">▲ 실내 테스트베드 (좌하단 대기 로봇 · 상단 CCTV · 화원 표적)</div>
                 </div>
               </div>
             </div>
@@ -2578,15 +2564,15 @@
         <div class="page-num">13</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s13" style="width: 1475px; height: 829.688px;">
-      <section class="slide theme-as" style="transform: scale(0.768229); transform-origin: left top;">
+<div class="slide-slot" id="pf-s13" style="width: 1017px; height: 572.062px;">
+      <section class="slide theme-as" style="transform: scale(0.529687); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
             <span class="brand-logo">AutoSavior</span>
             <span class="divider"></span>
             <span class="section-pill">Core Problem Solving : 화재·연기 YOLOv8n 학습 검증 &amp; Hailo-8 엣지 NPU 경량화</span>
           </div>
-          <h1 class="main-title" data-tid="p-244" contenteditable="false">Roboflow 2배 데이터 증강(1,600장) 및 YOLOv8n → Hailo-8 양자화 파이프라인으로 mAP@50 0.926 달성</h1>
+          <h1 class="main-title" data-tid="p-238" contenteditable="false">Roboflow 2배 데이터 증강(1,600장) 및 YOLOv8n → Hailo-8 양자화 파이프라인으로 mAP@50 0.926 달성</h1>
         </div>
 
         <div class="middle-section">
@@ -2637,22 +2623,22 @@
               <table class="metric-table">
                 <thead>
                   <tr>
-                    <th data-tid="p-245" contenteditable="false">검증 대상 (Val 190장 / 328 Instances)</th>
-                    <th data-tid="p-246" contenteditable="false">Box Precision (P)</th>
-                    <th data-tid="p-247" contenteditable="false">Recall (R)</th>
-                    <th data-tid="p-248" contenteditable="false">mAP@50</th>
-                    <th data-tid="p-249" contenteditable="false">mAP@50-95</th>
-                    <th data-tid="p-250" contenteditable="false">GPU 추론 속도 (RTX 3060)</th>
+                    <th data-tid="p-239" contenteditable="false">검증 대상 (Val 190장 / 328 Instances)</th>
+                    <th data-tid="p-240" contenteditable="false">Box Precision (P)</th>
+                    <th data-tid="p-241" contenteditable="false">Recall (R)</th>
+                    <th data-tid="p-242" contenteditable="false">mAP@50</th>
+                    <th data-tid="p-243" contenteditable="false">mAP@50-95</th>
+                    <th data-tid="p-244" contenteditable="false">GPU 추론 속도 (RTX 3060)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-tid="p-251" contenteditable="false">YOLOv8n (best.pt · 6.3 MB)</td>
-                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-252" contenteditable="false">0.905 (90.5%)</td>
-                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-253" contenteditable="false">0.927 (92.7%)</td>
-                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-254" contenteditable="false">0.926 (92.6%)</td>
-                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-255" contenteditable="false">0.607 (60.7%)</td>
-                    <td data-tid="p-256" contenteditable="false">총 3.8 ms (전처리 0.3 + 추론 2.1 + 후처리 1.4)</td>
+                    <td data-tid="p-245" contenteditable="false">YOLOv8n (best.pt · 6.3 MB)</td>
+                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-246" contenteditable="false">0.905 (90.5%)</td>
+                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-247" contenteditable="false">0.927 (92.7%)</td>
+                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-248" contenteditable="false">0.926 (92.6%)</td>
+                    <td class="good" style="color:#d9531e; background:#fff7ed;" data-tid="p-249" contenteditable="false">0.607 (60.7%)</td>
+                    <td data-tid="p-250" contenteditable="false">총 3.8 ms (전처리 0.3 + 추론 2.1 + 후처리 1.4)</td>
                   </tr>
                 </tbody>
               </table>
@@ -2666,13 +2652,13 @@
                 <div class="proof-img-box">
                   <img src="./assets/as_yolo_log.jpg" alt="YOLOv8n 학습 로그">
                 </div>
-                <div class="proof-caption" data-tid="p-257" contenteditable="false">▲ 300 Epochs 학습·검증 실측 로그<br>(P=0.905, R=0.927, mAP50=0.926)</div>
+                <div class="proof-caption" data-tid="p-251" contenteditable="false">▲ 300 Epochs 학습·검증 실측 로그<br>(P=0.905, R=0.927, mAP50=0.926)</div>
               </div>
               <div class="proof-item">
                 <div class="proof-img-box light">
                   <img src="./assets/as_map50_curve.jpg" alt="mAP50 곡선">
                 </div>
-                <div class="proof-caption" data-tid="p-258" contenteditable="false">▲ Epoch별 mAP@50 수렴 추이 곡선<br>(안정적 수렴 및 과적합 방지)</div>
+                <div class="proof-caption" data-tid="p-252" contenteditable="false">▲ Epoch별 mAP@50 수렴 추이 곡선<br>(안정적 수렴 및 과적합 방지)</div>
               </div>
             </div>
           </div>
@@ -2682,70 +2668,58 @@
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-problem" style="margin-bottom:0;">1. 문제 원인</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-259" contenteditable="false"><b>초기 소형 화염·연기 탐지 한계</b>: 800장 원본만으로는 화재 초기 작은 불꽃과 조도·각도 변화에 대한 일반화 성능 부족</li>
-              <li data-tid="p-260" contenteditable="false"><b>온보드 CPU 추론 병목</b>: SLAM·Nav2·하드웨어 제어 노드가 동시에 도는 Raspberry Pi 환경에서 CPU 단독 YOLO 추론 부하 과다</li>
-              <li data-tid="p-261" contenteditable="false"><b>비화재 오탐 과제 도출</b>: 붉은 천·강한 햇빛 등 비화재 적색 객체에 의한 간헐적 오인식 개선 필요성 확인 (논문 한계 분석)</li>
+              <li data-tid="p-253" contenteditable="false"><b>초기 소형 화염·연기 탐지 한계</b>: 800장 원본만으로는 화재 초기 작은 불꽃과 조도·각도 변화에 대한 일반화 성능 부족</li>
+              <li data-tid="p-254" contenteditable="false"><b>온보드 CPU 추론 병목</b>: SLAM·Nav2·하드웨어 제어 노드가 동시에 도는 Raspberry Pi 환경에서 CPU 단독 YOLO 추론 부하 과다</li>
+              <li data-tid="p-255" contenteditable="false"><b>비화재 오탐 과제 도출</b>: 붉은 천·강한 햇빛 등 비화재 적색 객체에 의한 간헐적 오인식 개선 필요성 확인 (논문 한계 분석)</li>
             </ul>
           </div>
 
           <div class="text-card highlight">
             <div class="text-card-header"><span class="card-badge" style="margin-bottom:0;">2. 해결 과정 (핵심 실행)</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-262" contenteditable="false"><b>데이터 증강 &amp; 경량 모델 선정</b>: <code>Roboflow</code> 회전·크기·밝기 2배 증강으로 <b>1,600장</b>을 구축하고 8.1 GFLOPs 초경량 <code>YOLOv8n</code> 300 epochs 학습</li>
-              <li data-tid="p-263" contenteditable="false"><b>ONNX → Hailo-8 NPU 오프로딩</b>: <code>best.pt(6.3MB)</code>를 ONNX로 변환 후 Hailo Model Zoo(파싱·양자화·컴파일)로 전용 NPU 가속 파이프라인 설계</li>
-              <li data-tid="p-264" contenteditable="false"><b>실내 A/B 테스트베드 검증</b>: A/B 구역 CCTV와 <code>Cartographer SLAM</code> 주행·노즐 중앙 정렬 소화 시나리오 연동 검증</li>
+              <li data-tid="p-256" contenteditable="false"><b>데이터 증강 &amp; 경량 모델 선정</b>: <code>Roboflow</code> 회전·크기·밝기 2배 증강으로 <b>1,600장</b>을 구축하고 8.1 GFLOPs 초경량 <code>YOLOv8n</code> 300 epochs 학습</li>
+              <li data-tid="p-257" contenteditable="false"><b>ONNX → Hailo-8 NPU 오프로딩</b>: <code>best.pt(6.3MB)</code>를 ONNX로 변환 후 Hailo Model Zoo(파싱·양자화·컴파일)로 전용 NPU 가속 파이프라인 설계</li>
+              <li data-tid="p-258" contenteditable="false"><b>실내 A/B 테스트베드 검증</b>: A/B 구역 CCTV와 <code>Cartographer SLAM</code> 주행·노즐 중앙 정렬 소화 시나리오 연동 검증</li>
             </ul>
           </div>
 
           <div class="text-card">
             <div class="text-card-header"><span class="card-badge pill-result" style="margin-bottom:0;">3. 결과 및 검증</span></div>
             <ul class="bullet-list">
-              <li data-tid="p-265" contenteditable="false">검증셋(190장/328 instances) 기준 <b>mAP@50 0.926 · Recall 0.927 · Precision 0.905</b> 및 이미지당 <code>3.8ms</code> 추론 성능 확보</li>
-              <li data-tid="p-266" contenteditable="false">인천대학교 정보통신공학 <b>학사학위논문(29p)</b> 발간 및 <b>한이음 드림업 공모전 동상</b> 수상(2024.12.04)</li>
-              <li data-tid="p-267" contenteditable="false">본 프로젝트에서 체감한 비전 오탐 문제를 이후 <code>LIBO</code>의 <b>슬라이딩 필터+기하 임계값</b> 설계로 발전시키는 밑거름 확보</li>
+              <li data-tid="p-259" contenteditable="false">검증셋(190장/328 instances) 기준 <b>mAP@50 0.926 · Recall 0.927 · Precision 0.905</b> 및 이미지당 <code>3.8ms</code> 추론 성능 확보</li>
+              <li data-tid="p-260" contenteditable="false">인천대학교 정보통신공학 <b>학사학위논문(29p)</b> 발간 및 <b>한이음 드림업 공모전 동상</b> 수상(2024.12.04)</li>
+              <li data-tid="p-261" contenteditable="false">본 프로젝트에서 체감한 비전 오탐 문제를 이후 <code>LIBO</code>의 <b>슬라이딩 필터+기하 임계값</b> 설계로 발전시키는 밑거름 확보</li>
             </ul>
           </div>
         </div>
         <div class="page-num">14</div>
       </section>
     </div>
-<div class="slide-slot" id="pf-s14" style="width: 1475px; height: 829.688px;">
-      <section class="slide slide-cover" style="padding: 72px 84px 58px; transform: scale(0.768229); transform-origin: left top;">
-        <div class="cover-grid-bg"></div>
-        <div class="cover-inner">
-          <div>
-            <span class="cover-kicker">THANK YOU FOR REVIEWING · PORTFOLIO SUMMARY</span>
-            <h1 class="cover-title" style="font-size: 56px; margin-top: 34px; line-height: 1.28;" data-tid="p-268" contenteditable="false">
-              현장의 물리 변수를 코드와 수치로 증명하는<br>
-              <span>신뢰할 수 있는 로봇 S/W 엔지니어</span>가 되겠습니다
+<div class="slide-slot" id="pf-s14" style="width: 1017px; height: 572.062px;">
+      <section class="slide" style="background: rgb(255, 255, 255); color: rgb(15, 23, 42); padding: 84px 96px 60px; position: relative; overflow: hidden; transform: scale(0.529687); transform-origin: left top;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(29, 95, 167, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 95, 167, 0.045) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none;"></div>
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 10px; background: #1d4ed8;"></div>
+        <div style="position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div style="font-size: 15px; font-weight: 700; letter-spacing: 2.2px; color: #1d4ed8;">
+            <span class="editable-text" data-tid="p-262" contenteditable="false">THANK YOU FOR REVIEWING</span>
+          </div>
+
+          <div style="margin: auto 0;">
+            <div style="width: 72px; height: 5px; background: #1d4ed8; border-radius: 999px; margin-bottom: 32px;"></div>
+            <h1 style="font-size: 78px; font-weight: 800; color: #0f172a; letter-spacing: -2.2px; line-height: 1.15;" data-tid="p-263" contenteditable="false">
+              감사합니다.
             </h1>
-            <p class="cover-sub" style="margin-top: 24px; font-size: 22px;" data-tid="p-269" contenteditable="false">
-              양산 라인 필드 트러블슈팅부터 ROS 2 자율주행 · 센서 퓨전 · 엣지 AI 통합까지,<br>
-              가설에 의존하지 않고 원인 규명과 정량 검증으로 끝까지 완성합니다.
+            <div style="margin-top: 24px; font-size: 30px; font-weight: 600; color: #1d4ed8; letter-spacing: -0.5px;">
+              <span class="cover-sub" style="margin:0; font-size:inherit; color:inherit; font-weight:inherit;" data-tid="p-264" contenteditable="false">로봇 S/W · 자율주행(ROS 2) 엔지니어 김민수</span>
+            </div>
+            <p style="margin-top: 16px; font-size: 20px; color: #475569; font-weight: 500; line-height: 1.55;" data-tid="p-265" contenteditable="false">
+              현장의 물리 변수를 코드와 수치로 풀어내며, 실물 검증까지 책임지는 엔지니어로 기여하겠습니다.
             </p>
           </div>
 
-          <div class="cover-cards" style="grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 32px;">
-            <div class="cover-card" style="padding: 26px 28px; gap: 10px;">
-              <span class="cover-card-num">FIELD PROVEN · 10 MONTHS</span>
-              <div class="cover-card-title" style="font-size: 23px;" data-tid="p-270" contenteditable="false">양산 현장 실무 감각</div>
-              <div class="cover-card-desc" style="font-size: 16px; line-height: 1.52;" data-tid="p-271" contenteditable="false">SK배터리(39대)·현대모비스(40대) 총 79대 AMR/AGV 셋업 · 50m 반사판 이탈 재발 0건 · nanoScan3·PLC/PIO 디버깅</div>
-            </div>
-            <div class="cover-card" style="padding: 26px 28px; gap: 10px;">
-              <span class="cover-card-num">AUTONOMOUS NAVIGATION · ROS 2</span>
-              <div class="cover-card-title" style="font-size: 23px;" data-tid="p-272" contenteditable="false">측위 정합 &amp; FMS 관제</div>
-              <div class="cover-card-desc" style="font-size: 16px; line-height: 1.52;" data-tid="p-273" contenteditable="false">C++17 50Hz PID 도킹(1.90~3.42cm) · A*/EKF 39~108x 가속 · 6축 자이로 EKF(XY +91.6%) · 210.47초 슬립 E2E</div>
-            </div>
-            <div class="cover-card" style="padding: 26px 28px; gap: 10px;">
-              <span class="cover-card-num">HRI · EDGE AI DEPLOYMENT</span>
-              <div class="cover-card-title" style="font-size: 23px;" data-tid="p-274" contenteditable="false">멀티모달 HRI &amp; 엣지 NPU</div>
-              <div class="cover-card-desc" style="font-size: 16px; line-height: 1.52;" data-tid="p-275" contenteditable="false">MediaPipe 5-Frame + 0.3s 선형 감속 · Porcupine+GPT-3.5 비동기 제어 · YOLOv8n(mAP@50 0.926) Hailo-8 양자화</div>
-            </div>
-          </div>
-
-          <div class="cover-footer" style="font-size: 17px; color: #cbd5e1;">
-            <span><strong style="color: #ffffff; font-size: 19px;">김민수 (Kim Minsu)</strong> · 인천대학교 정보통신공학과 공학사 우등 졸업</span>
-            <span><a href="mailto:ajferhcz153@gmail.com" style="color: #93c5fd;">ajferhcz153@gmail.com</a> · 010-9900-9256 · <a href="https://github.com/kimminsu0519" target="_blank" rel="noopener" style="color: #93c5fd;">github.com/kimminsu0519</a></span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 22px; border-top: 1.5px solid #e2e8f0; font-size: 16.5px; color: #475569; font-weight: 500;">
+            <span><strong style="color: #0f172a; font-weight: 700;">김민수 (Kim Minsu)</strong> · 1999.05.19</span>
+            <span><a href="mailto:ajferhcz153@gmail.com" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">ajferhcz153@gmail.com</a> · 010-9900-9256 · <a href="https://github.com/kimminsu0519" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">github.com/kimminsu0519</a> · <a href="https://kimminsu0519.github.io/pf" target="_blank" rel="noopener" style="color: #1d5fa7; text-decoration: none; font-weight: 500;">kimminsu0519.github.io/pf</a></span>
           </div>
         </div>
         <div class="page-num" style="color: #94a3b8;">15</div>
@@ -2762,6 +2736,7 @@
     <button type="button" onclick="stepSlide(1)">다음</button>
     <button type="button" onclick="jumpTo('pf-s3')">목차</button>
     <button type="button" onclick="setView('overview')">전체보기</button>
+    <button type="button" onclick="location.href='./resume.html'">이력서</button>
     <button type="button" class="ppt-hide-mobile" onclick="toggleFs()">전체화면(F)</button>
     <button type="button" class="ppt-hide-mobile" onclick="printDeck()">PDF</button>
   </div>
