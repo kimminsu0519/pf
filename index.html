@@ -1232,11 +1232,11 @@
             </div>
           </div>
 
-          <div class="ov-right">
-            <div class="card" style="padding: 18px 24px; height: 292px; justify-content: center;">
-              <span class="card-badge" style="margin-bottom: 10px;">통합 시스템 아키텍처 (Gazebo · ROS 2 Jazzy · FMS Web)</span>
+          <div class="ov-right" style="gap: 14px;">
+            <div class="card" style="padding: 14px 22px; height: 248px; justify-content: center;">
+              <span class="card-badge" style="margin-bottom: 6px;">통합 시스템 아키텍처 (Gazebo · ROS 2 Jazzy · FMS Web)</span>
               <div class="diagram-wrapper">
-                <svg viewBox="0 0 1050 205" style="width:100%; height:200px;">
+                <svg viewBox="0 0 1050 205" style="width:100%; height:174px;">
                   <defs>
                     <marker id="arr-lsm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                       <path d="M0 1 L10 5 L0 9 z" fill="#4338ca"></path>
@@ -1293,27 +1293,29 @@
               </div>
             </div>
 
-            <div class="card" style="flex: 1; padding: 20px 24px; justify-content: center; gap: 18px;">
-              <div>
-                <span class="card-badge" style="margin-bottom: 12px;">Gazebo · RViz2 · Web FMS 실구동 화면</span>
-                <div class="proof-grid">
+            <div class="card" style="flex: 1; padding: 16px 22px; justify-content: space-between; gap: 12px;">
+              <div style="display: flex; flex-direction: column; flex: 1;">
+                <span class="card-badge" style="margin-bottom: 10px;">Gazebo · RViz2 · Web FMS 실구동 화면</span>
+                <div style="display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 12px; align-items: stretch; flex: 1;">
                   <div class="proof-item" style="padding: 10px;">
-                    <div class="proof-img-box light" style="height: 255px;">
+                    <div class="proof-img-box light" style="flex: 1; height: 100%; min-height: 368px;">
                       <img src="./assets/lsm_01_gazebo.png" class="cover" alt="Gazebo 3D 물류 창고">
                     </div>
                     <div class="proof-caption" data-tid="p-31" contenteditable="false">▲ 1:1 스케일 Gazebo 3D 창고 월드</div>
                   </div>
-                  <div class="proof-item" style="padding: 10px;">
-                    <div class="proof-img-box light" style="height: 255px;">
-                      <img src="./assets/lsm_02_rviz.png" alt="RViz2 AMCL Nav2 정합">
+                  <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="proof-item" style="padding: 8px 10px;">
+                      <div class="proof-img-box light" style="height: 176px;">
+                        <img src="./assets/lsm_02_rviz.png" alt="RViz2 AMCL Nav2 정합">
+                      </div>
+                      <div class="proof-caption" data-tid="p-32" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
                     </div>
-                    <div class="proof-caption" data-tid="p-32" contenteditable="false">▲ RViz2 AMCL 파티클 수렴 · Nav2 주행</div>
-                  </div>
-                  <div class="proof-item" style="padding: 10px;">
-                    <div class="proof-img-box light" style="height: 255px;">
-                      <img src="./assets/lsm_03_fms.png" alt="FMS 웹 관제 대시보드">
+                    <div class="proof-item" style="padding: 8px 10px;">
+                      <div class="proof-img-box light" style="height: 176px;">
+                        <img src="./assets/lsm_03_fms.png" alt="FMS 웹 관제 대시보드">
+                      </div>
+                      <div class="proof-caption" data-tid="p-33" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
                     </div>
-                    <div class="proof-caption" data-tid="p-33" contenteditable="false">▲ WebSocket FMS (206노드 A* · 5단계 FSM)</div>
                   </div>
                 </div>
               </div>
@@ -1332,11 +1334,11 @@
       <section class="slide theme-lsm" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">LSM Bot</span>
+            <span class="brand-logo">PROJECT 01 · LSM Bot</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving #1 : AMCL 원점 정합 &amp; 6축 자이로 EKF 4-Way (2/4)</span>
+            <span class="section-pill">Problem Solving 1-1 · AMCL 원점 정합 &amp; 6축 자이로 EKF 4-Way (2/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-34" contenteditable="false">무노이즈 GT 스냅을 배제한 6축 MEMS 자이로 EKF 4-Way 검증으로 슬립 오차 XY +91.6%(0.0322m) · Yaw +86.4% 개선</h1>
+          <h1 class="main-title" data-tid="p-34" contenteditable="false">1-1. 무노이즈 GT 스냅을 배제한 6축 MEMS 자이로 EKF 4-Way 검증으로 슬립 오차 XY +91.6%(0.0322m) · Yaw +86.4% 개선</h1>
         </div>
 
         <div class="middle-section">
@@ -1497,11 +1499,11 @@
       <section class="slide theme-lsm" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">LSM Bot</span>
+            <span class="brand-logo">PROJECT 01 · LSM Bot</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving #2 : 206노드 A* 순차 디스패처 &amp; 5단계 FSM E2E (3/4)</span>
+            <span class="section-pill">Problem Solving 1-2 · 206노드 A* 순차 디스패처 &amp; 5단계 FSM E2E (3/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-81" contenteditable="false">206노드 A* 순차 디스패처와 C++17 5단계 FSM으로 28.14m 정상(216.17s)·슬립(210.47s) E2E 완주</h1>
+          <h1 class="main-title" data-tid="p-81" contenteditable="false">1-2. 206노드 A* 순차 디스패처와 C++17 5단계 FSM으로 28.14m 정상(216.17s)·슬립(210.47s) E2E 완주</h1>
         </div>
 
         <div class="middle-section">
@@ -1631,11 +1633,11 @@
       <section class="slide theme-lsm" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">LSM Bot</span>
+            <span class="brand-logo">PROJECT 01 · LSM Bot</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving #3 : Modern C++17 (rclcpp · Eigen3) 코어 전환 &amp; 50Hz PID 정밀 도킹 (4/4)</span>
+            <span class="section-pill">Problem Solving 1-3 · C++17 (rclcpp · Eigen3) 코어 전환 &amp; 50Hz PID 정밀 도킹 (4/4)</span>
           </div>
-          <h1 class="main-title" data-tid="p-108" contenteditable="false">C++17(rclcpp · Eigen3) 실시간 코어 전환으로 연산 39~108배 가속 및 50Hz PID 정밀 도킹(29.27cm → 3.42cm) 달성</h1>
+          <h1 class="main-title" data-tid="p-108" contenteditable="false">1-3. C++17(rclcpp · Eigen3) 실시간 코어 전환으로 연산 39~108배 가속 및 50Hz PID 정밀 도킹(29.27cm → 3.42cm) 달성</h1>
         </div>
 
         <div class="middle-section">
@@ -1957,11 +1959,11 @@
       <section class="slide theme-libo" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">LIBO</span>
+            <span class="brand-logo">PROJECT 02 · LIBO</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving #1 : 비전 제스처 실시간 파이프라인 &amp; 장애물 우선 안전 감속</span>
+            <span class="section-pill">Problem Solving 2-1 · 비전 제스처 실시간 파이프라인 &amp; 장애물 우선 안전 감속 (2/3)</span>
           </div>
-          <h1 class="main-title" data-tid="p-152" contenteditable="false">MediaPipe 5-Frame 합의 · UDP 4MB 버퍼 분리 · 20단계 선형 감속으로 오작동 및 급정거 차단</h1>
+          <h1 class="main-title" data-tid="p-152" contenteditable="false">2-1. MediaPipe 5-Frame 합의 · UDP 4MB 버퍼 분리 · 20단계 선형 감속으로 오작동 및 급정거 차단</h1>
         </div>
 
         <div class="middle-section">
@@ -2101,11 +2103,11 @@
       <section class="slide theme-libo" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">LIBO</span>
+            <span class="brand-logo">PROJECT 02 · LIBO</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving #2 : 실시간 음성·LLM 의도 분류 및 ROS 2 모드 오케스트레이션</span>
+            <span class="section-pill">Problem Solving 2-2 · 실시간 음성·LLM 의도 분류 및 ROS 2 모드 오케스트레이션 (3/3)</span>
           </div>
-          <h1 class="main-title" data-tid="p-176" contenteditable="false">Porcupine 한국어 WakeWord · RMS 1.5초 침묵 감지 · GPT-3.5 9종 의도 분류 기반 비동기 모드 전환</h1>
+          <h1 class="main-title" data-tid="p-176" contenteditable="false">2-2. Porcupine 한국어 WakeWord · RMS 1.5초 침묵 감지 · GPT-3.5 9종 의도 분류 기반 비동기 모드 전환</h1>
         </div>
 
         <div class="middle-section">
@@ -2252,7 +2254,7 @@
           <div class="header-top">
             <span class="brand-logo">WORK EXPERIENCE · AMR 제어팀 (인턴)</span>
             <span class="divider"></span>
-            <span class="header-sub" data-tid="p-203" contenteditable="false">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수 (1/2)</span>
+            <span class="header-sub" data-tid="p-203" contenteditable="false">생산라인 자율주행 물류(AMR/AGV) 시스템 셋업 및 센서·PLC 유지보수 (1/2 · 개요 및 현장 플릿)</span>
           </div>
         </div>
 
@@ -2379,11 +2381,11 @@
       <section class="slide theme-amr" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">AMR 제어팀 (인턴)</span>
+            <span class="brand-logo">WORK EXPERIENCE · AMR 제어팀 (인턴)</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving : 50m 반복 구간 위치 이탈 규명 &amp; 세이프티·도킹 트러블슈팅 (2/2)</span>
+            <span class="section-pill">Field Case W-1 · 50m 반복 구간 위치 이탈 규명 &amp; 세이프티·도킹 트러블슈팅 (2/2)</span>
           </div>
-          <h1 class="main-title" data-tid="p-215" contenteditable="false">LiDAR-LOC 스캔 매칭 분석 기반 비대칭 반사판 배치로 50m 반복 구간 위치 이탈 재발 0건 정상화</h1>
+          <h1 class="main-title" data-tid="p-215" contenteditable="false">W-1. LiDAR-LOC 스캔 매칭 분석 기반 비대칭 반사판 배치로 50m 반복 구간 위치 이탈 재발 0건 정상화</h1>
         </div>
 
         <div class="middle-section">
@@ -2579,11 +2581,11 @@
       <section class="slide theme-as" style="transform: scale(0.518229); transform-origin: left top;">
         <div class="header">
           <div class="header-top">
-            <span class="brand-logo">AutoSavior</span>
+            <span class="brand-logo">PROJECT 03 · AutoSavior</span>
             <span class="divider"></span>
-            <span class="section-pill">Core Problem Solving : 화재·연기 YOLOv8n 학습 검증 &amp; Hailo-8 엣지 NPU 경량화</span>
+            <span class="section-pill">Problem Solving 3-1 · 화재·연기 YOLOv8n 학습 검증 &amp; Hailo-8 엣지 NPU 경량화 (2/2)</span>
           </div>
-          <h1 class="main-title" data-tid="p-238" contenteditable="false">Roboflow 2배 데이터 증강(1,600장) 및 YOLOv8n → Hailo-8 양자화 파이프라인으로 mAP@50 0.926 달성</h1>
+          <h1 class="main-title" data-tid="p-238" contenteditable="false">3-1. Roboflow 2배 데이터 증강(1,600장) 및 YOLOv8n → Hailo-8 양자화 파이프라인으로 mAP@50 0.926 달성</h1>
         </div>
 
         <div class="middle-section">
