@@ -102,7 +102,7 @@
 
   <line x1="764" y1="280" x2="782" y2="280" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
   <rect x="786" y="222" width="156" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
-  <text x="864" y="249" text-anchor="middle" class="t b" font-size="14.5" fill="#1e3a8a">오류율 0%대 복구</text>
+  <text x="864" y="249" text-anchor="middle" class="t b" font-size="14.5" fill="#1e3a8a">이탈 재발 0건 복구</text>
   <line x1="802" y1="260" x2="926" y2="260" stroke="#bfdbfe"/>
   <text x="864" y="282" text-anchor="middle" class="t m" font-size="13" fill="#0f172a">고유 특징점 매칭</text>
   <text x="864" y="302" text-anchor="middle" class="t m" font-size="13" fill="#0f172a">도킹 편차 해소</text>
