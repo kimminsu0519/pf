@@ -822,9 +822,11 @@
       body.print-portfolio-only .resume-section-wrap { display: none !important; }
     }
   
+    
     body { margin: 0; background: #090d14; }
     body.ppt-view { overflow: hidden; width: 100vw; height: 100dvh; }
     body.ppt-view .export-bar { display: none; }
+
     body.ppt-view .doc-canvas,
     body.ppt-view .portfolio-section-wrap,
     body.ppt-view .deck { display: block; width: 100%; height: 100%; padding: 0; margin: 0; }
@@ -839,6 +841,7 @@
       box-shadow: 0 24px 70px rgba(0,0,0,0.72);
     }
     body.ppt-view .slide-slot.ppt-active > .slide { transform: none !important; }
+    body.overview-mode .deck { padding: 24px 0 60px; gap: 22px; }
 
     .ppt-edge {
       display: none; position: fixed; top: 50%; transform: translateY(-50%); z-index: 400;
@@ -879,17 +882,25 @@
 
     .export-bar {
       position: sticky; top: 0; z-index: 500; background: #0f172a; color: #f8fafc;
-      padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px;
+      padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px;
       border-bottom: 1px solid #334155;
+    }
+    .export-bar strong { line-height: 1.3; min-width: 0; }
+    .export-bar .st-btn { white-space: nowrap; flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .export-bar { padding: 8px 12px; font-size: 12px; gap: 8px; }
+      .export-bar .st-btn { padding: 6px 10px; font-size: 11.5px; }
     }
     body.overview-mode { background: #1e293b; overflow: auto; }
     body.overview-mode .ppt-hud, body.overview-mode .ppt-edge { display: none !important; }
-    body.overview-mode .deck { padding: 24px 0 60px; gap: 22px; }
 
     @media print {
       .export-bar, .ppt-hud, .ppt-edge { display: none !important; }
-      body.ppt-view { overflow: visible !important; width: auto !important; height: auto !important; background: #fff !important; }
-      body.ppt-view .slide-slot { display: flex !important; position: static !important; transform: none !important; box-shadow: none !important; page-break-after: always; }
+      body, body.ppt-view, body.overview-mode { overflow: visible !important; width: auto !important; height: auto !important; background: #fff !important; }
+
+      body.ppt-view .slide-slot,
+      body.overview-mode .slide-slot { display: flex !important; position: static !important; transform: none !important; box-shadow: none !important; page-break-after: always; }
+      .slide-slot:last-child { page-break-after: auto; }
     }
   </style>
   <style id="dynamicPageRule">@page { size: 1920px 1080px; margin: 0; }</style>
@@ -2728,8 +2739,8 @@
     </section>
   </div>
 
-  <button type="button" class="ppt-edge ppt-prev" onclick="stepSlide(-1)" aria-label="이전 슬라이드">&#8249;</button>
-  <button type="button" class="ppt-edge ppt-next" onclick="stepSlide(1)" aria-label="다음 슬라이드">&#8250;</button>
+  <button type="button" class="ppt-edge ppt-prev" onclick="stepSlide(-1)" aria-label="이전 페이지">&#8249;</button>
+  <button type="button" class="ppt-edge ppt-next" onclick="stepSlide(1)" aria-label="다음 페이지">&#8250;</button>
   <div class="ppt-hud" id="pptHud">
     <button type="button" onclick="stepSlide(-1)">이전</button>
     <span id="pptCounter" style="font-weight:700; min-width:52px; text-align:center;">1 / 1</span>
@@ -2742,7 +2753,8 @@
   </div>
 
   <script>
-    const slots = Array.from(document.querySelectorAll('#deck .slide-slot'));
+    const IS_PORTFOLIO = true;
+    const items = Array.from(document.querySelectorAll('#deck .slide-slot'));
     let curIdx = 0;
     let hudTimer = null;
 
@@ -2750,36 +2762,55 @@
       const vw = window.innerWidth;
       const vh = window.innerHeight;
       if (document.body.classList.contains('ppt-view')) {
-        const pad = vw <= 768 ? 4 : 24;
-        const scale = Math.min((vw - pad) / 1920, (vh - pad) / 1080);
+        const active = items[curIdx] || items[0];
+        const bw = IS_PORTFOLIO ? 1920 : ((active && active.offsetWidth) || 794);
+        const bh = IS_PORTFOLIO ? 1080 : ((active && active.offsetHeight) || 1123);
+        const pad = vw <= 768 ? (IS_PORTFOLIO ? 4 : 8) : (IS_PORTFOLIO ? 24 : 28);
+        const scale = Math.min((vw - pad) / bw, (vh - pad) / bh);
         document.documentElement.style.setProperty('--ppt-scale', String(scale));
-      } else {
+      } else if (IS_PORTFOLIO) {
         const ovPad = vw <= 768 ? 16 : 48;
         const scale = Math.min(1, Math.max(vw - ovPad, 300) / 1920);
-        slots.forEach(slot => {
+        items.forEach(slot => {
           slot.style.width = (1920 * scale) + 'px';
           slot.style.height = (1080 * scale) + 'px';
           slot.firstElementChild.style.transform = scale < 1 ? 'scale(' + scale + ')' : 'none';
           slot.firstElementChild.style.transformOrigin = 'top left';
         });
+      } else {
+        if (!items.length) return;
+        const baseW = items[0].offsetWidth || 794;
+        const ovW = document.documentElement.clientWidth - 20;
+        const sc = ovW < baseW ? Math.max(0.4, ovW / baseW) : 1;
+        items.forEach(p => {
+          if (sc < 1) {
+            p.style.transform = 'scale(' + sc + ')';
+            p.style.transformOrigin = 'top center';
+            p.style.marginBottom = '-' + Math.round(p.offsetHeight * (1 - sc) - 10) + 'px';
+          } else {
+            p.style.transform = '';
+            p.style.marginBottom = '';
+          }
+        });
       }
     }
 
     function showSlide(idx, updateHash = true) {
-      if (!slots.length) return;
-      curIdx = Math.max(0, Math.min(slots.length - 1, idx));
-      slots.forEach((el, i) => el.classList.toggle('ppt-active', i === curIdx));
-      document.getElementById('pptCounter').textContent = (curIdx + 1) + ' / ' + slots.length;
-      if (updateHash && slots[curIdx].id) history.replaceState(null, '', '#' + slots[curIdx].id);
+      if (!items.length) return;
+      curIdx = Math.max(0, Math.min(items.length - 1, idx));
+      items.forEach((el, i) => el.classList.toggle('ppt-active', i === curIdx));
+      document.getElementById('pptCounter').textContent = (curIdx + 1) + ' / ' + items.length;
+      if (updateHash && items[curIdx].id) history.replaceState(null, '', '#' + items[curIdx].id);
+      if (document.body.classList.contains('ppt-view')) updatePptScale();
     }
 
     function stepSlide(delta) { showSlide(curIdx + delta); }
 
     window.jumpTo = function(id) {
-      const idx = slots.findIndex(el => el.id === id);
+      const idx = items.findIndex(el => el.id === id);
       if (idx >= 0) {
         if (document.body.classList.contains('ppt-view')) showSlide(idx);
-        else slots[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else items[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     };
 
@@ -2790,7 +2821,11 @@
       } else {
         document.body.classList.remove('overview-mode');
         document.body.classList.add('ppt-view');
-        slots.forEach(s => { s.style.width = ''; s.style.height = ''; s.firstElementChild.style.transform = ''; });
+        items.forEach(el => {
+          el.style.width = ''; el.style.height = '';
+          el.style.transform = ''; el.style.marginBottom = '';
+          if (IS_PORTFOLIO && el.firstElementChild) el.firstElementChild.style.transform = '';
+        });
         showSlide(curIdx, false);
       }
       updatePptScale();
@@ -2817,7 +2852,14 @@
     function printDeck() {
       const prev = document.body.classList.contains('ppt-view') ? 'ppt' : 'overview';
       setView('overview');
-      slots.forEach(slot => { slot.style.width = '1920px'; slot.style.height = '1080px'; slot.firstElementChild.style.transform = 'none'; });
+      items.forEach(el => {
+        if (IS_PORTFOLIO) {
+          el.style.width = '1920px'; el.style.height = '1080px';
+          if (el.firstElementChild) el.firstElementChild.style.transform = 'none';
+        } else {
+          el.style.transform = ''; el.style.marginBottom = '';
+        }
+      });
       window.print();
       setTimeout(() => setView(prev), 300);
     }
@@ -2827,11 +2869,10 @@
       if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); stepSlide(1); hideHudNow(); }
       else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); stepSlide(-1); hideHudNow(); }
       else if (e.key === 'Home') { e.preventDefault(); showSlide(0); hideHudNow(); }
-      else if (e.key === 'End') { e.preventDefault(); showSlide(slots.length - 1); hideHudNow(); }
+      else if (e.key === 'End') { e.preventDefault(); showSlide(items.length - 1); hideHudNow(); }
       else if (e.key === 'f' || e.key === 'F') { toggleFs(); }
     });
 
-    // Touch swipe for mobile
     let touchX = null, touchY = null;
     document.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }
@@ -2853,7 +2894,7 @@
     window.addEventListener('resize', updatePptScale);
 
     const initHash = (location.hash || '').slice(1);
-    const hashIdx = initHash ? slots.findIndex(el => el.id === initHash) : -1;
+    const hashIdx = initHash ? items.findIndex(el => el.id === initHash) : -1;
     showSlide(hashIdx >= 0 ? hashIdx : 0, false);
     updatePptScale();
     wakeHud();
