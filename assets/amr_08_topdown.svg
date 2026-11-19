@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 365" width="960" height="365">
+  <defs>
+    <style>
+      .t { font-family: "Pretendard Variable", "Pretendard", "Malgun Gothic", sans-serif; }
+      .b { font-weight: 800; }
+      .m { font-weight: 600; }
+    </style>
+    <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 1 L10 5 L0 9 z" fill="#0f172a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 1 L10 5 L0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 1 L10 5 L0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="365" fill="#ffffff"/>
+
+  <!-- BEFORE (TOP) -->
+  <rect x="6" y="6" width="948" height="164" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" stroke-dasharray="6 3"/>
+  <rect x="18" y="16" width="136" height="26" rx="13" fill="#64748b"/>
+  <text x="86" y="34" text-anchor="middle" class="t b" font-size="13.5" fill="#ffffff">BEFORE · 문제</text>
+  <text x="18" y="66" class="t b" font-size="16" fill="#0f172a">50m 대칭 반복 복도</text>
+  <text x="18" y="88" class="t m" font-size="13.5" fill="#475569">동일 기둥(d) 연속 배치</text>
+  <rect x="18" y="100" width="194" height="58" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="28" y="122" class="t" font-size="13" fill="#64748b">✕ 바닥 균열 슬립 (오진 배제)</text>
+  <text x="28" y="145" class="t b" font-size="13" fill="#0f172a">✓ 스캔 특징점 모호성 규명</text>
+
+  <!-- Corridor BEFORE -->
+  <line x1="230" y1="25" x2="755" y2="25" stroke="#64748b" stroke-width="1.4" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <rect x="398" y="14" width="188" height="20" fill="#f8fafc"/>
+  <text x="492" y="29" text-anchor="middle" class="t m" font-size="13.5" fill="#334155">반복 직선 구간 (~50m)</text>
+  <line x1="228" y1="42" x2="760" y2="42" stroke="#1e293b" stroke-width="2.5"/>
+  <line x1="228" y1="146" x2="760" y2="146" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="255" y="42" width="14" height="14" fill="#334155" rx="2"/><rect x="255" y="132" width="14" height="14" fill="#334155" rx="2"/><rect x="370" y="42" width="14" height="14" fill="#334155" rx="2"/><rect x="370" y="132" width="14" height="14" fill="#334155" rx="2"/><rect x="485" y="42" width="14" height="14" fill="#334155" rx="2"/><rect x="485" y="132" width="14" height="14" fill="#334155" rx="2"/><rect x="600" y="42" width="14" height="14" fill="#334155" rx="2"/><rect x="600" y="132" width="14" height="14" fill="#334155" rx="2"/><rect x="715" y="42" width="14" height="14" fill="#334155" rx="2"/><rect x="715" y="132" width="14" height="14" fill="#334155" rx="2"/>
+  <text x="318" y="62" text-anchor="middle" class="t m" font-size="12.5" fill="#64748b">동일 간격 d</text>
+  <text x="434" y="62" text-anchor="middle" class="t m" font-size="12.5" fill="#64748b">동일 간격 d</text>
+  <rect x="378" y="114" width="104" height="24" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-dasharray="3 2"/>
+  <text x="430" y="130" text-anchor="middle" class="t m" font-size="12" fill="#475569">공사 바닥 균열</text>
+  <line x1="240" y1="94" x2="745" y2="94" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="368" y="78" width="58" height="32" rx="5" fill="#0f172a"/>
+  <text x="397" y="99" text-anchor="middle" class="t b" font-size="13.5" fill="#ffffff">실제</text>
+  <line x1="428" y1="94" x2="546" y2="94" stroke="#ef4444" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#ad)"/>
+  <text x="487" y="84" text-anchor="middle" class="t b" font-size="13" fill="#dc2626">오매칭 Drift</text>
+  <rect x="552" y="78" width="64" height="32" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="584" y="99" text-anchor="middle" class="t b" font-size="13.5" fill="#dc2626">오인식</text>
+  <line x1="618" y1="94" x2="700" y2="116" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#ad)"/>
+  <text x="714" y="131" text-anchor="middle" class="t b" font-size="13" fill="#dc2626">이탈</text>
+
+  <line x1="764" y1="94" x2="782" y2="94" stroke="#64748b" stroke-width="1.6" marker-end="url(#ag)"/>
+  <rect x="786" y="36" width="156" height="110" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.4"/>
+  <text x="864" y="63" text-anchor="middle" class="t b" font-size="14.5" fill="#0f172a">특징점 소실</text>
+  <line x1="802" y1="74" x2="926" y2="74" stroke="#e2e8f0"/>
+  <text x="864" y="96" text-anchor="middle" class="t" font-size="13" fill="#475569">인접 기둥 오스냅</text>
+  <text x="864" y="116" text-anchor="middle" class="t" font-size="13" fill="#475569">위치 오차 누적</text>
+  <text x="864" y="136" text-anchor="middle" class="t b" font-size="13" fill="#dc2626">도킹 실패·지연</text>
+
+  <!-- TRANSITION -->
+  <rect x="295" y="171" width="370" height="24" rx="12" fill="#1e40af"/>
+  <text x="480" y="188" text-anchor="middle" class="t b" font-size="13" fill="#ffffff">▼ LiDAR-LOC 분석 기반 · 반사판 비대칭 배치 적용</text>
+
+  <!-- AFTER (BOTTOM) -->
+  <rect x="6" y="196" width="948" height="163" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="18" y="206" width="136" height="26" rx="13" fill="#2563eb"/>
+  <text x="86" y="224" text-anchor="middle" class="t b" font-size="13.5" fill="#ffffff">AFTER · 해결</text>
+  <text x="18" y="256" class="t b" font-size="16" fill="#0f172a">반사판 비대칭 배치</text>
+  <text x="18" y="278" class="t m" font-size="13.5" fill="#334155">고유 기하 랜드마크 형성</text>
+  <rect x="18" y="290" width="194" height="58" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="28" y="312" class="t b" font-size="13.5" fill="#1e3a8a">• 비대칭 간격 (d₁ ≠ d₂ ≠ d₃)</text>
+  <text x="28" y="334" class="t b" font-size="13.5" fill="#1e3a8a">• 전역 유일 특징점 락온</text>
+
+  <!-- Asymmetric spacing labels -->
+  <line x1="295" y1="214" x2="418" y2="214" stroke="#2563eb" stroke-width="1.4" marker-start="url(#ab)" marker-end="url(#ab)"/>
+  <rect x="344" y="204" width="26" height="18" fill="#ffffff"/>
+  <text x="357" y="218" text-anchor="middle" class="t b" font-size="13.5" fill="#1d4ed8">d₁</text>
+  <line x1="418" y1="214" x2="635" y2="214" stroke="#2563eb" stroke-width="1.4" marker-start="url(#ab)" marker-end="url(#ab)"/>
+  <rect x="514" y="204" width="26" height="18" fill="#ffffff"/>
+  <text x="527" y="218" text-anchor="middle" class="t b" font-size="13.5" fill="#1d4ed8">d₂</text>
+  <line x1="635" y1="214" x2="742" y2="214" stroke="#2563eb" stroke-width="1.4" marker-start="url(#ab)" marker-end="url(#ab)"/>
+  <rect x="676" y="204" width="26" height="18" fill="#ffffff"/>
+  <text x="689" y="218" text-anchor="middle" class="t b" font-size="13.5" fill="#1d4ed8">d₃</text>
+
+  <line x1="228" y1="228" x2="760" y2="228" stroke="#0f172a" stroke-width="2.5"/>
+  <line x1="228" y1="332" x2="760" y2="332" stroke="#0f172a" stroke-width="2.5"/>
+  <rect x="255" y="228" width="14" height="14" fill="#334155" rx="2"/><rect x="255" y="318" width="14" height="14" fill="#334155" rx="2"/><rect x="370" y="228" width="14" height="14" fill="#334155" rx="2"/><rect x="370" y="318" width="14" height="14" fill="#334155" rx="2"/><rect x="485" y="228" width="14" height="14" fill="#334155" rx="2"/><rect x="485" y="318" width="14" height="14" fill="#334155" rx="2"/><rect x="600" y="228" width="14" height="14" fill="#334155" rx="2"/><rect x="600" y="318" width="14" height="14" fill="#334155" rx="2"/><rect x="715" y="228" width="14" height="14" fill="#334155" rx="2"/><rect x="715" y="318" width="14" height="14" fill="#334155" rx="2"/>
+  <line x1="240" y1="280" x2="745" y2="280" stroke="#0f172a" stroke-width="2.4" marker-end="url(#ad)"/>
+  <line x1="480" y1="280" x2="295" y2="237" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="480" y1="280" x2="418" y2="323" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="480" y1="280" x2="635" y2="237" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="480" y1="280" x2="742" y2="323" stroke="#64748b" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <polygon points="295,225 305,235 295,245 285,235" fill="#2563eb" stroke="#ffffff" stroke-width="2"/><circle cx="295" cy="235" r="3" fill="#ffffff"/><polygon points="418,315 428,325 418,335 408,325" fill="#2563eb" stroke="#ffffff" stroke-width="2"/><circle cx="418" cy="325" r="3" fill="#ffffff"/><polygon points="635,225 645,235 635,245 625,235" fill="#2563eb" stroke="#ffffff" stroke-width="2"/><circle cx="635" cy="235" r="3" fill="#ffffff"/><polygon points="742,315 752,325 742,335 732,325" fill="#2563eb" stroke="#ffffff" stroke-width="2"/><circle cx="742" cy="325" r="3" fill="#ffffff"/>
+  <text x="276" y="256" text-anchor="end" class="t b" font-size="13" fill="#1e40af">R1</text>
+  <text x="398" y="314" text-anchor="end" class="t b" font-size="13" fill="#1e40af">R2</text>
+  <text x="654" y="256" text-anchor="start" class="t b" font-size="13" fill="#1e40af">R3</text>
+  <text x="742" y="310" text-anchor="middle" class="t b" font-size="13" fill="#1e40af">R4</text>
+
+  <rect x="446" y="264" width="68" height="32" rx="5" fill="#2563eb"/>
+  <text x="480" y="285" text-anchor="middle" class="t b" font-size="14" fill="#ffffff">정합</text>
+  <text x="492" y="351" text-anchor="middle" class="t b" font-size="13" fill="#1e40af">◆ 비대칭 고반사 리플렉터 삼각 락온 → 오매칭 차단·직진 추종</text>
+
+  <line x1="764" y1="280" x2="782" y2="280" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+  <rect x="786" y="222" width="156" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="864" y="249" text-anchor="middle" class="t b" font-size="14.5" fill="#1e3a8a">오류율 0%대 복구</text>
+  <line x1="802" y1="260" x2="926" y2="260" stroke="#bfdbfe"/>
+  <text x="864" y="282" text-anchor="middle" class="t m" font-size="13" fill="#0f172a">고유 특징점 매칭</text>
+  <text x="864" y="302" text-anchor="middle" class="t m" font-size="13" fill="#0f172a">도킹 편차 해소</text>
+  <text x="864" y="322" text-anchor="middle" class="t b" font-size="13" fill="#1d4ed8">양산 라인 연속가동</text>
+</svg>
